@@ -1,0 +1,36 @@
+{
+  "name": "project-02",
+  "version": "1.0.0",
+  "description": "Application that allows the user to find, view, rate, and review public restroom facilities based on provided categories or categotries they create. ",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NAHco-code/Project-02.git"
+  },
+  "keywords": [
+    "google",
+    "bathroom",
+    "finder",
+    "restroom",
+    "location",
+    "wilkinson"
+  ],
+  "author": "k.wilkinson b.king j.mays s.taylor",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NAHco-code/Project-02/issues"
+  },
+  "homepage": "https://github.com/NAHco-code/Project-02#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mysql2": "^2.2.5",
+    "nodemon": "^2.0.7",
+    "sequelize": "^6.6.2",
+    "uniqid": "^5.3.0"
+  }
+}
