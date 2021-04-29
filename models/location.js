@@ -1,25 +1,30 @@
-// IN PROGRESS
-
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Location extends Model { }
+// create our Location model
+class Location extends Model {}
 
+// create fields/columns for Location model
 Location.init(
-    {
-        id: {
-
-        }
-
+  {
+    id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      primaryKey: true,
+      autoIncrement: true
     },
-    {
-        sequelize,
-        timestamps: true,
-        freezeTableName: true,
-        underscored: true,
-        modelName: 'location',
+    location_name: {
+      type: DataTypes.STRING,
+      allowNull: false
     }
+  },
+  {
+    sequelize,
+    timestamps: false,
+    freezeTableName: true,
+    underscored: true,
+    modelName: 'location'
+  }
 );
 
-
-module.exports = { Location };
+module.exports = Location;
