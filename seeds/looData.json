@@ -8,9 +8,9 @@
             "accessibilty": "",
             "amenities": {
                 "toiletries": "",
-                "shower": "",
-                "storage": "",
-                "seating": ""
+                "shower": true,
+                "storage": true,
+                "seating": true
             },
             "cleanliness": "",
             "cool_factor": "",
@@ -20,7 +20,10 @@
             "wait_time": ""
         },
         "rating": 4,
-        "review": "Usually clean, stocked, and private."
+        "review": {
+            "date": "",
+            "descr": "Usually clean, stocked, and private."
+        }
     },
     {
 
