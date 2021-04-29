@@ -1,0 +1,42 @@
+[
+    {
+        "facility": "Starbucks",
+        "address": {
+            "street_number": 123,
+            "street_name": "Street Nm",
+            "city": "Columbus",
+            "state": "Ohio",
+            "zip": 43026
+        }
+    },
+    {
+        "facility": "Starbucks",
+        "address": {
+            "street_number": 123,
+            "street_name": "Street Nm",
+            "city": "Columbus",
+            "state": "Ohio",
+            "zip": 43026
+        }
+    },
+    {
+        "facility": "Starbucks",
+        "address": {
+            "street_number": 123,
+            "street_name": "Street Nm",
+            "city": "Columbus",
+            "state": "Ohio",
+            "zip": 43026
+        }
+    },
+    {
+        "facility": "Starbucks",
+        "address": {
+            "street_number": 123,
+            "street_name": "Street Nm",
+            "city": "Columbus",
+            "state": "Ohio",
+            "zip": 43026
+        }
+    }
+]
