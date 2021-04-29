@@ -1,0 +1,28 @@
+[
+    {
+        "type": {
+            "capacity": "one person",
+            "spec_gend": "Women's"
+        },
+        "categories": {
+            "accessibilty": "",
+            "amenities": {
+                "toiletries": "",
+                "shower": "",
+                "storage": "",
+                "seating": ""
+            },
+            "cleanliness": "",
+            "cool_factor": "",
+            "privacy": "",
+            "safety": "",
+            "stocked": "",
+            "wait_time": ""
+        },
+        "rating": 4,
+        "review": "Usually clean, stocked, and private."
+    },
+    {
+
+    }
+]
