@@ -1,4 +1,4 @@
-// IN PROGRESS
+// IN PROGRESS // following code from class example
 
 const sequelize = require('../config/connection');
 const { User, Location, Loo } = require('../models');
