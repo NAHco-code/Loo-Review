@@ -25,5 +25,6 @@ as:
 module.exports = { 
     Location, 
     Loo, 
-    User 
+    User,
+    looReviews, 
 };

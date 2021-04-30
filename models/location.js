@@ -13,10 +13,19 @@ Location.init(
       primaryKey: true,
       autoIncrement: true
     },
-    location_name: {
+    facility: {
       type: DataTypes.STRING,
       allowNull: false
-    }
+    },
+    address: {
+        type: DataTypes.JSON,
+        // street_number: DataTypes.INTEGER,
+        // street_name: DataTypes.STRING,
+        // street_city:DataTypes.STRING,
+        // street_state:DataTypes.STRING,
+        // street_zip:DataTypes.INTEGER,
+        allowNull: false
+    },
   },
   {
     sequelize,
