@@ -1,11 +1,11 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-// create our looReview model
-class looReviews extends Model {}
+// create Review model
+class Review extends Model { }
 
-// create fields/columns for looReview model
-looReviews.init(
+// create fields/columns for Review model
+Review.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -20,27 +20,26 @@ looReviews.init(
     review_body: {
         type: DataTypes.STRING,
         allowNull: false
-      },
-    username: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        unique: true,
+    },
+    rating: {
+      type: DataTypes.INTEGER,
+      allowNull: false
     },
     loo_id: {
         type: DataTypes.INTEGER,
         references: {
             model: 'loo',
-            key: 'id',
-        },
-    },
+            key: 'id'
+        }
+    }
   },
   {
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'looReviews'
+    modelName: 'review'
   }
 );
 
-module.exports = looReviews;
+module.exports = Review;
