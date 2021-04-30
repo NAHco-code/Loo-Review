@@ -1,31 +1,42 @@
-[
-    {
-        "type": {
-            "capacity": "one person",
-            "spec_gend": "Women's"
-        },
-        "categories": {
-            "accessibilty": "",
-            "amenities": {
-                "toiletries": "",
-                "shower": true,
-                "storage": true,
-                "seating": true
+{
+    "loos":[
+        {
+            "location_descr": "back left",
+            "type": {
+                "capacity": 1,
+                "spec_gend": [
+                    { "female": true, "male": false, "neutral": false, "family": false }
+                ]
             },
-            "cleanliness": "",
-            "cool_factor": "",
-            "privacy": "",
-            "safety": "",
-            "stocked": "",
-            "wait_time": ""
+            "categories": {
+                "accessible": false,
+                "clean": true,
+                "cool_factor": true,
+                "privacy": true,
+                "safety": true,
+                "stocked": true,
+                "long_wait_time": false
+            }
         },
-        "rating": 4,
-        "review": {
-            "date": "",
-            "descr": "Usually clean, stocked, and private."
+        {
+                "type": {
+                "capacity": 1,
+                "spec_gend": [
+                    { "female": true, "male": true, "neutral": true, "family": true }
+                ]
+            },
+            "categories": {
+                "accessible": true,
+                "amenities": [
+                    { "shower": false, "storage": true, "seating": true, "hygiene_products": false }
+                ],
+                "clean": true,
+                "cool_factor": false,
+                "privacy": true,
+                "safety": true,
+                "stocked": true,
+                "long_wait_time": false
+            }
         }
-    },
-    {
-
-    }
-]
+    ]
+}

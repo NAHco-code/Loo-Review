@@ -1,7 +1,6 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-// create our Location model
 class Location extends Model { }
 
 // create fields/columns for Location model
@@ -36,7 +35,7 @@ Location.init(
         zip: {
             type: DataTypes.INTEGER,
             allowNull: false
-        },
+        }
     },
     {
         sequelize,

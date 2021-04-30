@@ -1,9 +1,9 @@
 // IN PROGRESS
 // import models
-const User = require('./user');
-const Location = require('./location');
-const Loo = require('./loo');
-const looReviews = require('./looReviews');
+const User = require('./User');
+const Location = require('./Location');
+const Loo = require('./Loo');
+const Review = require('./Review');
 
 // Each location hasMany loos
 Location.hasMany(Loo, {
@@ -11,28 +11,13 @@ Location.hasMany(Loo, {
     onDelete: 'CASCADE'
 });
 
-// Loos belongsTo many locations
+
 Loo.belongsTo(Location, {
     foreignKey: 'location_id'
 });
 
-// User belongsTomany reviews (through looReviews)
-User.belongsToMany(looReviews, {
-    through: {
-        model: looReviews,
-        unique: false,
-    },
-    as: 'username'
-});
-
-
-// Each Review belongsTo only one user
-looReviews.belongsTo(User, {
-    foreignKey: 'username'
-});
-
 // Loo hasMany reviews
-Loo.hasMany(looReviews, {
+Loo.hasMany( Review, {
     foreignKey:'loo_id'
 });
 
@@ -42,5 +27,5 @@ module.exports = {
     Location,
     Loo,
     User,
-    looReviews,
+    Review,
 };
