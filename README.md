@@ -1,14 +1,22 @@
 # Project-02
 
 <!-- TEAM DASHBOARD
-    * please enter your initial to pick up issues as you start each one
-        ** will help track pace and progress -->
+    * please enter your name to pick up issues as you start each one
+        ** will help track pace and progress + get you tons of commits on github ;) -->
+
+<!-- ISSUES --
+<!-- Total: 20 --           * consider how long each problem will take you to solve
+<!-- Per Person: 5 --       * understand that more issues will arise as we continue to develop
+<!-- Per Day: 0.625 --      * each issue you solve will reduce the amount of time the next issue will take you
+<!-- Days left: 8 --        * you can do this in 8 days-->
+<!--                        * you can do this for 8 days-->
+
+
+
 
 <!-- PSA: Remember to install packages you’re requiring in your code and test before you push to develop or submit a pull request to main. It will make development much faster and easier :) -->
 
-<!-- ISSUES -->
-
-<!-- API /* pick up issue: {  } */
+<!-- API /* pick up issue+1: {  } */
 - how are we using the api?
 - what data are we able to pull from google maps and how will we be able to manipulate it?
 - can we seed location data with google maps api to prevent writing unnecessary seed information + save a ton of time?
@@ -32,12 +40,24 @@ BACK END FINISHED AND WORKING BEFORE SAT CLASS IS THE NECESSARY GOAL
 
 *** AFTER BACK END, WE STILL HAVE :
 - many many handlebars files (+ connect them to wherever they need to be connected to) /* pick up issue: {  } */ /* pick up issue: {  } */
-- html and css (*styling is time consuming*)
-- PLUS forms, 'update' and 'post' routes, event listeners, big huge javascript functions to iterate through all of our api calls /* pick up issue: {  } */
-    - ( ** which can only be like 75 calls per hour or something like that ** )
-- front end javascript (this will have to do a lot for us in terms of functionality, this will be a lot of work and take A LOT of time) /* pick up issue: {  } */
-- deploy to Heroku /* pick up issue: { K } */
-- figure out how to access it from Heroku /* pick up issue: {  } */
+- html and css /* pick up issue: {  } */
+    - style main.handlebars
+    - style other views - code class and id names to be resusable for all these pages to minimize work + time
+    - style index.html
+- PLUS:
+    - forms /* pick up issue: {  } */
+    - event listeners /* pick up issue: {  } */
+    - big huge javascript functions to iterate through all of our api calls /* pick up issue: {  } */
+        * api calls can only be up to 75 per hour or something like that ** )
+- front end javascript (this will have to do a lot for us in terms of functionality, this will be a lot of work and take A LOT of time)
+    - search bar funcitonality /* pick up issue: {  } */
+    - main menu functionality /* pick up issue: {  } */
+    - rating functionality /* pick up issue: {  } */
+    - event listeners for each button /* pick up issue: {  } */
+    - probably more stuff
+    - favorites and trip boards/saved // save for last
+- deploy to Heroku /* pick up issue: { Kathryn } */
+- figure out how to access it from Heroku /* pick up issue: { Kathryn } */
 - present it /* pick up issue: {  } */
 - readme /* pick up issue: {  } */
 
