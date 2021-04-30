@@ -1,103 +1,106 @@
-[
-  {
-    "name": "Julie",
-    "user_name": "soulSing",
-    "email": "jcannell@icloud.com",
-    "password": "password12345"
-  },
-  {
-    "name": "Robert",
-    "user_name": "meatnPotatoes",
-    "email": "robby@gmail.com",
-    "password": "password12345"
-  },
-  {
-    "name": "Mikey",
-    "user_name": "batman87",
-    "email": "mcwilwil@aol.com",
-    "password": "password12345"
-  },
-   {
-    "name": "Dani",
-    "user_name": "goTops18",
-    "email": "dpthrow@gmail.com",
-    "password": "password12345"
-  },
-  {
-    "name": "Dani",
-    "user_name": "readyFreddy",
-    "email": "danicat@gmail.com",
-    "password": "password12345"
-  },
-  {
-    "name": "Jake",
-    "user_name": "volleyBear",
-    "email": "jlww@aol.com",
-    "password": "password12345"
-  },
-  {
-    "name": "Shelly",
-    "user_name": "smartyPants",
-    "email": "shelbel@osu.com",
-    "password": "password12345"
-  },
-  {
-    "name": "Joe",
-    "user_name": "guitarFlower",
-    "email": "joeyC@gmail.com",
-    "password": "password12345"
-  },
-  {
-    "name": "Milo",
-    "user_name": "pennyPoc",
-    "email": "Milo@yahoo.com",
-    "password": "password12345"
-  },
-  {
-    "name": "Tristan",
-    "user_name": "iLikePlanets",
-    "email": "Tristan@yahoo.com",
-    "password": "password12345"
-  },
-  {
-    "name": "Sue",
-    "user_name": "spoiledGF",
-    "email": "suzyQ@aol.com",
-    "password": "password12345"
-  },
-  {
-    "name": "Jimmy",
-    "user_name": "Jimbo98",
-    "email": "jimbo@gmail.com",
-    "password": "password12345"
-  },
-  {
-    "name": "Toni",
-    "user_name": "iHeartPups",
-    "email": "antoinette@gmail.com",
-    "password": "password12345"
-  },
-  {
-    "name": "Mark",
-    "user_name": "grayBeard",
-    "email": "markyMark@gmail.com",
-    "password": "password12345"
-  },
-  {
-    "name": "Nick",
-    "user_name": "MAXout",
-    "email": "liftnrun@aol.com",
-    "password": "password12345"
-  },
-  {
-    "name": "Maddie",
-    "user_name": "7yearfiance",
-    "email": "maddieO@aol.com",
-    "password": "password12345"
-  },{
-    "name": "Austin",
-    "user_name": "fishEyes",
-    "email": "austinFoo@gmail.com",
-    "password": "password12345"
-  }
-]
+{
+  "users":[
+    {
+      "name": "Julie",
+      "user_name": "soulSing",
+      "email": "jcannell@icloud.com",
+      "password": "password12345"
+    },
+    {
+      "name": "Robert",
+      "user_name": "meatnPotatoes",
+      "email": "robby@gmail.com",
+      "password": "password12345"
+    },
+    {
+      "name": "Mikey",
+      "user_name": "batman87",
+      "email": "mcwilwil@aol.com",
+      "password": "password12345"
+    },
+    {
+      "name": "Dani",
+      "user_name": "goTops18",
+      "email": "dpthrow@gmail.com",
+      "password": "password12345"
+    },
+    {
+      "name": "Dani",
+      "user_name": "readyFreddy",
+      "email": "danicat@gmail.com",
+      "password": "password12345"
+    },
+    {
+      "name": "Jake",
+      "user_name": "volleyBear",
+      "email": "jlww@aol.com",
+      "password": "password12345"
+    },
+    {
+      "name": "Shelly",
+      "user_name": "smartyPants",
+      "email": "shelbel@osu.com",
+      "password": "password12345"
+    },
+    {
+      "name": "Joe",
+      "user_name": "guitarFlower",
+      "email": "joeyC@gmail.com",
+      "password": "password12345"
+    },
+    {
+      "name": "Milo",
+      "user_name": "pennyPoc",
+      "email": "Milo@yahoo.com",
+      "password": "password12345"
+    },
+    {
+      "name": "Tristan",
+      "user_name": "iLikePlanets",
+      "email": "Tristan@yahoo.com",
+      "password": "password12345"
+    },
+    {
+      "name": "Sue",
+      "user_name": "spoiledGF",
+      "email": "suzyQ@aol.com",
+      "password": "password12345"
+    },
+    {
+      "name": "Jimmy",
+      "user_name": "Jimbo98",
+      "email": "jimbo@gmail.com",
+      "password": "password12345"
+    },
+    {
+      "name": "Toni",
+      "user_name": "iHeartPups",
+      "email": "antoinette@gmail.com",
+      "password": "password12345"
+    },
+    {
+      "name": "Mark",
+      "user_name": "grayBeard",
+      "email": "markyMark@gmail.com",
+      "password": "password12345"
+    },
+    {
+      "name": "Nick",
+      "user_name": "MAXout",
+      "email": "liftnrun@aol.com",
+      "password": "password12345"
+    },
+    {
+      "name": "Maddie",
+      "user_name": "7yearfiance",
+      "email": "maddieO@aol.com",
+      "password": "password12345"
+    },
+    {
+      "name": "Austin",
+      "user_name": "fishEyes",
+      "email": "austinFoo@gmail.com",
+      "password": "password12345"
+    }
+  ]
+}
