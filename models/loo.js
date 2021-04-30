@@ -1,26 +1,26 @@
-// IN PROGRESS
-
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
 class Loo extends Model { }
 
+// create fields/columns for Loo model
 Loo.init(
     {
         id: {
             type: DataTypes.INTEGER,
-            allowNull: true,
-            primaryKey: true,
-            autoIncrement: true,
-        },
-        name: {
-            type: DataTypes.STRING,
             allowNull: false,
+            primaryKey: true,
+            autoIncrement: true
         },
-        description: {
+        location_descr: {
             type: DataTypes.STRING,
+            allowNull: true
         },
-        date_cteated: {
+        capacity: {
+            type: DataTypes.INTEGER,
+        },
+
+        date_created: {
             type: DataTypes.DATE,
             allowNull: false,
             defaultValue: Date.now,
@@ -30,8 +30,8 @@ Loo.init(
             references: {
                 model: 'location',
                 key: 'id',
-            },
-        },
+            }
+        }
     },
     {
         sequelize,
@@ -42,4 +42,4 @@ Loo.init(
     }
 );
 
-module.exports = { Loo };
+module.exports = Loo;

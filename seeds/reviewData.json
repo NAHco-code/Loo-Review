@@ -1,0 +1,40 @@
+{
+    "reviews":[
+        {
+            "username": "",
+            "rating": 4,
+            "review": {
+                "title": "",
+                "date": "",
+                "message": "Usually clean, stocked, and private."
+            }
+        },
+        {
+            "username": "",
+            "rating": 4,
+            "review": {
+                "title": "",
+                "date": "",
+                "message": "Usually clean, stocked, and private."
+            }
+        },
+        {
+            "username": "",
+            "rating": 4,
+            "review": {
+                "title": "",
+                "date": "",
+                "message": "Usually clean, stocked, and private."
+            }
+        },
+        {
+            "username": "",
+            "rating": 4,
+            "review": {
+                "title": "",
+                "date": "",
+                "message": "Usually clean, stocked, and private."
+            }
+        }
+    ]
+}
