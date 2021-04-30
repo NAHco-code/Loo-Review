@@ -20,7 +20,12 @@
 <!-- PSA: Comment your code and use console.logs for testing + leave them in there so others who are using that page can test as well. We will delete them before we submit -->
 
 <!-- House Keeping:
-    - When you start up the server, what does the 'Executing (default): SELECT 1+1 AS result' message mean? -->
+    - When you start up the server, what does the 'Executing (default): SELECT 1+1 AS result' message mean?
+    - Note: userRoutes and homeRoutes are almost complete, but didn't have enough time to test
+        - view changes in Kathryn's branch or in the develop branch
+        - you can pull from these branches if all your changes are committed and pushed to your branch with git pull origin develop or git pull origin kathryn
+        - don't push to main unless code has been tested and is working correctly
+        -->
 
 <!-- Dependecies:
     - bcrypt 5.0.1- installed, not working properly
