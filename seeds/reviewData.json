@@ -1,30 +1,30 @@
 {
     "reviews":[
         {
-            "username": "",
-            "rating": 4,
+            "username": "soulSing",
+            "rating": 2,
             "review": {
-                "title": "",
-                "date": "",
-                "message": "Usually clean, stocked, and private."
+                "title": "This place stinks..literally",
+                "date": "01/16/2019",
+                "message": "This bathroom was terrible. There was toilet paper scattered on the ground everywhere. I felt like I needed a hazmat suit. It's safe to say I will hold my pee the next time."
             }
         },
         {
-            "username": "",
-            "rating": 4,
+            "username": "meatnPotatoes",
+            "rating": 5,
             "review": {
-                "title": "",
-                "date": "",
-                "message": "Usually clean, stocked, and private."
+                "title": "The Holy Grail",
+                "date": "3/08/2021",
+                "message": "You guys, I've found it... The throne to end all thrones. This place has it all, including marbel stall walls. That's right, you read right, marbel walls! This rig can take anything you can throw at it. No log too long; no poo too plump. Comfort? It's like the seat was made for my buttcheeks. Excellent light for hours of optimum phone scrolling. This is my gift to you fellow poo enthusiasts. Sit back, relax, and let the good times roll."
             }
         },
         {
-            "username": "",
-            "rating": 4,
+            "username": "batman87",
+            "rating": 1,
             "review": {
-                "title": "",
-                "date": "",
-                "message": "Usually clean, stocked, and private."
+                "title": "This bathroom has seen some sh*t",
+                "date": "7/27/2013",
+                "message": ""
             }
         },
         {
