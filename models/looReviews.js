@@ -17,15 +17,19 @@ looReviews.init(
       type: DataTypes.STRING,
       allowNull: false
     },
+    review_body: {
+        type: DataTypes.STRING,
+        allowNull: false
+      },
     username: {
         type: DataTypes.STRING,
         allowNull: false,
         unique: true,
     },
-    location_id: {
+    loo_id: {
         type: DataTypes.INTEGER,
         references: {
-            model: 'location',
+            model: 'loo',
             key: 'id',
         },
     },
