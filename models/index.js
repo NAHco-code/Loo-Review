@@ -5,36 +5,36 @@ const Location = require('./location');
 const Loo = require('./loo');
 const looReviews = require('./looReviews');
 
-//
+// Each location hasMany loos
 Location.hasMany(Loo, {
     foreignKey: 'location_id',
     onDelete: 'CASCADE'
 });
 
-// Bathrooms belongsTo many locations
+// Loos belongsTo many locations
 Loo.belongsTo(Location, {
-    through: {
-
     foreignKey: 'location_id'
-    },
-as:
 });
 
-// User belongsTomany reviews
-User.belongsToMany( looReviews, {
+// User belongsTomany reviews (through looReviews)
+User.belongsToMany(looReviews, {
     through: {
-        model:
+        model: looReviews,
         unique: false,
     },
-    as: ''
-)
+    as: 'username'
+});
 
 
 // Each Review belongsTo only one user
-
+looReviews.belongsTo(User, {
+    foreignKey: 'username'
+});
 
 // Loo hasMany reviews
-
+Loo.hasMany(looReviews, {
+    foreignKey:'loo_id'
+});
 
 
 
