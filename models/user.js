@@ -1,6 +1,8 @@
+// Perspective: user is the user of the website // doesn't hve relationship with other models
+
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
-// const bcrypt = require('bcrypt');
+// const bcrypt = require('bcrypt'); // commented out bc causing error when starting server
 
 class User extends Model {
     // // checkPassword(loginPw) {
