@@ -24,7 +24,14 @@
     - Note: userRoutes and homeRoutes are almost complete, but didn't have enough time to test
         - view changes in Kathryn's branch or in the develop branch
         - you can pull from these branches if all your changes are committed and pushed to your branch with git pull origin develop or git pull origin kathryn
-        - don't push to main unless code has been tested and is working correctly
+        - to update the develop branch for others to use:
+            - git checkout develop
+            - git pull origin yourbranchname
+            - git commit
+            - git push (pushes your branch changes that you just pulled into develop)
+            - git checkout yourbranchname + continue working. rinse + repeat
+
+        - don't send pull req to main unless code has been tested and is working correctly
         -->
 
 <!-- Dependecies:
