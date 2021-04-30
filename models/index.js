@@ -4,7 +4,7 @@ const User = require('./user');
 const Location = require('./location');
 const Loo = require('./loo');
 
-// 
+//
 Location.hasMany(Loo, {
     foreignKey: 'location_id',
     onDelete: 'CASCADE'
@@ -16,15 +16,12 @@ Loo.belongsTo(Location, {
 
     foreignKey: 'location_id'
     },
-as: 
+as:
 });
 
-
-
-
-module.exports = { 
-    Location, 
-    Loo, 
+module.exports = {
+    Location,
+    Loo,
     User,
-    looReviews, 
+    looReviews,
 };
