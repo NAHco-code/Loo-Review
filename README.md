@@ -45,22 +45,18 @@
     - uniqid 5.3.0 - installed, *use to manage assigning unique ids if needed, uninstall if not-->
 
 <!--
-#1 - API /* pick up issue: {  } */
+#1 - API /* pick up issue: { Brandon } */
 - how are we using the api?
 - what data are we able to pull from google maps and how will we be able to manipulate it?
-- can we seed location data with google maps api to prevent writing unnecessary seed information + save a ton of time?
-- can we seed public restroom data with google maps api? (this would save a lot of time)
-- is there just a public restrooms api or a different, better api we could use that'd be easier for us to work with?
-- can we have this figured out and coded by saturday?? It will be hard to code the rest of the project without this data
     - * figure out how to remedy the git guardian secret thing // save for last
 
 SEED INFO
 - this will also be time consuming if we can't figure out how to access the location or restroom data from a third party api
 #2 - seed files need to be converted to js files and completed with information enough to present multiple locations and reviews /* pick up issue: {  } */
-#3 - we need to figure out exactly what information we need from each model, why + how we're using it, where we need to send it, etc. /* pick up issue: {  } */
+#3 - we need to figure out exactly what information we need from each model, why + how we're using it, where we need to send it, etc. /* pick up issue: { Kathryn } */
     - where is it all coming from and going to??
     - why??
-* categories removed from MVP due to accessive api calls and time consuming logic
+* categories removed from MVP due to accessive api calls and time consuming logic /
 
 BCRYPT NOT WORKING
 #4 - commented out in user.js to get server running - there is a bug /* pick up issue: {  } */
@@ -165,7 +161,7 @@ BACK END FINISHED AND WORKING BEFORE SAT CLASS IS THE NECESSARY GOAL
         - server + models { Janee' }
         - config/connection { Brandon }
         - server running { Kathryn }
-    - Fri: 8
+    - Fri: X
         - solidify needed data to be included in models + seeds {  }
         - solidify API { Brandon }
         - controllers/routes (create new loo, save, + review funcitonality (http methods)){ Kathryn }
@@ -173,7 +169,7 @@ BACK END FINISHED AND WORKING BEFORE SAT CLASS IS THE NECESSARY GOAL
         - create user logins, cookies, and properly encrypt information {  }
         - views, html, begin responsive styling {  }
         -
-    - Sat: 7
+    - Sat: X
         - configure search functionality (need restroom data {include location}) {  }
         - configure main menu functionality {  }
         - configure rating functionality {  }
@@ -194,10 +190,5 @@ BACK END FINISHED AND WORKING BEFORE SAT CLASS IS THE NECESSARY GOAL
         - commit final changes
     - Sat: 1
         - PRESENT
-
-
-
-
-
 
     -->
