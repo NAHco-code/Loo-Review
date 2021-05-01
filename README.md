@@ -7,9 +7,9 @@
 
 <!-- ISSUES --
 <!-- Total: 30 --           * consider how long each problem will take you to solve
-<!-- Per Person: 7.5 --       * understand that more issues will arise as we continue to develop
+<!-- Per Person: 7 --       * understand that more issues will arise as we continue to develop
 <!-- Per Day: 1 --              * each issue you solve will reduce the amount of time the next issue will take you
-<!-- Days left: 7.5 --        * you can do this in 7 days-->
+<!-- Days left: 7 --        * you can do this in 7 days-->
 <!--                        * you can do this for 7 days-->
 
 
@@ -20,7 +20,19 @@
 <!-- PSA: Comment your code and use console.logs for testing + leave them in there so others who are using that page can test as well. We will delete them before we submit -->
 
 <!-- House Keeping:
-    - When you start up the server, what does the 'Executing (default): SELECT 1+1 AS result' message mean? -->
+    - When you start up the server, what does the 'Executing (default): SELECT 1+1 AS result' message mean?
+    - Note: userRoutes and homeRoutes are almost complete, but didn't have enough time to test
+        - view changes in Kathryn's branch or in the develop branch
+        - you can pull from these branches if all your changes are committed and pushed to your branch with git pull origin develop or git pull origin kathryn
+        - to update the develop branch for others to use:
+            - git checkout develop
+            - git pull origin yourbranchname
+            - git commit
+            - git push (pushes your branch changes that you just pulled into develop)
+            - git checkout yourbranchname + continue working. rinse + repeat
+
+        - don't send pull req to main unless code has been tested and is working correctly
+        -->
 
 <!-- Dependecies:
     - bcrypt 5.0.1- installed, not working properly
