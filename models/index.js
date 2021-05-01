@@ -9,19 +9,20 @@
 
 // #### LOCATION TABLE
 // * ID(PK)
+// * Facility name
 // * Address (string or object - TBD)
 // *    // if object, may need: street_number, street_name, city, state, zip
 
 // #### LOO TABLE
 // * ID(PK)
-// * Location ID / Address (string or object - TBD)
-// * Facility name
+// * Location ID // to get address + facility name (string or object - TBD)
 // * Rating
 
 // #### REVIEW TABLE
 // * ID(PK)
-// * User ID
-// * Loo ID
+// * Location ID // to get facility name
+// * Loo ID // to get rating
+// * User ID // to get username
 // * Title
 // * Review
 // * Date created

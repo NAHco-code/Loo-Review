@@ -12,10 +12,6 @@ Loo.init(
             primaryKey: true,
             autoIncrement: true
         },
-        facility_name: {
-            type: DataTypes.STRING,
-            allowNull: true
-        },
         rating: {
             type: DataTypes.INTEGER,
             allowNull: false

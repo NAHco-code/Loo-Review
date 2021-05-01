@@ -12,9 +12,13 @@ Location.init(
             primaryKey: true,
             autoIncrement: true
         },
-            address: {
-                type: DataTypes.STRING,
-                allowNull: false
+        facility_name: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+        address: {
+            type: DataTypes.STRING,
+            allowNull: false
         }
 
         // **IF NEEDED** // depends on data from google api
@@ -46,7 +50,7 @@ Location.init(
     },
     {
         sequelize,
-        timestamps: false,
+        timestamps: true,
         freezeTableName: true,
         underscored: true,
         modelName: 'location'

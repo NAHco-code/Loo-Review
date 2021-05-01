@@ -13,17 +13,24 @@ Review.init(
       primaryKey: true,
       autoIncrement: true
     },
-    user_id: { //to get username from model
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'user',
-        key: 'id'
-      }
-    },
-    loo_id: { //to connect the review to the loo + loo rating //can we include location(to get facility name) in 'get' route without defining it in the model?
+    location_id: { // to get facility name
       type: DataTypes.INTEGER,
       references: {
         model: 'loo',
+        key: 'id'
+      }
+    },
+    loo_id: { // to get rating
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'loo',
+        key: 'id'
+      }
+    },
+    user_id: { // to get username
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'user',
         key: 'id'
       }
     },
@@ -31,14 +38,19 @@ Review.init(
       type: DataTypes.STRING,
       allowNull: false
     },
-    message: {
+    review: {
         type: DataTypes.STRING,
         allowNull: false
+    },
+    date_created: {
+      type: DataTypes.DATE,
+      allowNull: false
     }
   },
   {
     sequelize,
-    timestamps: false,
+    timestamps: true,
+    createdAt: true,
     freezeTableName: true,
     underscored: true,
     modelName: 'review'
