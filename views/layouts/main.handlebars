@@ -14,29 +14,35 @@
     <header>
        <nav>
     <div class="nav-wrapper">
-      <h1>The Loo Review</h1>
+      <h1 id="navbar-title">The Loo Review</h1>
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="sass.html">Sass</a></li>
-        <li><a href="badges.html">Components</a></li>
-        <li><a href="collapsible.html">Javascript</a></li>
-        <li><a href="mobile.html">Mobile</a></li>
+        <li><a href="#">Add a Loo</a></li>
+        <li><a href="#">Review a Loo</a></li>
+        {{#if logged_in}}
+        <li><a href="#">Logout</a></li>
+        {{else}}
+        <li><a href="#">Login</a></li>
+        {{/if}}
       </ul>
     </div>
   </nav>
 
   <ul class="sidenav" id="mobile-demo">
-    <li><a href="sass.html">Sass</a></li>
-    <li><a href="badges.html">Components</a></li>
-    <li><a href="collapsible.html">Javascript</a></li>
-    <li><a href="mobile.html">Mobile</a></li>
+    <li><a href="#">Add a Loo</a></li>
+    <li><a href="#">Review a Loo</a></li>
+    {{#if logged_in}}
+        <li><a href="#">Logout</a></li>
+        {{else}}
+        <li><a href="#">Login</a></li>
+        {{/if}}
   </ul>
     </header>
     <main>
-
+        {{{body}}}
     </main>
 </body>
 <script src="./assets/js/index.js"></script>
-<script src="./assets/js/script.js"></script>
+<!-- <script src="./assets/js/script.js"></script> -->
 
 </html>
