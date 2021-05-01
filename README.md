@@ -7,9 +7,9 @@
 
 <!-- ISSUES --
 <!-- Total: 30 --           * consider how long each problem will take you to solve
-<!-- Per Person: 7.5 --       * understand that more issues will arise as we continue to develop
+<!-- Per Person: 7 --       * understand that more issues will arise as we continue to develop
 <!-- Per Day: 1 --              * each issue you solve will reduce the amount of time the next issue will take you
-<!-- Days left: 7.5 --        * you can do this in 7 days-->
+<!-- Days left: 7 --        * you can do this in 7 days-->
 <!--                        * you can do this for 7 days-->
 
 
