@@ -71,7 +71,7 @@ BACK END FINISHED AND WORKING BEFORE SAT CLASS IS THE NECESSARY GOAL
 
 *** AFTER BACK END, WE STILL HAVE :
 #5, #6 - many many handlebars files (+ connect them to wherever they need to be connected to) /* pick up issue: {  } */ /* pick up issue: {  } */
-- html and css /* pick up issue: {  } */
+- html and css /* pick up issue: { Janee's } */
 #7  - style main.handlebars
 #8  - style other views - code class and id names to be resusable for all these pages to minimize work + time
 #9  - style index.html
