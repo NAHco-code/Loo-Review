@@ -15,7 +15,7 @@
             "review": {
                 "title": "The Holy Grail",
                 "date": "3/08/2021",
-                "message": "You guys, I've found it... The throne to end all thrones. This place has it all, including marbel stall walls. That's right, you read right, marbel walls! This rig can take anything you can throw at it. No log too long; no poo too plump. Comfort? It's like the seat was made for my buttcheeks. Excellent light for hours of optimum phone scrolling. This is my gift to you my fellow poo enthusiasts. Sit back, relax, and let the good times roll."
+                "message": "You guys, I've found it... The throne to end all thrones. This place has it all, including marble stall walls. That's right, you read right, marble walls! This rig can take anything you can throw at it. No log too long; no poo too plump. Comfort? It's like the seat was made for my buttcheeks. Excellent light for hours of optimum phone scrolling. This is my gift to you my fellow poo enthusiasts. Sit back, relax, and let the good times roll."
             }
         },
         {
@@ -58,10 +58,100 @@
             "username": "smartyPants",
             "rating": 2,
             "review": {
-                "title": "TP for the bunghole",
-                "date": "2/28/2018",
-                "message": "I may be wrong, but this may be the softest toilet paper I've ever felt. I'm not sure which sweet angel decided to bless this commode with such softness but my humble hiney thanks you."
+                "title": "Scared Sh*tless",
+                "date": "5/7/2020",
+                "message": "I had to stop for a quick ehem.. break. It's pretty scary looking from the outside because the light was burned out. I had to do my business in the dark! I don't know who's in charge of the upkeep on this place but I would suggest avoiding it until the light is fixed."
             }
         },
+        {
+            "username": "guitarFlower",
+            "rating": 3,
+            "review": {
+                "title": "",
+                "date": "",
+                "message": ""
+            }
+        },
+        {
+            "username": "pennyPoc",
+            "rating": 3,
+            "review": {
+                "title": "",
+                "date": "",
+                "message": ""
+            }
+        },
+        {
+            "username": "iLikePlanets",
+            "rating": 3,
+            "review": {
+                "title": "",
+                "date": "",
+                "message": ""
+            }
+        },
+        {
+            "username": "spoiledGF",
+            "rating": 3,
+            "review": {
+                "title": "",
+                "date": "",
+                "message": ""
+            }
+        },
+        {
+            "username": "Jimbo98",
+            "rating": 3,
+            "review": {
+                "title": "",
+                "date": "",
+                "message": ""
+            }
+        },
+        {
+            "username": "iHeartPups",
+            "rating": 3,
+            "review": {
+                "title": "",
+                "date": "",
+                "message": ""
+            }
+        },
+        {
+            "username": "grayBeard",
+            "rating": 3,
+            "review": {
+                "title": "",
+                "date": "",
+                "message": ""
+            }
+        },
+        {
+            "username": "MAXout",
+            "rating": 3,
+            "review": {
+                "title": "",
+                "date": "",
+                "message": ""
+            }
+        },
+        {
+            "username": "7yearfiance",
+            "rating": 3,
+            "review": {
+                "title": "",
+                "date": "",
+                "message": ""
+            }
+        },
+        {
+            "username": "fishEyes",
+            "rating": 3,
+            "review": {
+                "title": "",
+                "date": "",
+                "message": ""
+            }
+        }
     ]
 }
