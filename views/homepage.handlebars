@@ -1,6 +1,13 @@
-
+{{!-- 
     <div id="map"></div>
     <script
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIwzALxUPNbatRBj3Xi1Uhp0fFzwWNBkE&callback=initMap&libraries=&v=weekly"
       async
-    ></script>
+    ></script> --}}
+
+{{#each loos as |loo|}}
+  <div>
+    <h2>{{loo.location_id}}</h2>
+    <p>{{loo.rating}}</p>
+  </div>
+{{/each}}
