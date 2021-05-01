@@ -92,65 +92,65 @@
         },
         {
             "username": "spoiledGF",
-            "rating": 3,
+            "rating": 5,
             "review": {
-                "title": "",
-                "date": "",
-                "message": ""
+                "title": "You can have it all",
+                "date": "9/11/2014",
+                "message": "This bathroom is amazing! It's more like a luxury spa. It has showers, lockers, and warm towels by the sink. The hand soap smelled like heaven. Do youself a favor and check it out."
             }
         },
         {
             "username": "Jimbo98",
             "rating": 3,
             "review": {
-                "title": "",
-                "date": "",
-                "message": ""
+                "title": "Just your average go",
+                "date": "3/19/2021",
+                "message": "When I saw the amount of people going into and out of this bathroom I thought I was in for a decent wait. Au contraire mon frère, I was in and out in a jiffy."
             }
         },
         {
             "username": "iHeartPups",
-            "rating": 3,
+            "rating": 2,
             "review": {
-                "title": "",
-                "date": "",
-                "message": ""
+                "title": "Papi doesn't wash his hands",
+                "date": "8/22/2019",
+                "message": "Two of the sinks were out of order so I had to wait to wash my hands. This was problematic because even though I waited, I saw several people exit without washing their hands. Be very afraid."
             }
         },
         {
             "username": "grayBeard",
-            "rating": 3,
+            "rating": 4,
             "review": {
-                "title": "",
-                "date": "",
-                "message": ""
+                "title": "Accessible",
+                "date": "5/03/2017",
+                "message": "This bathroom had an accessible button for the door which was really convenient. It was also very spacious which made it easy to maneuver. I appreciated the extra touches but removed a star because the trash needed replaced and had started to smell."
             }
         },
         {
             "username": "MAXout",
             "rating": 3,
             "review": {
-                "title": "",
-                "date": "",
-                "message": ""
+                "title": "Gender Neutral Paradise",
+                "date": "11/23/2019",
+                "message": "This bathroom is awesome! When you first walk in there are several doors in a row, kind of like stalls. Inside each stall is a small mini bathroom, complete with individual sinks. It was really nice and fancy. The facility seemed to be well stalked and clean. "
             }
         },
         {
             "username": "7yearfiance",
-            "rating": 3,
+            "rating": 2,
             "review": {
-                "title": "",
-                "date": "",
-                "message": ""
+                "title": "BMotion sensors",
+                "date": "12/16/2019",
+                "message": "I'm all for energy saving lights but this has got to be some sort of oversight. Be prepared to do the chicken dance/Macarena/etc to keep the lights on. I guess it's one way to keep bathroom breaks short?"
             }
         },
         {
             "username": "fishEyes",
-            "rating": 3,
+            "rating": 1,
             "review": {
-                "title": "",
-                "date": "",
-                "message": ""
+                "title": "Some things should be left to the imagination",
+                "date": "4/30/2021",
+                "message": "Would you like to see a 360 view of yourself going to the bathroom? Well, this place is for you! Picture a room, completely covered in mirrors. The toilet itself is silver and reflective. The ceiling light is an extravagant chandelier. I can appreciate the finer things in life but this is next level. It's a pass from me poo pourri!"
             }
         }
     ]
