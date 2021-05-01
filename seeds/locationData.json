@@ -1,6 +1,5 @@
 [
     {
-        "facility": "Starbucks",
         "address": {
             "street_number": 123,
             "street_name": "Street Nm",
@@ -10,7 +9,6 @@
         }
     },
     {
-        "facility": "Starbucks",
         "address": {
             "street_number": 123,
             "street_name": "Street Nm",
@@ -20,7 +18,6 @@
         }
     },
     {
-        "facility": "Starbucks",
         "address": {
             "street_number": 123,
             "street_name": "Street Nm",
@@ -30,7 +27,6 @@
         }
     },
     {
-        "facility": "Starbucks",
         "address": {
             "street_number": 123,
             "street_name": "Street Nm",
