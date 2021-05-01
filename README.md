@@ -56,7 +56,7 @@
 
 SEED INFO
 - this will also be time consuming if we can't figure out how to access the location or restroom data from a third party api
-#2 - seed files need to be converted to js files and completed with information enough to present multiple locations and reviews /* pick up issue: {  } */
+#2 - seed files need to be converted to js files and completed with information enough to present multiple locations and reviews /* pick up issue: { Janee' } */
 #3 - we need to figure out exactly what information we need from each model, why + how we're using it, where we need to send it, etc. /* pick up issue: {  } */
     - where is it all coming from and going to??
     - why??
@@ -71,7 +71,7 @@ BACK END FINISHED AND WORKING BEFORE SAT CLASS IS THE NECESSARY GOAL
 
 *** AFTER BACK END, WE STILL HAVE :
 #5, #6 - many many handlebars files (+ connect them to wherever they need to be connected to) /* pick up issue: {  } */ /* pick up issue: {  } */
-- html and css /* pick up issue: {  } */
+- html and css /* pick up issue: { Janee's } */
 #7  - style main.handlebars
 #8  - style other views - code class and id names to be resusable for all these pages to minimize work + time
 #9  - style index.html
