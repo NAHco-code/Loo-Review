@@ -13,24 +13,27 @@ Review.init(
       primaryKey: true,
       autoIncrement: true
     },
-    review_title: {
+    user_id: { //to get username from model
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'user',
+        key: 'id'
+      }
+    },
+    loo_id: { //to connect the review to the loo + loo rating //can we include location(to get facility name) in 'get' route without defining it in the model?
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'loo',
+        key: 'id'
+      }
+    },
+    title: {
       type: DataTypes.STRING,
       allowNull: false
     },
-    review_body: {
+    message: {
         type: DataTypes.STRING,
         allowNull: false
-    },
-    rating: {
-      type: DataTypes.INTEGER,
-      allowNull: false
-    },
-    loo_id: {
-        type: DataTypes.INTEGER,
-        references: {
-            model: 'loo',
-            key: 'id'
-        }
     }
   },
   {
