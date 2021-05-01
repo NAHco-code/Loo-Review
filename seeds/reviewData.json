@@ -15,7 +15,7 @@
             "review": {
                 "title": "The Holy Grail",
                 "date": "3/08/2021",
-                "message": "You guys, I've found it... The throne to end all thrones. This place has it all, including marbel stall walls. That's right, you read right, marbel walls! This rig can take anything you can throw at it. No log too long; no poo too plump. Comfort? It's like the seat was made for my buttcheeks. Excellent light for hours of optimum phone scrolling. This is my gift to you fellow poo enthusiasts. Sit back, relax, and let the good times roll."
+                "message": "You guys, I've found it... The throne to end all thrones. This place has it all, including marbel stall walls. That's right, you read right, marbel walls! This rig can take anything you can throw at it. No log too long; no poo too plump. Comfort? It's like the seat was made for my buttcheeks. Excellent light for hours of optimum phone scrolling. This is my gift to you my fellow poo enthusiasts. Sit back, relax, and let the good times roll."
             }
         },
         {
@@ -24,16 +24,25 @@
             "review": {
                 "title": "This bathroom has seen some sh*t",
                 "date": "7/27/2013",
-                "message": ""
+                "message": "I'm not even sure this bathroom is still monitored? There was no toilet paper in any of the stalls and the trash was overflowing. The smell was something akin to that one time my dog threw up. In emergency, you gotta do what you gotta do - but if I were you, I'd find the nearest bush instead."
             }
         },
         {
-            "username": "",
+            "username": "goTops18",
             "rating": 4,
             "review": {
-                "title": "",
-                "date": "",
-                "message": "Usually clean, stocked, and private."
+                "title": "First bathroom break of the new year!",
+                "date": "01/01/2021",
+                "message": "I don't mean to brag but I started the new year off right. I deviated from my normal bathroom of choice and I'm happy I did. It was well maintaned, quiet, and with just the right amount of privacy."
+            }
+        },
+        {
+            "username": "readyFreddy",
+            "rating": 3,
+            "review": {
+                "title": "A well polished turd",
+                "date": "04/30/2015",
+                "message": "This place looks cool but don't be fooled. It's not a powerful flush which resulted in a clogged/back-up situation. Let's just say it was an awkward first encounter with my significant others parents."
             }
         }
     ]
