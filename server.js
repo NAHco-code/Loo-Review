@@ -16,7 +16,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // app.use(require('./controllers/homeRoutes')); // don't know if this is needed
-
+// set up session/ cookies/ etc
 
 // sync sequelize models to the database, then turn on the server
 sequelize.sync({ force: false })//force false prevents added data from being overwritten

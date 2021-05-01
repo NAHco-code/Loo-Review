@@ -9,9 +9,9 @@ TODO: solidify the tables and columns needed + correct models and seed files to 
 user
     id, name, username, email, password; // when accessing name entered for homepage banner, use *const name = str.split(' ');* to avoid saving first and last names in seperate columns
 locations
-    id, name, loos[]
+    id, facility name, address
 loos
-    id, name, reviews[]
+    id, location id, rating // rating 1-5 (might have to do in front end js),
 reviews
-    id, description, rating 1-5 (might have to do in front end js),
+    id, user id, loo id, title, review, date
 */

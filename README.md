@@ -52,6 +52,7 @@
 - can we seed public restroom data with google maps api? (this would save a lot of time)
 - is there just a public restrooms api or a different, better api we could use that'd be easier for us to work with?
 - can we have this figured out and coded by saturday?? It will be hard to code the rest of the project without this data
+    - * figure out how to remedy the git guardian secret thing // save for last
 
 SEED INFO
 - this will also be time consuming if we can't figure out how to access the location or restroom data from a third party api
