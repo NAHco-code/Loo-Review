@@ -3,7 +3,7 @@ const sequelize = require('../config/connection');
 
 class Loo extends Model { }
 
-// create fields/columns for Loo model
+// create fields/columns for Loo table
 Loo.init(
     {
         id: {
@@ -12,18 +12,13 @@ Loo.init(
             primaryKey: true,
             autoIncrement: true
         },
-        location_descr: {
+        facility_name: {
             type: DataTypes.STRING,
             allowNull: true
         },
-        capacity: {
+        rating: {
             type: DataTypes.INTEGER,
-        },
-
-        date_created: {
-            type: DataTypes.DATE,
-            allowNull: false,
-            defaultValue: Date.now,
+            allowNull: false
         },
         location_id: {
             type: DataTypes.INTEGER,
