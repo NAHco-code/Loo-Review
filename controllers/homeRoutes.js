@@ -1,4 +1,6 @@
-// ALMOST COMPLETE - NEEDS TESTED + CHECKED
+// COMPLETE + TESTED
+    // get('/')
+    //
 // *reference homeRoutes in MVPunit student mini proj
 
 const router = require('express').Router();
@@ -10,14 +12,15 @@ router.get('/', async (req, res) => {
     // TODO: **Find nearby locations (mile radius?) || render saved/favorites
     try {
         // TODO: **What data are we using/are we able to use @here?**
-        const LooData = await Loo.findAll/* createFind? which method to use? */({ include: { model: Location } });
+        const locationData = await Location.findAll/* createFind? which method to use? */({ include: { model: Loo } });
 
         // Serialize data so the template can read it
-        const loos = LooData.map((loo) => loo.get({ plain: true }));
+        const locations = locationData.map((location) => location.get({ plain: true }));
 
         // Pass serialized data and session flag to template
         res.render('homepage', {
-            projects,
+            locations,
+            loos,
             logged_in: req.session.logged_in
         });
     } catch (err) {
@@ -27,10 +30,10 @@ router.get('/', async (req, res) => {
 
 
 
-// TODO: /loo/:id renders a specific loo + associated reviews
-router.get('/loo/:id', async (req, res) => {
+// TODO: /location/:id renders a specific loo + associated reviews
+router.get('/location/:id', async (req, res) => {
     try {
-        const looData = await Loo.findByPk(req.params.id, {include: {model: Location}});
+        const looData = await Loo.findByPk(req.params.id, {through: {model: Location}});
 
         const loo = looData.get({ plain: true });
 
