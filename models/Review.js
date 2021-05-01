@@ -13,29 +13,44 @@ Review.init(
       primaryKey: true,
       autoIncrement: true
     },
-    review_title: {
+    location_id: { // to get facility name
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'loo',
+        key: 'id'
+      }
+    },
+    loo_id: { // to get rating
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'loo',
+        key: 'id'
+      }
+    },
+    user_id: { // to get username
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'user',
+        key: 'id'
+      }
+    },
+    title: {
       type: DataTypes.STRING,
       allowNull: false
     },
-    review_body: {
+    review: {
         type: DataTypes.STRING,
         allowNull: false
     },
-    rating: {
-      type: DataTypes.INTEGER,
+    date_created: {
+      type: DataTypes.DATE,
       allowNull: false
-    },
-    loo_id: {
-        type: DataTypes.INTEGER,
-        references: {
-            model: 'loo',
-            key: 'id'
-        }
     }
   },
   {
     sequelize,
-    timestamps: false,
+    timestamps: true,
+    createdAt: true,
     freezeTableName: true,
     underscored: true,
     modelName: 'review'
