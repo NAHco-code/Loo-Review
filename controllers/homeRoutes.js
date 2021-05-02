@@ -77,14 +77,20 @@ router.get('/location/:id', async (req, res) => {
 
 //TODO: redirect  // If the user is already logged in, redirect the request to another route
 
-//router.get('/login', (req, res) => {
+router.get('/login', (req, res) => {
 
-//     if (req.session.logged_in) {
-//         res.redirect('/profile');
-//         return;
-//     }
+    // if (req.session.logged_in) {
+    //     res.redirect('/profile');
+    //     return;
+    // }
 
-//     res.render('login');
-// });
+    res.render('login');
+});
+
+router.get('/review', (req, res) => {
+    //add redirect if not logged in
+    
+    res.render('review');
+})
 
 module.exports = router;
