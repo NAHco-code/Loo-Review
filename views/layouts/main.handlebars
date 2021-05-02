@@ -13,16 +13,23 @@
 
 <body style="background-color: #333;">
   <header>
-     <nav>
-    <div class="nav-wrapper">
-      <a href="#" class="brand-logo">Loo Review</a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="#">Add a Loo</a></li>
-        <li><a href="/review">Review a Loo</a></li>
-        <li><a href="/login">Login</a></li>
-      </ul>
-    </div>
-  </nav>
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#!" class="brand-logo">Logo</a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="#">Add a Loo</a></li>
+          <li><a href="/review">Review a Loo</a></li>
+          <li><a href="/login">Login</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <ul class="sidenav" id="mobile-demo">
+      <li><a href="#">Add a Loo</a></li>
+      <li><a href="/review">Review a Loo</a></li>
+      <li><a href="/login">Login</a></li>
+    </ul>
   </header>
   <main>
     {{{body}}}
