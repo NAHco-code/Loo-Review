@@ -28,7 +28,7 @@ const locations = [
             new google.maps.Marker({
             position: place,
             map,
-            title: "Hello World!",
+            title: "NAME",
             });
         }
       };
@@ -36,7 +36,7 @@ const locations = [
 // Function populating locations, ...etc.
 
 // Event Listeners
-document.addEventListener('DOMContentLoaded', function() {
-  var elems = document.querySelectorAll('.sidenav');
-  var instances = M.Sidenav.init(elems, options);
-});
+// document.addEventListener('DOMContentLoaded', function() {
+//   var elems = document.querySelectorAll('.sidenav');
+//   var instances = M.Sidenav.init(elems, options);
+// });
