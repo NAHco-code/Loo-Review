@@ -1,13 +1,6 @@
-
-/* TODO: Add css reset code */
 /* TODO: Add code to style over framework */
-header, .project:not(:last-child) {
-    border-bottom: 1px solid #ccc;
-  }
-  
-  .no-button {
-    background: none;
-    border: none;
+* {
+    box-sizing: border-box;
     padding: 0;
     cursor: pointer;
     color: #1b89bc;
@@ -33,3 +26,12 @@ header, .project:not(:last-child) {
     height: 300px;
     width: 300px;
   }
+
+#navbar-title{
+    padding: 20px;
+    font-family: inherit;
+    background-color: lightsteelblue;
+    font-size: 25px;
+    color: black;
+    text-align: right;
+}
