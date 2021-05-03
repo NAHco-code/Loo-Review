@@ -70,10 +70,9 @@ BACK END FINISHED AND WORKING BEFORE SAT CLASS IS THE NECESSARY GOAL
 *** AFTER BACK END, WE STILL HAVE :
 #5, #6 - many many handlebars files (+ connect them to wherever they need to be connected to) /* pick up issue: {  } */ /* pick up issue: {  } */
         - home.hbs(login), loos.hbs(render loos within 20 mi radius *haversine* ), map.hbs (map view and form to leave review)
-- html and css /* pick up issue: { Janee's } */
+- html and css /* pick up issue: { Janee'} */
 #7  - style main.handlebars
 #8  - style other views - code class and id names to be resusable for all these pages to minimize work + time
-#9  - style index.html
 - PLUS:
 #10 - forms /* pick up issue: {  } */
 #11 - event listeners /* pick up issue: {  } */
@@ -172,8 +171,7 @@ BACK END FINISHED AND WORKING BEFORE SAT CLASS IS THE NECESSARY GOAL
         - controllers/routes (create new loo, save, + review funcitonality (http methods)){ Kathryn }
         x- models + seed structure {  }
         - create user logins, cookies, and properly encrypt information {  }
-        - views, html, begin responsive styling {  }
-        -
+        - views, html, begin responsive styling { Janee' }
     - Sat: X
         O- configure search functionality (need restroom data {include location}) {  }
         O- configure main menu functionality {  }
