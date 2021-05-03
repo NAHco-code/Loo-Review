@@ -1,6 +1,24 @@
 
-    <div id="map"></div>
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIwzALxUPNbatRBj3Xi1Uhp0fFzwWNBkE&callback=initMap&libraries=&v=weekly"
-      async
-    ></script>
+{{#each loos as |loo|}}
+<div class="col s4">
+  <h2 class="header">LOCATION NAME</h2>
+  <div class="card horizontal">
+    <div class="card-image">
+      <div id="map"></div>
+    </div>
+    <div class="card-stacked">
+      <div class="card-content">
+        <p>Average Rating: {{loo.rating}}</p>
+      </div>
+      <div class="card-action">
+        <a href="#">See Reviews</a>
+      </div>
+    </div>
+  </div>
+</div>
+{{/each}}
+
+
+<script async
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDz091kyRUnde4u6imdbCufy_dba23YnPc&callback=initMap">
+  </script>

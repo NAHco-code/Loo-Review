@@ -12,18 +12,16 @@ Loo.init(
             primaryKey: true,
             autoIncrement: true
         },
-        rating: {
-            type: DataTypes.INTEGER,
-            allowNull: false
+        facility_name: {
+            type: DataTypes.STRING,
+            allowNull: false,
         },
-        location_id: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: 'location',
-                key: 'id',
-            }
+        address: { // format still in question  - string or obeject
+            type: DataTypes.STRING,
+            allowNull: false
         }
-    },
+    }, // render average rating in front end js
+    // individual ratings from each review in review table
     {
         sequelize,
         timestamps: true,

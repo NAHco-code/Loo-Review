@@ -4,17 +4,18 @@
 const router = require('express').Router();
 const { User } = require('../../models')
 
-// home route - user posts searches, loos, and reviews on homepage (TODO: this codeblock is questionable - needs a second look)
-router.post('/', async (req, res) => {
+// create user // create an acct
+router.post('/create', async (req, res) => {
     try {
         const userData = await User.create(req.body);
 
-        req.session.save(() => {
-            req.session.user_id = userData.id;
-            req.session.logged_in = true;
+        // req.session.save(() => {
+        //     req.session.user_id = userData.id;
+        //     req.session.logged_in = true;
 
-            res.status(200).json(userData);
-        });
+        //     res.status(200).json(userData);
+        // });
+        res.status(200).json(userData);
     } catch (err) {
         res.status(400).json(err);
     }
@@ -33,9 +34,9 @@ router.post('/login', async (req, res) => {
             return;
         }
 
-        const validatePassword = await userData.checkPassword(req.body.password);
+        const isValidPassword = await userData.checkPassword(req.body.password);
 
-        if (!validPassword) {
+        if (!isValidPassword) {
             res
                 .status(400)
                 .json({ message: 'Incorrect email or password, please create an account or try again.' });
