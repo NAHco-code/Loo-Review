@@ -5,7 +5,7 @@
 
 const router = require('express').Router();
 const { Loo, User, Review, Location } = require('../models'); //reads index.js
-const withAuth = require('../utils/auth'); //fix password encryption & authentication
+// const withAuth = require('../utils/auth'); //fix password encryption & authentication
 
 // TODO: homepageRoute renders nearby loos (through location)
 router.get('/', async (req, res) => {

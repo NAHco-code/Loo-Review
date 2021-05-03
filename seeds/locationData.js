@@ -1,7 +1,7 @@
-const { Location } = require('../models');
+// const { Location } = require('../models');
 
-// check syntax upper v. lower case titles
+// // check syntax upper v. lower case titles
 
-const seedLocations = () => Location.bulkCreate.JSON.parse(locationData);
+// const seedLocations = () => Location.bulkCreate.JSON.parse(locationData);
 
-module.exports = seedLocations;
+// module.exports = seedLocations;

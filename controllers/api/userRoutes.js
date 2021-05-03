@@ -9,12 +9,13 @@ router.post('/create', async (req, res) => {
     try {
         const userData = await User.create(req.body);
         // TODO: edge cases - if username exists
-        req.session.save(() => {
-            req.session.user_id = userData.id;
-            req.session.logged_in = true;
+        // req.session.save(() => {
+        //     req.session.user_id = userData.id;
+        //     req.session.logged_in = true;
 
-            res.status(200).json(userData);
-        });
+        //     res.status(200).json(userData);
+        // });
+        res.status(200).json(userData);
     } catch (err) {
         res.status(400).json(err);
     }
@@ -64,6 +65,8 @@ router.post('/login', async (req, res) => {
 
             res.json({ user: userData, message: 'Logged In!' });
         });
+
+        // res.json({ user: userData, message: 'Logged In!' });
 
     } catch (err) {
         res.status(400).json(err);
