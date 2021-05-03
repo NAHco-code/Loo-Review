@@ -13,14 +13,14 @@ Review.init(
       primaryKey: true,
       autoIncrement: true
     },
-    location_id: { // to get facility name
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'loo',
-        key: 'id'
-      }
-    },
-    loo_id: { // to get rating
+    // location_id: { // to get facility name
+    //   type: DataTypes.INTEGER,
+    //   references: {
+    //     model: 'loo',
+    //     key: 'id'
+    //   }
+    // },
+    loo_id: { // to get facility name and address
       type: DataTypes.INTEGER,
       references: {
         model: 'loo',
@@ -36,6 +36,10 @@ Review.init(
     },
     title: {
       type: DataTypes.STRING,
+      allowNull: false
+    },
+    rating: {
+      type: DataTypes.INTEGER,
       allowNull: false
     },
     review: {
