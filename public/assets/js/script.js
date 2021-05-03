@@ -3,10 +3,10 @@ require('dotenv').config();
 const mapKey = process.env.MAP_KEY;
 const geoKey = process.env.GEO_KEY;
 
-//confirm permission 
+//confirm permission
 const permission = confirm('Loo Review would like to access your location');
 if (!permission) {
-    alert('application cannot work without location data')
+  alert('application cannot work without location data')
 };
 
 let map, infoWindow;
@@ -55,8 +55,3 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
   );
   infoWindow.open(map);
 }
-
-
-
-
-

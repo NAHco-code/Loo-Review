@@ -5,7 +5,7 @@
 
 const router = require('express').Router();
 const { Loo, User, Review, Location } = require('../models'); //reads index.js
-const withAuth = require('../utils/auth'); //fix password encryption & authentication
+// const withAuth = require('../utils/auth'); //fix password encryption & authentication
 
 // TODO: homepageRoute renders nearby loos (through location)
 router.get('/', async (req, res) => {
@@ -14,13 +14,13 @@ router.get('/', async (req, res) => {
     try {
         // TODO: **What data are we using/are we able to use @here?**
         /* createFind? which method to use? */
-        
-        const LooData = await Loo.findAll({ include: { model: Location } });
-        
-        const locationData = await Location.findAll/* createFind? which method to use? */({ include: { model: Loo } });
+
+        const LooData = await Loo.findAll();
+
+        // const locationData = await Location.findAll/* createFind? which method to use? */({ include: { model: Loo } });
 
         // Serialize data so the template can read it
-        const locations = locationData.map((location) => location.get({ plain: true }));
+        const loos = looData.map((loos) => loos.get({ plain: true }));
 
         // Pass serialized data and session flag to template
         res.render('homepage', {
@@ -28,7 +28,7 @@ router.get('/', async (req, res) => {
             //logged_in: req.session.logged_in
         });
     } catch (err) {
-        
+
         res.status(500).json(err);
     }
 });
@@ -36,20 +36,20 @@ router.get('/', async (req, res) => {
 
 
 // TODO: /location/:id renders a specific loo + associated reviews
-router.get('/location/:id', async (req, res) => {
-    try {
-        const looData = await Loo.findByPk(req.params.id, {through: {model: Location}});
+// router.get('/location/:id', async (req, res) => {
+//     try {
+//         const looData = await Loo.findByPk(req.params.id, {through: {model: Location}});
 
-        const loo = looData.get({ plain: true });
+//         const loo = looData.get({ plain: true });
 
-        res.render('loo', {
-            ...loo,
-            logged_in: req.session.logged_in
-        });
-    } catch (err) {
-        res.status(500).json(err);
-    }
-});
+//         res.render('loo', {
+//             ...loo,
+//             logged_in: req.session.logged_in
+//         });
+//     } catch (err) {
+//         res.status(500).json(err);
+//     }
+// });
 
 // TODO: with Auth
 // code block from mini proj
@@ -76,14 +76,21 @@ router.get('/location/:id', async (req, res) => {
 
 //TODO: redirect  // If the user is already logged in, redirect the request to another route
 
-//router.get('/login', (req, res) => {
+router.get('/login', (req, res) => {
 
-//     if (req.session.logged_in) {
-//         res.redirect('/profile');
-//         return;
-//     }
+    if (req.session.logged_in) {
+        res.redirect('/profile');
+        return;
+    }
 
-//     res.render('login');
-// });
+    res.render('login');
+});
+
+router.get('/review', (req, res) => {
+    //add redirect if not logged in
+
+    res.render('review');
+});
+
 
 module.exports = router;

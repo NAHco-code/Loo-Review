@@ -17,7 +17,7 @@ const locations = [
         {lat: 39.9939083, lng: -83.0062601},
         {lat: 39.994207, lng: -83.0059488}
     ]
-    
+
     function initMap() {
         const myLatLng = locations[0];
         const map = new google.maps.Map(document.getElementById("map"), {
