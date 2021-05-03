@@ -10,10 +10,6 @@ const userRoutes = require('./userRoutes');
 //router.use('/loos', looRoutes);
 //router.use('/reviews', reviewRoutes);
 router.use('/users', userRoutes);
-<<<<<<< HEAD
-// router.use('/locations', locationRoutes);
-=======
 //router.use('/locations', locationRoutes);
->>>>>>> a287c0f5335444dc2c39a9922c3bc0e65d8690ee
 
 module.exports = router;
