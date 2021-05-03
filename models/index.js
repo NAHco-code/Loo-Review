@@ -7,23 +7,19 @@
 // * Password
 // * Username
 
-// #### LOCATION TABLE
+// #### LOO TABLE
 // * ID(PK)
 // * Facility name
 // * Address (string or object - TBD)
 // *    // if object, may need: street_number, street_name, city, state, zip
-
-// #### LOO TABLE
-// * ID(PK)
-// * Location ID // to get address + facility name (string or object - TBD)
-// * Rating
+// * Rating (avg rating - sequelize literal - update loo after each review - can do in front end - doesn't need to be in table)
 
 // #### REVIEW TABLE
 // * ID(PK)
-// * Location ID // to get facility name
-// * Loo ID // to get rating
+// * Loo ID // to get rating + facility name
 // * User ID // to get username
 // * Title
+// * Rating
 // * Review
 // * Date created
 
@@ -40,14 +36,19 @@ const Review = require('./Review');
 
 // location seems the starting point - that's how the user finds the loos, which hold the reviews
 
+
 // One-To-Many relationship // *created by using '.hasMany' + '.belongsTo' associations together
-Location.hasMany(Loo, { onDelete: 'CASCADE', foreignKey: 'location_id' }); // .hasMany association - fk is defined in target model
-Loo.belongsTo(Location, { foreignKey: 'location_id' }); // .belongsTo association - fk is defined in source model
+Loo.hasMany(Review, { onDelete: 'CASCADE', foreignKey: 'loo_id' });// .hasMany association - fk is defined in target model
+Review.belongsTo(Loo, { foreignKey: 'loo_id' });// .belongsTo association - fk is defined in source model
 
+User.hasMany(Review, { foreignKey: 'user_id' });
+Review.belongsTo(User, { foreignKey: 'user_id' });
 
-// One-To-Many relationship
-Loo.hasMany(Review, { onDelete: 'CASCADE', foreignKey: 'loo_id' });
-Review.belongsTo(Loo, { through: 'User', foreignKey: 'loo_id' });
+// many to many relationship between users and loos - render username on who added a loo
+User.belongsToMany(Loo, { foreignKey: 'user_id' });
+Loo.belongsToMany(User, { foreignKey: 'loo_id' });
+
+// relationship b/w user and loo if we want to save favorites //*after MVP is reached
 
 
 
