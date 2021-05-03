@@ -29,15 +29,15 @@ const locations = [
             new google.maps.Marker({
             position: place,
             map,
-            title: "Hello World!",
+            title: "NAME",
             });
         }
       };
 
 // Function populating locations, ...etc.
 
-// Event Listeners
+//Event Listeners
 document.addEventListener('DOMContentLoaded', function() {
   var elems = document.querySelectorAll('.sidenav');
-  var instances = M.Sidenav.init(elems, options);
+  var instances = M.Sidenav.init(elems);
 });

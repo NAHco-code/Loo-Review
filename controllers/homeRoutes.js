@@ -10,16 +10,17 @@ const withAuth = require('../utils/auth'); //fix password encryption & authentic
 // TODO: homepageRoute renders nearby loos (through location)
 router.get('/', async (req, res) => {
     // TODO: **Find nearby locations (mile radius?) || render saved/favorites
-    console.log(req.session)
+    
     try {
         // TODO: **What data are we using/are we able to use @here?**
         /* createFind? which method to use? */
-
-        const LooData = await Loo.findAll({ include: { model: Location } });
-
+        
+        const looData = await Loo.findAll({ include: { model: Location } });
+        
         const locationData = await Location.findAll/* createFind? which method to use? */({ include: { model: Loo } });
 
         // Serialize data so the template can read it
+        const loos = looData.map((loos)=> loos.get({plain: true}))
         const locations = locationData.map((location) => location.get({ plain: true }));
 
         // Pass serialized data and session flag to template
@@ -28,7 +29,7 @@ router.get('/', async (req, res) => {
             //logged_in: req.session.logged_in
         });
     } catch (err) {
-        console.log(err);
+        console.log(err)
         res.status(500).json(err);
     }
 });
@@ -61,14 +62,20 @@ router.get('/', async (req, res) => {
 
 //TODO: redirect  // If the user is already logged in, redirect the request to another route
 
-//router.get('/login', (req, res) => {
+router.get('/login', (req, res) => {
 
-//     if (req.session.logged_in) {
-//         res.redirect('/profile');
-//         return;
-//     }
+    // if (req.session.logged_in) {
+    //     res.redirect('/profile');
+    //     return;
+    // }
 
-//     res.render('login');
-// });
+    res.render('login');
+});
+
+router.get('/review', (req, res) => {
+    //add redirect if not logged in
+    
+    res.render('review');
+})
 
 module.exports = router;
