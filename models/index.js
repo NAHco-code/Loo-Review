@@ -12,6 +12,7 @@
 // * Facility name
 // * Address (string or object - TBD)
 // *    // if object, may need: street_number, street_name, city, state, zip
+// * Rating (avg rating - sequelize literal - update loo after each review - can do in front end - doesn't need to be in table)
 
 // #### REVIEW TABLE
 // * ID(PK)
@@ -43,11 +44,11 @@ Review.belongsTo(Loo, { foreignKey: 'loo_id' });// .belongsTo association - fk i
 User.hasMany(Review, { foreignKey: 'user_id' });
 Review.belongsTo(User, { foreignKey: 'user_id' });
 
-// One-to-Many relationship between users and loos - render username on who added a loo
-User.hasMany(Loo, { foreignKey: 'user_id' });
-Loo.belongsTo(User, { foreignKey: 'user_id' });
+// many to many relationship between users and loos - render username on who added a loo
+User.belongsToMany(Loo, { foreignKey: 'user_id' });
+Loo.belongsToMany(User, { foreignKey: 'loo_id' });
 
-// Many-to Many relationship b/w user and loo if we want to save favorites //*after MVP is reached
+// relationship b/w user and loo if we want to save favorites //*after MVP is reached
 
 
 
