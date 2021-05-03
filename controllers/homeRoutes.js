@@ -14,9 +14,9 @@ router.get('/', async (req, res) => {
     try {
         // TODO: **What data are we using/are we able to use @here?**
         /* createFind? which method to use? */
-        
+
         const LooData = await Loo.findAll({ include: { model: Location } });
-        
+
         const locationData = await Location.findAll/* createFind? which method to use? */({ include: { model: Loo } });
 
         // Serialize data so the template can read it
@@ -24,32 +24,17 @@ router.get('/', async (req, res) => {
 
         // Pass serialized data and session flag to template
         res.render('homepage', {
-            loos
+            LooData
             //logged_in: req.session.logged_in
         });
     } catch (err) {
-        
+        console.log(err);
         res.status(500).json(err);
     }
 });
-
-
 
 // TODO: /location/:id renders a specific loo + associated reviews
-router.get('/location/:id', async (req, res) => {
-    try {
-        const looData = await Loo.findByPk(req.params.id, {through: {model: Location}});
 
-        const loo = looData.get({ plain: true });
-
-        res.render('loo', {
-            ...loo,
-            logged_in: req.session.logged_in
-        });
-    } catch (err) {
-        res.status(500).json(err);
-    }
-});
 
 // TODO: with Auth
 // code block from mini proj
