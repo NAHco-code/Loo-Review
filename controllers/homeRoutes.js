@@ -25,7 +25,7 @@ router.get('/', async (req, res) => {
 
         // Pass serialized data and session flag to template
         res.render('homepage', {
-            loos
+            LooData
             //logged_in: req.session.logged_in
         });
     } catch (err) {
@@ -34,23 +34,8 @@ router.get('/', async (req, res) => {
     }
 });
 
-
-
 // TODO: /location/:id renders a specific loo + associated reviews
-router.get('/location/:id', async (req, res) => {
-    try {
-        const looData = await Loo.findByPk(req.params.id, {through: {model: Location}});
 
-        const loo = looData.get({ plain: true });
-
-        res.render('loo', {
-            ...loo,
-            logged_in: req.session.logged_in
-        });
-    } catch (err) {
-        res.status(500).json(err);
-    }
-});
 
 // TODO: with Auth
 // code block from mini proj
