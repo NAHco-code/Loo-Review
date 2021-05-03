@@ -45,33 +45,31 @@
     - uniqid 5.3.0 - installed, *use to manage assigning unique ids if needed, uninstall if not-->
 
 <!--
-#1 - API /* pick up issue: { Brandon } */
+x#1 - API /* pick up issue: { Brandon } */
 - how are we using the api?
 - what data are we able to pull from google maps and how will we be able to manipulate it?
     - * figure out how to remedy the git guardian secret thing // save for last
 
 SEED INFO
 - this will also be time consuming if we can't figure out how to access the location or restroom data from a third party api
-<<<<<<< HEAD
 #2 - seed files need to be converted to js files and completed with information enough to present multiple locations and reviews /* pick up issue: {  } */
 #3 - we need to figure out exactly what information we need from each model, why + how we're using it, where we need to send it, etc. /* pick up issue: { Kathryn } */
-=======
 #2 - seed files need to be converted to js files and completed with information enough to present multiple locations and reviews /* pick up issue: { Janee' } */
 #3 - we need to figure out exactly what information we need from each model, why + how we're using it, where we need to send it, etc. /* pick up issue: {  } */
->>>>>>> main
     - where is it all coming from and going to??
     - why??
 * categories removed from MVP due to accessive api calls and time consuming logic /
 
 BCRYPT NOT WORKING
 #4 - commented out in user.js to get server running - there is a bug /* pick up issue: {  } */
--
+    - boilerplate passport
 
 BACK END FINISHED AND WORKING BEFORE SAT CLASS IS THE NECESSARY GOAL
 *if not, we will only have one class period to complete: handlebars, styling, front end js AND the presentation - this is not enough time.
 
 *** AFTER BACK END, WE STILL HAVE :
 #5, #6 - many many handlebars files (+ connect them to wherever they need to be connected to) /* pick up issue: {  } */ /* pick up issue: {  } */
+        - home.hbs(login), loos.hbs(render loos within 20 mi radius *haversine* ), map.hbs (map view and form to leave review)
 - html and css /* pick up issue: { Janee's } */
 #7  - style main.handlebars
 #8  - style other views - code class and id names to be resusable for all these pages to minimize work + time
@@ -111,7 +109,9 @@ BACK END FINISHED AND WORKING BEFORE SAT CLASS IS THE NECESSARY GOAL
     jobs with lots of money - we shouldn't wait till Sat to start figuring this out - we don't have time ** -->
 
 
-
+<!-- PAGES
+    - login page could just be a button with a modal form on homepage view
+    - -->
 
 
 
@@ -159,24 +159,24 @@ BACK END FINISHED AND WORKING BEFORE SAT CLASS IS THE NECESSARY GOAL
     *If you're ahead of schedule, work ahead so we can kill this!
 
     - Tues: X
-        - project idea { Janee' }
-        - user story + wireframe { Kathryn }
-        - file structure, repo set up, install dependencies { Kathryn }
+        x- project idea { Janee' }
+        x- user story + wireframe { Kathryn }
+        x- file structure, repo set up, install dependencies { Kathryn }
     - Thurs: X
-        - server + models { Janee' }
-        - config/connection { Brandon }
-        - server running { Kathryn }
+        x- server + models { Janee' }
+        x- config/connection { Brandon }
+        x- server running { Kathryn }
     - Fri: X
-        - solidify needed data to be included in models + seeds {  }
-        - solidify API { Brandon }
+        x- solidify needed data to be included in models + seeds {  }
+        x- solidify API { Brandon }
         - controllers/routes (create new loo, save, + review funcitonality (http methods)){ Kathryn }
-        - models + seed structure {  }
+        x- models + seed structure {  }
         - create user logins, cookies, and properly encrypt information {  }
         - views, html, begin responsive styling {  }
         -
     - Sat: X
-        - configure search functionality (need restroom data {include location}) {  }
-        - configure main menu functionality {  }
+        O- configure search functionality (need restroom data {include location}) {  }
+        O- configure main menu functionality {  }
         - configure rating functionality {  }
     - Sun: 6
         - overflow day
