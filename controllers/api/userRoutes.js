@@ -5,10 +5,10 @@ const router = require('express').Router();
 const { User } = require('../../models')
 
 // home route - user posts searches, loos, and reviews on homepage (TODO: this codeblock is questionable - needs a second look)
-router.post('/', async (req, res) => {
+router.post('/create', async (req, res) => {
     try {
         const userData = await User.create(req.body);
-
+        // TODO: edge cases - if username exists
         req.session.save(() => {
             req.session.user_id = userData.id;
             req.session.logged_in = true;
@@ -19,6 +19,22 @@ router.post('/', async (req, res) => {
         res.status(400).json(err);
     }
 });
+
+// create user route
+// router.post('/create', async (req, res) => {
+//     try {
+//         const userData = await User.create({
+//             name: req.body.name,
+//             username: req.body.username,
+//             email: req.body.email,
+//             password: req.body.password
+//         })
+
+//     } catch (err) {
+//         res.status(400).json(err);
+//     }
+// });
+
 
 // login route - user posts userdata to login or create acct
 router.post('/login', async (req, res) => {
@@ -33,9 +49,9 @@ router.post('/login', async (req, res) => {
             return;
         }
 
-        const validatePassword = await userData.checkPassword(req.body.password);
+        const isValidPassword = await userData.checkPassword(req.body.password);
 
-        if (!validPassword) {
+        if (!isValidPassword) {
             res
                 .status(400)
                 .json({ message: 'Incorrect email or password, please create an account or try again.' });
