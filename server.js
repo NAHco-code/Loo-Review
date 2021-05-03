@@ -31,7 +31,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(routes); 
 
-
 // sync sequelize models to the database, then turn on the server
 sequelize.sync({ force: false })//force false prevents added data from being overwritten
     .then(() => {
