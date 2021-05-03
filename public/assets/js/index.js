@@ -11,6 +11,7 @@
         ** can or should we break this up into seperate script files? */
 
 // TODO: Declare golbal variables
+// haversine calculation - if you have coordinates it filters the locations
 const locations = [
         {lat: 39.9902047, lng: -83.0061},
         {lat: 39.9892452, lng: -83.0054187},
@@ -28,15 +29,19 @@ const locations = [
             new google.maps.Marker({
             position: place,
             map,
-            title: "Hello World!",
+            title: "NAME",
             });
         }
       };
 
 // Function populating locations, ...etc.
 
-// Event Listeners
+//Event Listeners
 document.addEventListener('DOMContentLoaded', function() {
   var elems = document.querySelectorAll('.sidenav');
+<<<<<<< HEAD
   var instances = M.Sidenav.init(elems, options);
+=======
+  var instances = M.Sidenav.init(elems);
+>>>>>>> a287c0f5335444dc2c39a9922c3bc0e65d8690ee
 });
