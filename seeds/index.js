@@ -1,25 +1,26 @@
 // IN PROGRESS // following code from class example
 
 const sequelize = require('../config/connection');
-const { User, Location, Loo } = require('../models');
+const { User, Loo, Review } = require('../models');
 
-const userData = require('./userData.json');
-const locationData = require('./locationData.json');
-const looData = require('./looData.json');
+const userData = require('./userData');
+// const locationData = require('./locationData.json');
+const looData = require('./looData');
+const reviewData = require('./reviewData');
 
 const seedDatabase = async () => {
     await sequelize.sync({ force: true });
 
-    const location = await Location.bulkCreate(locationData, {
+    const loo = await Loo.bulkCreate(looData, {
         individualHooks: true,
         returning: true,
 
     });
 
-    for (const loo of looData) {
-        await Loo.create({
-            ...loo,
-            location_id: location //math floor random * users.legth)].id,
+    for (const review of reviewData) {
+        await Review.create({
+            ...review,
+            loo_id: loo //math floor random * users.legth)].id,
         });
     }
 
