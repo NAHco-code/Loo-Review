@@ -10,22 +10,22 @@ const withAuth = require('../utils/auth'); //fix password encryption & authentic
 // TODO: homepageRoute renders nearby loos (through location)
 router.get('/', async (req, res) => {
     // TODO: **Find nearby locations (mile radius?) || render saved/favorites
-    
+
     try {
         // TODO: **What data are we using/are we able to use @here?**
         /* createFind? which method to use? */
-        
-        const looData = await Loo.findAll({ include: { model: Location } });
-        
-        const locationData = await Location.findAll/* createFind? which method to use? */({ include: { model: Loo } });
+
+        const looData = await Loo.findAll();
+
+        // const locationData = await Location.findAll/* createFind? which method to use? */({ include: { model: Loo } });
 
         // Serialize data so the template can read it
         const loos = looData.map((loos)=> loos.get({plain: true}))
-        const locations = locationData.map((location) => location.get({ plain: true }));
+        // const locations = locationData.map((location) => location.get({ plain: true }));
 
         // Pass serialized data and session flag to template
         res.render('homepage', {
-            LooData
+            loos
             //logged_in: req.session.logged_in
         });
     } catch (err) {
@@ -74,7 +74,7 @@ router.get('/login', (req, res) => {
 
 router.get('/review', (req, res) => {
     //add redirect if not logged in
-    
+
     res.render('review');
 })
 
