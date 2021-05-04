@@ -2,7 +2,7 @@
 
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
-// const bcrypt = require('bcrypt'); // commented out bc causing error when starting server
+const bcrypt = require('bcrypt'); // commented out bc causing error when starting server
 
 class User extends Model {
     checkPassword(loginPw) {
@@ -52,9 +52,7 @@ User.init(
                 updateUser.password = await bcrypt.hash(updateUser.password, 10);
                 return updateUser;
             }
-        }
-    },
-    {
+        },
         sequelize,
         timestamps: true,
         freezeTableName: true,
