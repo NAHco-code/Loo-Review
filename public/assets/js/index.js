@@ -39,9 +39,5 @@ const locations = [
 //Event Listeners
 document.addEventListener('DOMContentLoaded', function() {
   var elems = document.querySelectorAll('.sidenav');
-<<<<<<< HEAD
-  var instances = M.Sidenav.init(elems, options);
-=======
   var instances = M.Sidenav.init(elems);
->>>>>>> a287c0f5335444dc2c39a9922c3bc0e65d8690ee
 });
