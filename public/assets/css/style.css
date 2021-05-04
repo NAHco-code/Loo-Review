@@ -9,7 +9,12 @@
   padding: 0;
   text-decoration: none;
 }
-
+.nav-wrapper {
+  background-color:steelblue;
+}
+ h3, .validate {
+ color:white; 
+}
 li {
   font-family: inherit;
   color: white;
