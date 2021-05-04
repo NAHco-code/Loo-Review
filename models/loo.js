@@ -19,6 +19,18 @@ Loo.init(
         address: { // format still in question  - string or obeject
             type: DataTypes.STRING,
             allowNull: false
+        },
+        city: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+        state: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+        zip: {
+            type: DataTypes.INTEGER,
+            allowNull: false
         }
     },  // render average rating with query
         // individual ratings from each review in review table
