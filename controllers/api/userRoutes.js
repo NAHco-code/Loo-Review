@@ -1,5 +1,5 @@
 // ALMOST COMPLETE - NEEDS TESTED + CHECKED
-// *reference userRoutes in MVPunit student mini proj
+// *reference userRoutes in MVPunit student mini proj + ECommerce hw
 
 const router = require('express').Router();
 const { User } = require('../../models')

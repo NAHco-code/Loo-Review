@@ -1,7 +1,7 @@
 // COMPLETE + TESTED
-    // get('/')
-    //
-// *reference homeRoutes in MVPunit student mini proj
+    // get ('/')
+    // get ('/login')
+// *reference homeRoutes in MVPunit student mini proj + ECommerce hs
 
 const router = require('express').Router();
 const { Loo, User, Review, Location } = require('../models'); //reads index.js

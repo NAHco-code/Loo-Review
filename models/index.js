@@ -9,21 +9,19 @@
 
 // #### LOO TABLE
 // * ID(PK)
-// * Review ID
-// * User ID
 // * Facility name
-// * Address (string or object - TBD)
-// *    // if object, may need: street_number, street_name, city, state, zip
+// * Address
+// * City
+// * Zip
 
 // #### REVIEW TABLE
 // * ID(PK)
-// * Loo ID // to get rating + facility name
-// * User ID // to get username
 // * Title
 // * Rating
 // * Review
-// * Date created
-
+// * createdAt
+// * Loo ID // to get rating + facility name
+// * User ID // to get username
 
 // import models
 const Loo = require('./Loo');
@@ -43,7 +41,6 @@ Review.belongsTo(User, { foreignKey: 'user_id' });
 // Many-to Many relationship b/w user and loo if we want to save favorites //*after MVP is reached
 
 module.exports = {
-    // Location,
     Loo,
     User,
     Review
