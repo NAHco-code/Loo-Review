@@ -1,12 +1,11 @@
+ <div id="map"></div>
 
 {{#each loos as |loo|}}
-  <div class="col s4">
-    <h2 class="header">LOCATION NAME</h2>
-    <div class="card horizontal">
-      <div class="card-image">
-        <div id="map"></div>
-      </div>
-      <div class="card-stacked">
+  <div class="col s12 m6">
+    <h2 class="header">{{loo.facility_name}}</h2>
+    <p class="address">{{loo.address}}</p>
+    <div class="card">
+      
         <div class="card-content">
           <p>Average Rating: {{loo.rating}}</p>
         </div>
@@ -14,11 +13,11 @@
           <a href="#">See Reviews</a> <!-- view loo + see reviews -->
         </div>
       </div>
-    </div>
+    
   </div>
 {{/each}}
 
 
-<script async
+<scrip async
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDz091kyRUnde4u6imdbCufy_dba23YnPc&callback=initMap">
-</script>
+</scrip>
