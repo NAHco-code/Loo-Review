@@ -22,8 +22,6 @@
 <!-- House Keeping:
     - When you start up the server, what does the 'Executing (default): SELECT 1+1 AS result' message mean?
     - Note: userRoutes and homeRoutes are almost complete, but didn't have enough time to test
-        - view changes in Kathryn's branch or in the develop branch
-        - you can pull from these branches if all your changes are committed and pushed to your branch with git pull origin develop or git pull origin kathryn
         - to update the develop branch for others to use:
             - git checkout develop
             - git pull origin yourbranchname
@@ -45,62 +43,70 @@
     - uniqid 5.3.0 - installed, *use to manage assigning unique ids if needed, uninstall if not-->
 
 <!--
-x#1 - API /* pick up issue: { Brandon } */
+X - API /* pick up issue: { Brandon } */
 - how are we using the api?
 - what data are we able to pull from google maps and how will we be able to manipulate it?
     - * figure out how to remedy the git guardian secret thing // save for last
 
 SEED INFO
-- this will also be time consuming if we can't figure out how to access the location or restroom data from a third party api
-#2 - seed files need to be converted to js files and completed with information enough to present multiple locations and reviews /* pick up issue: {  } */
-#3 - we need to figure out exactly what information we need from each model, why + how we're using it, where we need to send it, etc. /* pick up issue: { Kathryn } */
-#2 - seed files need to be converted to js files and completed with information enough to present multiple locations and reviews /* pick up issue: { Janee' } */
-#3 - we need to figure out exactly what information we need from each model, why + how we're using it, where we need to send it, etc. /* pick up issue: {  } */
-    - where is it all coming from and going to??
-    - why??
+    *this will also be time consuming if we can't figure out how to access the location or restroom data from a third party api
+
+X - seed files need to be converted to js files and completed with information enough to present multiple locations and reviews /* pick up issue: { Janee' } */
+#1 - we need to figure out exactly what information we need from each model, why + how we're using it, where we need to send it, etc. /* pick up issue: { Kathryn } */
+        - where is it all coming from and going to??
+        - why??
+
 * categories removed from MVP due to accessive api calls and time consuming logic /
 
 BCRYPT NOT WORKING
-#4 - commented out in user.js to get server running - there is a bug /* pick up issue: {  } */
+    *password encryption is going to be difficult
+#2 - commented out in user.js to get server running - there is a bug /* pick up issue: { Kathryn } */
     - boilerplate passport
 
-BACK END FINISHED AND WORKING BEFORE SAT CLASS IS THE NECESSARY GOAL
+BACK END FINISHED AND WORKING BEFORE TUES CLASS IS THE NECESSARY GOAL
 *if not, we will only have one class period to complete: handlebars, styling, front end js AND the presentation - this is not enough time.
 
 *** AFTER BACK END, WE STILL HAVE :
-#5, #6 - many many handlebars files (+ connect them to wherever they need to be connected to) /* pick up issue: {  } */ /* pick up issue: {  } */
-        - home.hbs(login), loos.hbs(render loos within 20 mi radius *haversine* ), map.hbs (map view and form to leave review)
-- html and css /* pick up issue: { Janee'} */
-#7  - style main.handlebars
-#8  - style other views - code class and id names to be resusable for all these pages to minimize work + time
-- PLUS:
-#10 - forms /* pick up issue: {  } */
-#11 - event listeners /* pick up issue: {  } */
-#12 - big huge javascript functions to iterate through all of our api calls /* pick up issue: {  } */
+#3, #4 - many many handlebars files (+ connect them to wherever they need to be connected to)
+    /* pick up issue: { Brandon } */
+    /* pick up issue: { Kathryn } */
+        * home.hbs(login), loos.hbs(render loos within 20 mi radius *haversine* ), map.hbs (map view and form to leave review)
+#5, #6 CSS for handlebars files
+        /* pick up issue: { Janee'} */
+        /* pick up issue: {  } */
+    #7  - style main.handlebars
+    #8  - style other views ** code class and id names to be resusable for all these pages to minimize work + time
+
+*** PLUS:
+#9 - forms /* pick up issue: {  } */
+#10 - event listeners /* pick up issue: {  } */
+#11 - big huge javascript functions to iterate through all of our api calls /* pick up issue: {  } */
         * api calls can only be up to 75 per hour or something like that ** )
-- front end javascript (this will have to do a lot for us in terms of functionality, this will be a lot of work and take A LOT of time)
-#13 - search bar funcitonality /* pick up issue: {  } */
-#14 - main menu functionality /* pick up issue: {  } */
-#16 - rating functionality /* pick up issue: {  } */
-#17 - event listeners for each button /* pick up issue: {  } */
-[#18, #19, #20]
+
+*** front end javascript (this will have to do a lot for us in terms of functionality, this will be a lot of work and take A LOT of time)
+
+#12 - main menu functionality - modal with buttons/links /* pick up issue: {  } */
+    * search functionality not needed - haversine function to render 20 mi radius based on user's current location
+#13 - rating functionality *front end js /* pick up issue: {  } */
+#14 - event listeners for each button /* pick up issue: {  } */
+[#15, #16, #17]
     {- probably more stuff
     - assuming at least 3 problems that take forever to solve
     - slowing us down *fill in as they arise* }
-#21 - favorites and trip boards/saved // save for last
-#22 - deploy to Heroku /* pick up issue: { Kathryn } */
-#23 - figure out how to access it from Heroku /* pick up issue: { Kathryn } */
-#24 - present it /* pick up issue: {  } */
-#25 - readme /* pick up issue: {  } */
+#18 - favorites and trip boards/saved // save for last
+#19 - deploy to Heroku /* pick up issue: { Kathryn } */
+#20 - figure out how to access it from Heroku /* pick up issue: { Kathryn } */
+#21 - present it /* pick up issue: {  } */
+#22 - readme /* pick up issue: {  } */
 
 - presentation /* pick up issue: {  } */
-#26 - slides
-#27 - timing
-#28 - meet presentation requirements
+#23 - slides
+#24 - timing
+#25 - meet presentation requirements
 
 **This alone will be tough to reach by due date - not including **
-#29 - favorites + pinboards
-#30 - user customization optiions like themes, light/dark switch, etc /* pick up issue: {  } */ -->
+#26 - favorites + pinboards
+#27 - user customization optiions like themes, light/dark switch, etc /* pick up issue: {  } */ -->
 
 <!-- ** If we don't have the time to make this happen,
     we need to sit down and figure out what we can make happen
@@ -108,8 +114,19 @@ BACK END FINISHED AND WORKING BEFORE SAT CLASS IS THE NECESSARY GOAL
     jobs with lots of money - we shouldn't wait till Sat to start figuring this out - we don't have time ** -->
 
 
-<!-- PAGES
-    - login page could just be a button with a modal form on homepage view
+<!-- PAGES + ROUTES
+    - login redirects to homepage
+    - homepage renders loodata (haversine - 20 mi radius) + map (view buttons render selected loo + reviews)
+        - add new loo in menu - modal form
+    - selected loo + reviews hbs (loo: id + reviews for that loo)
+        - new review button - modal form
+
+    - api routes
+
+        - map.hbs: map view - location pinpoints clickable to render "selected loo modal" which will scroll down to reviews
+            * at top of reviews there will be a button to leave a review and modal form to leave review.
+            - on map.hbs there will be a button to add new loo w pop up modal form to add a new loo
+                - this will redirect to "selected loo modal" rendering the loo that was just added
     - -->
 
 
@@ -176,7 +193,7 @@ BACK END FINISHED AND WORKING BEFORE SAT CLASS IS THE NECESSARY GOAL
         O- configure search functionality (need restroom data {include location}) {  }
         O- configure main menu functionality {  }
         - configure rating functionality {  }
-    - Sun: 6
+    - Sun: X
         - overflow day
         -
     - Mon: 5
@@ -187,8 +204,8 @@ BACK END FINISHED AND WORKING BEFORE SAT CLASS IS THE NECESSARY GOAL
         - assess where we're at and make a game plan for achieving desired final product
     - Thurs: 3
         - final touches
-        - presentation plan { }
-        - presentation runthrough
+        - presentation plan { Sarehon }
+        - presentation runthrough { All }
     - Fri: 2
         - commit final changes
     - Sat: 1
