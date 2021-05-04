@@ -43,19 +43,17 @@ User.init(
             }
         }
     },
-    // {
-    //     hooks: {
-    //         beforeCreate: async (newUser) => {
-    //             newUser.password = await bcrypt.hash(user.password, 10)
-    //             return newUser;
-    //         },
-    //         beforeUpdate: async (updateUser) => {
-    //             updateUser.password = await bcrypt.hash(updateUser.password, 10);
-    //             return updateUser;
-    //         }
-    //     }
-    // },
     {
+        hooks: {
+            beforeCreate: async (newUser) => {
+                newUser.password = await bcrypt.hash(newUser.password, 10)
+                return newUser;
+            },
+            beforeUpdate: async (updateUser) => {
+                updateUser.password = await bcrypt.hash(updateUser.password, 10);
+                return updateUser;
+            }
+        },
         sequelize,
         timestamps: true,
         freezeTableName: true,
