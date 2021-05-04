@@ -15,7 +15,7 @@ router.get('/', async (req, res) => {
         // TODO: **What data are we using/are we able to use @here?**
         /* createFind? which method to use? */
 
-        const LooData = await Loo.findAll();
+        const looData = await Loo.findAll();
 
         // const locationData = await Location.findAll/* createFind? which method to use? */({ include: { model: Loo } });
 
@@ -24,7 +24,7 @@ router.get('/', async (req, res) => {
 
         // Pass serialized data and session flag to template
         res.render('homepage', {
-            LooData
+            looData
             //logged_in: req.session.logged_in
         });
     } catch (err) {
