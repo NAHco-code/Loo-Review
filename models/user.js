@@ -5,9 +5,9 @@ const sequelize = require('../config/connection');
 // const bcrypt = require('bcrypt'); // commented out bc causing error when starting server
 
 class User extends Model {
-    // // checkPassword(loginPw) {
-    // //     return bcrypt.compareSync(loginPw, this.password);
-    // }
+    checkPassword(loginPw) {
+        return bcrypt.compareSync(loginPw, this.password);
+    }
 }
 
 User.init(
@@ -42,18 +42,18 @@ User.init(
             }
         }
     },
-    // {
-    //     hooks: {
-    //         beforeCreate: async (newUser) => {
-    //             newUser.password = await bcrypt.hash(user.password, 10)
-    //             return newUser;
-    //         },
-    //         beforeUpdate: async (updateUser) => {
-    //             updateUser.password = await bcrypt.hash(updateUser.password, 10);
-    //             return updateUser;
-    //         }
-    //     }
-    // },
+    {
+        hooks: {
+            beforeCreate: async (newUser) => {
+                newUser.password = await bcrypt.hash(newUser.password, 10)
+                return newUser;
+            },
+            beforeUpdate: async (updateUser) => {
+                updateUser.password = await bcrypt.hash(updateUser.password, 10);
+                return updateUser;
+            }
+        }
+    },
     {
         sequelize,
         timestamps: true,
