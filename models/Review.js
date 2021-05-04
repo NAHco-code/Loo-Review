@@ -13,13 +13,22 @@ Review.init(
       primaryKey: true,
       autoIncrement: true
     },
-    // location_id: { // to get facility name
-    //   type: DataTypes.INTEGER,
-    //   references: {
-    //     model: 'loo',
-    //     key: 'id'
-    //   }
-    // },
+    title: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    rating: {
+      type: DataTypes.INTEGER,
+      allowNull: false
+    },
+    review: {
+      type: DataTypes.TEXT, //longer than a string
+      allowNull: false
+    },
+    date: {
+      type: DataTypes.DATE,
+      allowNull: false
+    },
     loo_id: { // to get rating
       type: DataTypes.INTEGER,
       references: {
@@ -33,22 +42,6 @@ Review.init(
         model: 'user',
         key: 'id'
       }
-    },
-    title: {
-      type: DataTypes.STRING,
-      allowNull: false
-    },
-    rating: {
-      type: DataTypes.INTEGER,
-      allowNull: false
-    },
-    review: {
-        type: DataTypes.STRING,
-        allowNull: false
-    },
-    date_created: {
-      type: DataTypes.DATE,
-      allowNull: false
     }
   },
   {
