@@ -35,14 +35,14 @@ const Review = require('./Review');
 // ex. A.hasOne(B); // 'A' is the source model // 'B' is the target model
 // https://sequelize.org/master/manual/assocs.html
 
-
+Loo.hasMany(Review, { foreignKey: 'loo_id' });
+Review.belongsTo(Loo, { foreignKey: 'loo_id' });
 
 User.hasMany(Review, { foreignKey: 'user_id' });
 Review.belongsTo(User, { foreignKey: 'user_id' });
 
 // One-to-Many relationship between users and loos - render username on who added a loo
-User.hasMany(Loo, { foreignKey: 'user_id' });
-Loo.belongsTo(User, { foreignKey: 'user_id' });
+
 
 // Many-to Many relationship b/w user and loo if we want to save favorites //*after MVP is reached
 
