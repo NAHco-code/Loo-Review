@@ -1,37 +1,30 @@
 /* TODO: Add code to style over framework */
 * {
-    box-sizing: border-box;
-    padding: 0;
-    cursor: pointer;
-    color: #1b89bc;
-    text-decoration: none;
-    font-size: 100%;
-  }
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family:'Nunito', sans-serif;
+}
 
-  .no-button:hover {
-    color: #065b83;
-    text-decoration: underline;
-  }
+li {
+  font-family: inherit;
+  color: white;
+  position: static;
+  text-align: right;
+  top: 0;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  font-size: 25px;
+}
 
-  .dollar-amount {
-    color: #056605;
-    font-weight: bold;
-    margin-left: -5px;
-  }
+li a:hover{
+  background-color: #595959;
+}
 
-  #map {
-    position: absolute;
-    top: 300px;
-    left: 200px;
-    height: 300px;
-    width: 300px;
-  }
-
-#navbar-title{
-    padding: 20px;
-    font-family: inherit;
-    background-color: lightsteelblue;
-    font-size: 25px;
-    color: black;
-    text-align: right;
+.header{
+  padding: 20px;
+  font-family:inherit;
+  font-size: 25px;
+  color: white;
+  text-align:center;
 }
