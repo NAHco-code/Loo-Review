@@ -1,11 +1,48 @@
 /* TODO: Add code to style over framework */
-* {
+/* If you correct or add to someone's code, leave comment explaining why so it doesn't get changed back */
+
+
+* { /*brandon + janee */
   box-sizing: border-box;
-  padding: 0;
+  color: #1b89bc;
+  cursor: pointer;
+  font-family: 'Nunito', sans-serif;
+  font-size: 100%;
   margin: 0;
-  font-family:'Nunito', sans-serif;
+  padding: 0;
+  text-decoration: none;
 }
 
+/* Brandon's css */
+.no-button:hover {
+    color: #065b83;
+    text-decoration: underline;
+  }
+
+  .dollar-amount {
+    color: #056605;
+    font-weight: bold;
+    margin-left: -5px;
+  }
+
+  #map {
+    position: absolute;
+    top: 300px;
+    left: 200px;
+    height: 300px;
+    width: 300px;
+  }
+
+#navbar-title{
+    padding: 20px;
+    font-family: inherit;
+    background-color: lightsteelblue;
+    font-size: 25px;
+    color: black;
+    text-align: right;
+}
+
+/* Janee's css */
 li {
   font-family: inherit;
   color: white;
