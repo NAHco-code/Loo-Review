@@ -40,8 +40,13 @@ const Review = require('./Review');
 User.hasMany(Review, { foreignKey: 'user_id' });
 Review.belongsTo(User, { foreignKey: 'user_id' });
 
-Loo.hasMany(User, { include: Review, foreignKey: 'loo_id' });
-User.belongsTo(Loo, { include: Review, foreignKey: 'loo_id' });
+// One-to-Many relationship between users and loos - render username on who added a loo
+User.hasMany(Loo, { foreignKey: 'user_id' });
+Loo.belongsTo(User, { foreignKey: 'user_id' });
+
+// Many-to Many relationship b/w user and loo if we want to save favorites //*after MVP is reached
+
+
 
 
 module.exports = {
