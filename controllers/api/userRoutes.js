@@ -1,30 +1,29 @@
-// ALMOST COMPLETE - NEEDS TESTED + CHECKED
-// *reference userRoutes in MVPunit student mini proj
+// NEEDS TESTED + CHECKED
 
 const router = require('express').Router();
 const { User } = require('../../models')
 
-// home route - user posts searches, loos, and reviews on homepage (TODO: this codeblock is questionable - needs a second look)
-router.post('/create', async (req, res) => {
+// create user route
+router.post('/', async (req, res) => {
     try {
-        const userData = await User.create(req.body);
+        const createUser = await User.create(req.body);
         // TODO: edge cases - if username exists
-        // req.session.save(() => {
-        //     req.session.user_id = userData.id;
-        //     req.session.logged_in = true;
+        req.session.save(() => {
+            req.session.user_id = createUser.id;
+            req.session.logged_in = true;
 
-        //     res.status(200).json(userData);
-        // });
-        res.status(200).json(userData);
+            res.status(200).json(createUser);
+        });
+        res.status(200).json(createUser);
     } catch (err) {
         res.status(400).json(err);
     }
 });
 
-// create user route
+// another format for create user route // TODO: assess
 // router.post('/create', async (req, res) => {
 //     try {
-//         const userData = await User.create({
+//         const createUser = await User.create({
 //             name: req.body.name,
 //             username: req.body.username,
 //             email: req.body.email,
@@ -41,16 +40,16 @@ router.post('/create', async (req, res) => {
 router.post('/login', async (req, res) => {
     //
     try {
-        const userData = await User.findOne({ where: { email: req.body.email } });
+        const userLogIn = await User.findOne({ where: { email: req.body.email } });
 
-        if (!userData) {
+        if (!userLogIn) {
             res
                 .status(400)
                 .json({ message: 'Incorrect email or password, please create an account or try again.' });
             return;
         }
 
-        const isValidPassword = await userData.checkPassword(req.body.password);
+        const isValidPassword = await userLogIn.checkPassword(req.body.password);
 
         if (!isValidPassword) {
             res
@@ -60,10 +59,10 @@ router.post('/login', async (req, res) => {
         }
 
         req.session.save(() => {
-            req.session.user_id = userData.id;
+            req.session.user_id = userLogIn.id;
             req.session.logged_in = true;
 
-            res.json({ user: userData, message: 'Logged In!' });
+            res.json({ user: userLogIn, message: 'Logged In!' });
         });
 
     } catch (err) {

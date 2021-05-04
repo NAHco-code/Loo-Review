@@ -1,11 +1,27 @@
 /* TODO: Add code to style over framework */
-* {
+/* If you correct or add to someone's code, leave comment explaining why so it doesn't get changed back */
+
+* { /*brandon + janee */
   box-sizing: border-box;
-  padding: 0;
+  font-family: 'Nunito', sans-serif;
+  font-size: 100%;
   margin: 0;
-  font-family:'Nunito', sans-serif;
+  padding: 0;
+  text-decoration: none;
 }
 
+li {
+  font-family: inherit;
+  color: white;
+  position: static;
+  text-align: right;
+  top: 0;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  font-size: 25px;
+}
+
+/* Janee's css */
 li {
   font-family: inherit;
   color: white;
