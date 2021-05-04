@@ -20,8 +20,8 @@ Loo.init(
             type: DataTypes.STRING,
             allowNull: false
         }
-    }, // render average rating in front end js
-    // individual ratings from each review in review table
+    },  // render average rating with query
+        // individual ratings from each review in review table
     {
         sequelize,
         timestamps: true,
