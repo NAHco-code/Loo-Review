@@ -1,4 +1,4 @@
-const { Model, DataTypes } = require('sequelize');
+const { Model, DataTypes, Sequelize } = require('sequelize');
 const sequelize = require('../config/connection');
 
 // create Review model
@@ -22,10 +22,10 @@ Review.init(
       allowNull: false
     },
     review: {
-      type: DataTypes.TEXT, //longer than a string
+      type: DataTypes.TEXT('long'), //longer than a string
       allowNull: false
     },
-    date: {
+    createdAt: {
       type: DataTypes.DATE,
       allowNull: false
     },

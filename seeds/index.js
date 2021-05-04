@@ -8,14 +8,14 @@ const seedReviews = require('./reviewData');
 const sequelize = require('../config/connection');
 
 const seedDatabase = async () => {
-    await sequelize.sync({ force: true });
+    await sequelize.sync({ force: false });
     console.log('\n----- DATABASE SYNCED -----\n');
-
-    await seedUsers();
-    console.log('\n----- USERS SYNCED -----\n');
 
     await seedLoos();
     console.log('\n----- LOOS SYNCED -----\n');
+
+    await seedUsers();
+    console.log('\n----- USERS SYNCED -----\n');
 
     await seedReviews();
     console.log('\n----- REVIEWS SYNCED -----\n');
