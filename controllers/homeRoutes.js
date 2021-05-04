@@ -18,13 +18,7 @@ router.get('/', async (req, res) => {
         // TODO: **What data are we using/are we able to use @here?**
         /* createFind? which method to use? */
 
-        const looData = await Loo.findAll({
-            include: [{
-                model: User,
-                // attributes: ['name'],
-            },
-        ],
-    });
+        const looData = await Loo.findAll();
 
         //haversine function?
 
@@ -43,20 +37,23 @@ router.get('/', async (req, res) => {
 });
 
 // TODO: /loo/:id renders a specific loo + associated reviews
-router.get('/loo/:id', async (req, res) => {
+router.get('/loo/:id', async (req, res) => { //WORKING
     try {
         const looData = await Loo.findByPk(req.params.id, {
             include: [
                 {
                     model: User,
-                    attributes: ['name'],
+                    attributes: ['name']
                 },
-            ],
+                {
+                    model: Review
+                }
+            ]
         });
 
         const loo = looData.get({ plain: true });
 
-        res.render('loo', {
+        res.render('selected_loo+reviews', {
             ...loo,
             logged_in: req.session.logged_in
         });
@@ -93,10 +90,10 @@ router.get('/loo/:id', async (req, res) => {
 
 
 
-router.get('/login', (req, res) => {
+router.get('/login', (req, res) => { //WORKING
   // If the user is already logged in, redirect the request to another route
     if (req.session.logged_in) {
-        res.redirect('/profile');
+        res.redirect('/');
         return;
     }
 
