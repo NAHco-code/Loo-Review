@@ -8,8 +8,8 @@ const looData = [
         city: "Columbus",
         state: "OH",
         zip: 43212,
-        lat: -34.397,
-        lon: 150.644
+        lat: 39.9925574,
+        lon: -83.0252776
     },
     {
         id: 02,
@@ -18,8 +18,8 @@ const looData = [
         city: "Columbus",
         state: "OH",
         zip: 43212,
-        lat: -34,
-        lon: 150
+        lat: 39.9880513,
+        lon: -83.035245
     },
     {
         id: 03,
@@ -28,8 +28,8 @@ const looData = [
         city: "Columbus",
         state: "OH",
         zip: 43212,
-        lat: -34,
-        lon: 150
+        lat: 39.9859907,
+        lon: -83.0281561
     },
     {
         id: 04,
@@ -38,8 +38,8 @@ const looData = [
         city: "Columbus",
         state: "OH",
         zip: 43223,
-        lat: -34,
-        lon: 150
+        lat: 39.9393406,
+        lon: -83.0047873
     },
     {
         id: 05,
@@ -48,18 +48,18 @@ const looData = [
         city: "Columbus",
         state: "OH",
         zip: 43215,
-        lat: -34,
-        lon: 150
+        lat: 39.9494102,
+        lon: -82.9984929
     },
     {
         id: 06,
-        facility_name: "BP",
+        facility_name: "BP Duchess Shoppe",
         address: "1091 S High St",
         city: "Columbus",
         state: "OH",
         zip: 43206,
-        lat: -34,
-        lon: 150
+        lat: 39.9397768,
+        lon: -82.9970108
     },
     {
         id: 07,
@@ -68,8 +68,8 @@ const looData = [
         city: "Columbus",
         state: "OH",
         zip: 43206,
-        lat: -34,
-        lon: 150
+        lat: 39.9381674,
+        lon: -82.9965461
     },
     {
         id: 08,
@@ -78,8 +78,8 @@ const looData = [
         city: "Columbus",
         state: "OH",
         zip: 43212,
-        lat: -34,
-        lon: 150
+        lat: 39.9847699,
+        lon: -83.0267298
     },
     {
         id: 09,
@@ -88,8 +88,8 @@ const looData = [
         city: "Columbus",
         state: "OH",
         zip: 43212,
-        lat: -34,
-        lon: 150
+        lat: 39.9886586,
+        lon: -83.040188
     },
     {
         id: 10,
@@ -98,8 +98,8 @@ const looData = [
         city: "Columbus",
         state: "OH",
         zip: 43212,
-        lat: -34,
-        lon: 150
+        lat: 39.9863605,
+        lon: -83.0447611
     },
     // {
     //     id: 11,
@@ -228,8 +228,8 @@ const looData = [
         city: "Bowling Green",
         state: "KY",
         zip: 42101,
-        lat: -34,
-        lon: 150
+        lat: 36.9933131,
+        lon: -86.4409516
     },
     {
         id: 27,
@@ -238,8 +238,8 @@ const looData = [
         city: "Bowling Green",
         state: "KY",
         zip: 42101,
-        lat: -34,
-        lon: 150
+        lat: 36.9937149,
+        lon: -86.4420945
     },
     {
         id: 28,
@@ -248,8 +248,8 @@ const looData = [
         city: "Bowling Green",
         state: "KY",
         zip: 42101,
-        lat: -34,
-        lon: 150
+        lat: 36.9926623,
+        lon: -86.4406484
     },
     {
         id: 29,
@@ -258,8 +258,8 @@ const looData = [
         city: "Bowling Green",
         state: "KY",
         zip: 42101,
-        lat: -34,
-        lon: 150
+        lat: 36.9936055,
+        lon: -86.4412425
     },
     {
         id: 30,
@@ -268,8 +268,8 @@ const looData = [
         city: "Bowling Green",
         state: "KY",
         zip: 42101,
-        lat: -34,
-        lon: 150
+        lat: 36.9926669,
+        lon: -86.4406413
     },
     {
         id: 31,
@@ -278,18 +278,18 @@ const looData = [
         city: "Bowling Green",
         state: "KY",
         zip: 42101,
-        lat: -34,
-        lon: 150
+        lat: 36.9802178,
+        lon: -86.4640394
     },
     {
         id: 32,
-        facility_name: "E.A. Diddle Arena",
+        facility_name: "EA Diddle Arena",
         address: "1605 Avenue of Champions",
         city: "Bowling Green",
         state: "KY",
         zip: 42101,
-        lat: -34,
-        lon: 150
+        lat: 36.98630026844749,
+        lon: -86.45788299593002
     },
     // {
     //     id: 33,
