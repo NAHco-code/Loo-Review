@@ -7,6 +7,7 @@ const bcrypt = require('bcrypt'); // commented out bc causing error when startin
 class User extends Model {
     checkPassword(loginPw) {
         return bcrypt.compareSync(loginPw, this.password);
+
     }
 }
 
