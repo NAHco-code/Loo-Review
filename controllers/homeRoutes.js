@@ -9,7 +9,7 @@
 // *reference homeRoutes in MVPunit student mini proj + ECommerce hs
 
 const router = require('express').Router();
-const { Loo, User, Review } = require('../models'); //reads index.js
+const { Loo, User, Review, UsersLoos } = require('../models'); //reads index.js
 const withAuth = require('../utils/auth'); //fix password encryption & authentication
 
 // TODO: homepageRoute renders nearby loos (through location)
@@ -18,7 +18,7 @@ router.get('/', async (req, res) => { // WORKING
     try {
         // TODO: **What data are we using/are we able to use @here?**
         /* createFind? which method to use? */
-        const looData = await Loo.findAll();
+        const looData = await Loo.findAll({ include: [Review, User] });
 
         //TODO: haversine function
 
@@ -30,6 +30,8 @@ router.get('/', async (req, res) => { // WORKING
             loos,
             logged_in: req.session.logged_in
         });
+        // res.status(200).json(looData); //for testing
+
     } catch (err) {
         console.log(err)
         res.status(500).json(err);
@@ -39,14 +41,16 @@ router.get('/', async (req, res) => { // WORKING
 // TODO: /loo/:id renders a specific loo + associated reviews
 router.get('/loo/:id', async (req, res) => { //WORKING
     try {
-        const looData = await Loo.findByPk(req.params.id, {include: Review});
+        const looData = await Loo.findByPk(req.params.id, { include: [Review, User] });
 
         const loo = looData.get({ plain: true });
 
         res.render('selected_loo+reviews', {
-            ...loo,
+            loo,
             logged_in: req.session.logged_in
         });
+        //res.status(200).json(looData); //for testing
+
     } catch (err) {
         res.status(500).json(err);
         console.log(err);
