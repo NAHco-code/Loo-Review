@@ -12,8 +12,30 @@ if (!permission) {
 let map, infoWindow;
 
 function initMap() {
+
+  // const initMap = async () => {
+  //   const myLatLon = await window.navigator.geolocation.getCurrentPosition(((locale) => {
+  //     return { lat: locale.coords.latitude, lon: locale.coords.longitude };
+  //   }, () => { alert('This application will not function properly without your location') }));
+  //   const map = new google.maps.Map(document.getElementById("map"), {
+  //     zoom: 16,
+  //     center: myLatLon,
+  //   });
+
+    // make get request // /api/loos?lat=lat&lon=lon *URL *lat1 lon1
+    // set response data to locations
+
+  //   for (place of locations) {
+  //     new google.maps.Marker({
+  //       position: place,
+  //       map,
+  //       title: "NAME",
+  //     });
+  //   }
+  // };
+
   map = new google.maps.Map(document.getElementById("map"), {
-    center: { lat: -34.397, lng: 150.644 },
+    center: { lat: -34.397, lon: 150.644 },
     zoom: 6,
   });
   infoWindow = new google.maps.InfoWindow();
@@ -28,7 +50,7 @@ function initMap() {
         (position) => {
           const pos = {
             lat: position.coords.latitude,
-            lng: position.coords.longitude,
+            lon: position.coords.longitude,
           };
           infoWindow.setPosition(pos);
           infoWindow.setContent("Location found.");

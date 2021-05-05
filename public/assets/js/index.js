@@ -14,28 +14,26 @@
 // haversine calculation - if you have coordinates it filters the locations
 
 const locations = [
-  { lat: 39.9902047, lng: -83.0061 },
-  { lat: 39.9892452, lng: -83.0054187 },
-  { lat: 39.9939083, lng: -83.0062601 },
-  { lat: 39.994207, lng: -83.0059488 }
-]
+        {lat: 39.9902047, lon: -83.0061},
+        {lat: 39.9892452, lon: -83.0054187},
+        {lat: 39.9939083, lon: -83.0062601},
+        {lat: 39.994207, lon: -83.0059488}
+    ]
 
-const initMap = async () => {
-  const myLatLng = await window.navigator.geolocation.getCurrentPosition(((locale) => {
-    return { lat: locale.coords.latitude, lng: locale.coords.longitude };
-  }, () => { alert('This application will not function properly without your location') }));
-  const map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 16,
-    center: myLatLng,
-  });
-  for (place of locations) {
-    new google.maps.Marker({
-      position: place,
-      map,
-      title: "NAME",
-    });
-  }
-};
+    function initMap() {
+        const myLatLon = locations[0];
+        const map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 16,
+          center: myLatLon,
+        });
+        for (place of locations){
+            new google.maps.Marker({
+            position: place,
+            map,
+            title: "NAME",
+            });
+        }
+      };
 
 // Function populating locations, ...etc.
 

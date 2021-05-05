@@ -2,7 +2,7 @@ const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
 class Loo extends Model { }
-
+//
 // create fields/columns for Loo table
 Loo.init(
     {
@@ -30,6 +30,14 @@ Loo.init(
         },
         zip: {
             type: DataTypes.INTEGER,
+            allowNull: false
+        },
+        lat: {
+            type: DataTypes.DECIMAL,
+            allowNull: false
+        },
+        lon: {
+            type: DataTypes.DECIMAL,
             allowNull: false
         }
     },  // render average rating with query

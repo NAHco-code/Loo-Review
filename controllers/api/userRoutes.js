@@ -1,10 +1,9 @@
-// NEEDS TESTED + CHECKED
 
 const router = require('express').Router();
 const { User } = require('../../models')
 
 // create user route
-router.post('/', async (req, res) => {
+router.post('/', async (req, res) => { //WORKING
     try {
         const createUser = await User.create(req.body);
         // TODO: edge cases - if username exists
@@ -14,27 +13,10 @@ router.post('/', async (req, res) => {
 
             res.status(200).json(createUser);
         });
-        res.status(200).json(createUser);
     } catch (err) {
         res.status(400).json(err);
     }
 });
-
-// another format for create user route // TODO: assess
-// router.post('/create', async (req, res) => {
-//     try {
-//         const createUser = await User.create({
-//             name: req.body.name,
-//             username: req.body.username,
-//             email: req.body.email,
-//             password: req.body.password
-//         })
-
-//     } catch (err) {
-//         res.status(400).json(err);
-//     }
-// });
-
 
 // login route - user posts userdata to login or create acct
 router.post('/login', async (req, res) => {
@@ -49,7 +31,7 @@ router.post('/login', async (req, res) => {
             return;
         }
 
-        // const isValidPassword = await userLogIn.checkPassword(req.body.password);
+        // const isValidPassword = await userData.checkPassword(req.body.password);
 
         // if (!isValidPassword) {
         //     res
@@ -67,11 +49,12 @@ router.post('/login', async (req, res) => {
 
     } catch (err) {
         res.status(400).json(err);
+        //console.log(err.message)
     }
 });
 
-// logout route -
-router.post('/logout', (req, res) => {
+// logout route
+router.post('/logout', (req, res) => { //WORKING //TODO: redirect to login
     if (req.session.logged_in) {
         req.session.destroy(() => {
             res.status(204).end();
@@ -79,6 +62,7 @@ router.post('/logout', (req, res) => {
     } else {
         res.status(404).end();
     }
+
 });
 
 module.exports = router;
