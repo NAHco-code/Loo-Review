@@ -18,22 +18,6 @@ router.post('/', async (req, res) => { //WORKING
     }
 });
 
-// another format for create user route // TODO: assess
-// router.post('/create', async (req, res) => {
-//     try {
-//         const createUser = await User.create({
-//             name: req.body.name,
-//             username: req.body.username,
-//             email: req.body.email,
-//             password: req.body.password
-//         })
-
-//     } catch (err) {
-//         res.status(400).json(err);
-//     }
-// });
-
-
 // login route - user posts userdata to login or create acct
 router.post('/login', async (req, res) => {
     //
@@ -77,6 +61,7 @@ router.post('/logout', (req, res) => { //WORKING //TODO: redirect to login
     } else {
         res.status(404).end();
     }
+
 });
 
 module.exports = router;
