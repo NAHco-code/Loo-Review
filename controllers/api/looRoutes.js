@@ -3,10 +3,58 @@ const router = require('express').Router();
 // const { contains } = require('sequelize/types/lib/operators');
 const { Loo, Review, User } = require('../../models');
 const withAuth = require('../../utils/auth');
-
+const haversine= require('s-haversine');
+console.log(haversine);
 
 // The `/api/loos` endpoint
 // get loo data, include reviews + user [attribute: name, createdAt]
+router.get('/', async (req, res) => {
+    // req.query.lat
+    const testlooLoc = [{
+        id: 01,
+        facility_name: "Starbucks",
+        address: "1570 Olentangy River Rd",
+        city: "Columbus",
+        state: "OH",
+        zip: 43212,
+        lat: -34.397,
+        lon: 150.644
+    },
+    {
+        id: 02,
+        facility_name: "Starbucks",
+        address: "1085 W 5th Ave",
+        city: "Columbus",
+        state: "OH",
+        zip: 43212,
+        lat: -36.397,
+        lon: 151.644
+    },]
+
+    try {
+        const looData = await Loo.findAll({ include: [Review] });
+
+        const loos = looData.map((loos) => loos.get({ plain: true }));
+
+        const filteredLoos = testlooLoc.filter((loo) => {
+            //filter - in the return you give a condition - to return true or false
+            console.log(req.query);
+            console.log( )
+            return haversine.default.distance([Number(req.query.lat), Number(req.query.lon)], [loo.lat, loo.lon]) < 1609.34 * 10;
+        })
+        console.log(filteredLoos);
+    } catch (err) {
+        console.log(err);
+    }
+})
+
+// /api/loos?lat=33.333&lon=-123 *URL *lat1 lng1
+// when user adds loo - must take address and feed it into geolocation and get lat + long
+// will have to update the map with the rendered loo markers
+
+
+
+
 
 router.post('/', withAuth, async (req, res) => { //WORKING
     try {
