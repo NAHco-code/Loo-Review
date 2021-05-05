@@ -10,33 +10,33 @@ console.log(haversine);
 // get loo data, include reviews + user [attribute: name, createdAt]
 router.get('/', async (req, res) => {
     // req.query.lat
-    const testlooLoc = [{
-        id: 01,
-        facility_name: "Starbucks",
-        address: "1570 Olentangy River Rd",
-        city: "Columbus",
-        state: "OH",
-        zip: 43212,
-        lat: -34.397,
-        lon: 150.644
-    },
-    {
-        id: 02,
-        facility_name: "Starbucks",
-        address: "1085 W 5th Ave",
-        city: "Columbus",
-        state: "OH",
-        zip: 43212,
-        lat: -36.397,
-        lon: 151.644
-    },]
+    // const testlooLoc = [{
+    //     id: 01,
+    //     facility_name: "Starbucks",
+    //     address: "1570 Olentangy River Rd",
+    //     city: "Columbus",
+    //     state: "OH",
+    //     zip: 43212,
+    //     lat: -34.397,
+    //     lon: 150.644
+    // },
+    // {
+    //     id: 02,
+    //     facility_name: "Starbucks",
+    //     address: "1085 W 5th Ave",
+    //     city: "Columbus",
+    //     state: "OH",
+    //     zip: 43212,
+    //     lat: -36.397,
+    //     lon: 151.644
+    // },]
 
     try {
         const looData = await Loo.findAll({ include: [Review] });
 
         const loos = looData.map((loos) => loos.get({ plain: true }));
 
-        const filteredLoos = testlooLoc.filter((loo) => {
+        const filteredLoos = loos.filter((loo) => {
             //filter - in the return you give a condition - to return true or false
             console.log(req.query);
             console.log( )
