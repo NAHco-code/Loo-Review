@@ -9,22 +9,22 @@
   padding: 0;
   text-decoration: none;
 }
-.nav-wrapper {
-  background-color:steelblue;
-}
- h3, .validate {
- color:white; 
-}
-li {
-  font-family: inherit;
-  color: white;
-  position: static;
-  text-align: right;
-  top: 0;
-  padding-top: 40px;
-  padding-bottom: 40px;
+nav ul a {
   font-size: 25px;
 }
+.nav-wrapper {
+  background-color:teal;
+  font-size: 25px;
+}
+ h3, .validate,{
+ color:white; 
+}
+.address {
+  font-size: 25px;
+  color:white;
+  text-align:center;
+}
+
 
 /* Janee's css */
 li {
@@ -37,7 +37,9 @@ li {
   padding-bottom: 40px;
   font-size: 25px;
 }
-
+.right {
+  font-size: 100px;
+}
 li a:hover{
   background-color: #595959;
 }
