@@ -17,7 +17,11 @@ router.get('/', async (req, res) => {
     try {
         // TODO: **What data are we using/are we able to use @here?**
         /* createFind? which method to use? */
-
+        // const userLocale = await window.navigator.geolocation.getCurrentPosition((pass, fail)=> {
+        //     if (pass) {
+        //         return 
+        //     }
+        // })
         const looData = await Loo.findAll();
 
         //haversine function?

@@ -2,7 +2,7 @@
 require('dotenv').config();
 const mapKey = process.env.MAP_KEY;
 const geoKey = process.env.GEO_KEY;
-
+window.navigator.geolocation.getCurrentPosition(console.log, console.log)
 //confirm permission
 const permission = confirm('Loo Review would like to access your location');
 if (!permission) {

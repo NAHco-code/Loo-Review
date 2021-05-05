@@ -22,7 +22,11 @@
         <ul class="right hide-on-med-and-down">
           <li><a href="#">Add a Loo</a></li>
           <li><a href="/review">Review a Loo</a></li>
+          {{#if logged_in}}
+          <li><a href="/logout">Logout</a></li>
+          {{else}}
           <li><a href="/login">Login</a></li>
+          {{/if}}
         </ul>
       </div>
     </nav>
@@ -30,7 +34,11 @@
     <ul class="sidenav" id="mobile-demo">
       <li><a href="#">Add a Loo</a></li>
       <li><a href="/review">Review a Loo</a></li>
-      <li><a href="/login">Login</a></li>
+      {{#if logged_in}}
+          <li><a href="/logout">Logout</a></li>
+          {{else}}
+          <li><a href="/login">Login</a></li>
+          {{/if}}
     </ul>
   </header>
   <main>
