@@ -18,19 +18,20 @@ router.get('/', async (req, res) => { // WORKING
     try {
         // TODO: **What data are we using/are we able to use @here?**
         /* createFind? which method to use? */
-        const looData = await Loo.findAll({ include: [Review, User] });
+        const looData = await Loo.findAll({ include: [ Review ] });
 
         //TODO: haversine function
 
         // Serialize data so the template can read it
         const loos = looData.map((loos) => loos.get({ plain: true }));
 
+
         // Pass serialized data and session flag to template
-        res.render('homepage', {
-            loos,
-            logged_in: req.session.logged_in
-        });
-        // res.status(200).json(looData); //for testing
+        // res.render('homepage', {
+        //     //render map //make data call to render loos and populate map
+        //     logged_in: req.session.logged_in
+        // });
+        res.status(200).json(looData); //for testing
 
     } catch (err) {
         console.log(err)
@@ -41,15 +42,15 @@ router.get('/', async (req, res) => { // WORKING
 // TODO: /loo/:id renders a specific loo + associated reviews
 router.get('/loo/:id', async (req, res) => { //WORKING
     try {
-        const looData = await Loo.findByPk(req.params.id, { include: [Review, User] });
+        const looData = await Loo.findByPk(req.params.id, { include: [ Review ] });
 
         const loo = looData.get({ plain: true });
 
-        res.render('selected_loo+reviews', {
-            loo,
-            logged_in: req.session.logged_in
-        });
-        //res.status(200).json(looData); //for testing
+        // res.render('selected_loo+reviews', {
+        //     loo,
+        //     logged_in: req.session.logged_in
+        // });
+        res.status(200).json(looData); //for testing
 
     } catch (err) {
         res.status(500).json(err);

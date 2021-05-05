@@ -7,7 +7,9 @@ const looData = [
         address: "1570 Olentangy River Rd",
         city: "Columbus",
         state: "OH",
-        zip: 43212
+        zip: 43212,
+        lat: -34.397,
+        lon: 150.644
     },
     {
         id: 02,
@@ -15,7 +17,9 @@ const looData = [
         address: "1085 W 5th Ave",
         city: "Columbus",
         state: "OH",
-        zip: 43212
+        zip: 43212,
+        lat: -34,
+        lon: 150
     },
     {
         id: 03,
@@ -23,7 +27,9 @@ const looData = [
         address: "840 W 3rd Ave",
         city: "Columbus",
         state: "OH",
-        zip: 43212
+        zip: 43212,
+        lat: -34,
+        lon: 150
     },
     {
         id: 04,
@@ -31,7 +37,9 @@ const looData = [
         address: "325 Greenlawn Ave",
         city: "Columbus",
         state: "OH",
-        zip: 43223
+        zip: 43223,
+        lat: -34,
+        lon: 150
     },
     {
         id: 05,
@@ -39,7 +47,9 @@ const looData = [
         address: "631 S High St",
         city: "Columbus",
         state: "OH",
-        zip: 43215
+        zip: 43215,
+        lat: -34,
+        lon: 150
     },
     {
         id: 06,
@@ -47,7 +57,9 @@ const looData = [
         address: "1091 S High St",
         city: "Columbus",
         state: "OH",
-        zip: 43206
+        zip: 43206,
+        lat: -34,
+        lon: 150
     },
     {
         id: 07,
@@ -55,7 +67,9 @@ const looData = [
         address: "1165 S High St",
         city: "Columbus",
         state: "OH",
-        zip: 43206
+        zip: 43206,
+        lat: -34,
+        lon: 150
     },
     {
         id: 08,
@@ -63,7 +77,9 @@ const looData = [
         address: "820 W 3rd Ave",
         city: "Columbus",
         state: "OH",
-        zip: 43212
+        zip: 43212,
+        lat: -34,
+        lon: 150
     },
     {
         id: 09,
@@ -71,7 +87,9 @@ const looData = [
         address: "1270 W 5th Ave",
         city: "Columbus",
         state: "OH",
-        zip: 43212
+        zip: 43212,
+        lat: -34,
+        lon: 150
     },
     {
         id: 10,
@@ -79,7 +97,9 @@ const looData = [
         address: "1417 Grandview Ave",
         city: "Columbus",
         state: "OH",
-        zip: 43212
+        zip: 43212,
+        lat: -34,
+        lon: 150
     },
     // {
     //     id: 11,
@@ -207,7 +227,9 @@ const looData = [
         address: "440 E Main Ave",
         city: "Bowling Green",
         state: "KY",
-        zip: 42101
+        zip: 42101,
+        lat: -34,
+        lon: 150
     },
     {
         id: 27,
@@ -215,7 +237,9 @@ const looData = [
         address: "915 College St",
         city: "Bowling Green",
         state: "KY",
-        zip: 42101
+        zip: 42101,
+        lat: -34,
+        lon: 150
     },
     {
         id: 28,
@@ -223,7 +247,9 @@ const looData = [
         address: "904 State St",
         city: "Bowling Green",
         state: "KY",
-        zip: 42101
+        zip: 42101,
+        lat: -34,
+        lon: 150
     },
     {
         id: 29,
@@ -231,7 +257,9 @@ const looData = [
         address: "410 East Main Street",
         city: "Bowling Green",
         state: "KY",
-        zip: 42101
+        zip: 42101,
+        lat: -34,
+        lon: 150
     },
     {
         id: 30,
@@ -239,7 +267,9 @@ const looData = [
         address: "912 State St",
         city: "Bowling Green",
         state: "KY",
-        zip: 42101
+        zip: 42101,
+        lat: -34,
+        lon: 150
     },
     {
         id: 31,
@@ -247,7 +277,9 @@ const looData = [
         address: "301-361 Marylan Ave",
         city: "Bowling Green",
         state: "KY",
-        zip: 42101
+        zip: 42101,
+        lat: -34,
+        lon: 150
     },
     {
         id: 32,
@@ -255,7 +287,9 @@ const looData = [
         address: "1605 Avenue of Champions",
         city: "Bowling Green",
         state: "KY",
-        zip: 42101
+        zip: 42101,
+        lat: -34,
+        lon: 150
     },
     // {
     //     id: 33,
