@@ -2,7 +2,7 @@ const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
 class Loo extends Model { }
-
+//
 // create fields/columns for Loo table
 Loo.init(
     {
@@ -29,6 +29,14 @@ Loo.init(
             allowNull: false
         },
         zip: {
+            type: DataTypes.INTEGER,
+            allowNull: false
+        },
+        lat: {
+            type: DataTypes.INTEGER,
+            allowNull: false
+        },
+        lon: {
             type: DataTypes.INTEGER,
             allowNull: false
         }
