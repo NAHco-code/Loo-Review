@@ -185,23 +185,28 @@ BACK END FINISHED AND WORKING BEFORE TUES CLASS IS THE NECESSARY GOAL
     - Fri: X
         x- solidify needed data to be included in models + seeds {  }
         x- solidify API { Brandon }
-        - controllers/routes (create new loo, save, + review funcitonality (http methods)){ Kathryn }
-        x- models + seed structure {  }
-        - create user logins, cookies, and properly encrypt information {  }
-        - views, html, begin responsive styling { Janee' }
+        x- models + seed structure { J + K }
+        x- create user logins, cookies, and properly encrypt information { B + K }
+        x- begin responsive styling { Janee' }
     - Sat: X
-        O- configure search functionality (need restroom data {include location}) {  }
-        O- configure main menu functionality {  }
-        - configure rating functionality {  }
+        x- configure main menu functionality { Brandon }
+        - configure rating functionality IN PROGRESS { Brandon }
     - Sun: X
         - overflow day
-        -
-    - Mon: 5
-        - configure save favorites + search history functionality {  }
-        - heroku setup { Kathryn }
-    - Tues: 4
-        - complete MVP
+    - Mon: X
+
+    - Tues: X
         - assess where we're at and make a game plan for achieving desired final product
+    - Wed: 4
+        o- views IN PROGRESS { Brandon }
+        0- controllers/routes (create new loo, save, + review funcitonality (http methods)){ Kathryn }
+        - finish seed data
+        - get haversine function working { Kathryn }
+        - finish routes { Kathryn }
+        - complete MVP
+        - heroku setup { Kathryn }
+        - configure save favorites + search history functionality { save for last }
+        - styling { Sarehon + Janee' }
     - Thurs: 3
         - final touches
         - presentation plan { Sarehon }

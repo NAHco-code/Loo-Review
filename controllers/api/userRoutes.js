@@ -1,10 +1,9 @@
-// NEEDS TESTED + CHECKED
 
 const router = require('express').Router();
 const { User } = require('../../models')
 
 // create user route
-router.post('/', async (req, res) => {
+router.post('/', async (req, res) => { //WORKING
     try {
         const createUser = await User.create(req.body);
         // TODO: edge cases - if username exists
@@ -14,7 +13,6 @@ router.post('/', async (req, res) => {
 
             res.status(200).json(createUser);
         });
-        res.status(200).json(createUser);
     } catch (err) {
         res.status(400).json(err);
     }
@@ -70,8 +68,8 @@ router.post('/login', async (req, res) => {
     }
 });
 
-// logout route -
-router.post('/logout', (req, res) => {
+// logout route
+router.post('/logout', (req, res) => { //WORKING //TODO: redirect to login
     if (req.session.logged_in) {
         req.session.destroy(() => {
             res.status(204).end();
