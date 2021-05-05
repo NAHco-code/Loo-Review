@@ -16,7 +16,7 @@ nav ul a {
   background-color:teal;
   font-size: 25px;
 }
- h3, .validate,{
+ h3, .validate {
  color:white; 
 }
 .address {
@@ -24,7 +24,10 @@ nav ul a {
   color:white;
   text-align:center;
 }
-
+body {
+  background-image: url("../images/tp.jpg");
+  background-size: cover;
+}
 
 /* Janee's css */
 li {
