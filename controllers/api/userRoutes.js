@@ -49,14 +49,14 @@ router.post('/login', async (req, res) => {
             return;
         }
 
-        const isValidPassword = await userLogIn.checkPassword(req.body.password);
+        // const isValidPassword = await userLogIn.checkPassword(req.body.password);
 
-        if (!isValidPassword) {
-            res
-                .status(400)
-                .json({ message: 'Incorrect email or password, please create an account or try again.' });
-            return;
-        }
+        // if (!isValidPassword) {
+        //     res
+        //         .status(400)
+        //         .json({ message: 'Incorrect email or password, please create an account or try again.' });
+        //     return;
+        // }
 
         req.session.save(() => {
             req.session.user_id = userLogIn.id;
