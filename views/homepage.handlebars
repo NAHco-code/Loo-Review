@@ -1,3 +1,5 @@
+<!-- view loo + see reviews -->
+
  <div id="map" style="height:300px;"></div>
 
 {{#each loos as |loo|}}
@@ -6,17 +8,19 @@
     <h2 class="header">{{loo.facility_name}}</h2>
     <p class="address">{{loo.address}}</p>
     <div class="card">
-      
+
         <div class="card-content">
           <p>Average Rating: {{loo.rating}}</p>
         </div>
         <div class="card-action">
-          <a href="#">See Reviews</a> <!-- view loo + see reviews -->
+          <a class="button see-reviews" href="#">See Reviews &#8674;</a>
         </div>
       </div>
-    
+
   </div>
 {{/each}}
 
 
 <script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDz091kyRUnde4u6imdbCufy_dba23YnPc&callback=initMap'></script>
+{{!-- <script src="./assets/js/location.js"></script>
+<script src="./assets/js/loo.js"></script> --}}

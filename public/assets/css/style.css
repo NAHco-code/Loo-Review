@@ -1,7 +1,6 @@
-/* TODO: Add code to style over framework */
-/* If you correct or add to someone's code, leave comment explaining why so it doesn't get changed back */
+/* Global styling */
 
-* { /*brandon + janee */
+* {
   box-sizing: border-box;
   font-family: 'Nunito', sans-serif;
   font-size: 100%;
@@ -9,35 +8,41 @@
   padding: 0;
   text-decoration: none;
 }
+
 nav ul a {
   font-size: 25px;
 }
+
 .nav-wrapper {
   background-color:teal;
   font-size: 25px;
 }
+
  h3, .validate {
  color:white;
 }
+
 .tp {
   background-image: url("../images/tp.jpg");
   background-size: cover;
 }
+
 #image {
   background-image: url("../images/sink.jpg");
   background-size: cover;
 }
+
 .address {
   font-size: 25px;
   color:white;
   text-align:center;
 }
+
 body {
   background-image: url("../images/tp.jpg");
   background-size: cover;
 }
 
-/* Janee's css */
 li {
   font-family: inherit;
   color: white;
@@ -62,3 +67,7 @@ li a:hover{
   color: white;
   text-align:center;
 }
+
+/* .button{
+  transition: .25s all ease-in-out;
+} */

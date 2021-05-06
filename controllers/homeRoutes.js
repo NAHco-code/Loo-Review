@@ -14,10 +14,10 @@ console.log(haversine);
 
 
 //LOGIN PAGE //*redirect to main page once logged in *** WORKING
-router.get('/', (req, res) => {
+router.get('/login', (req, res) => {
 
     if (req.session.logged_in) {// If the user is already logged in,
-        res.redirect('/main'); // redirect to main page
+        res.redirect('/'); // redirect to main page
         return;
     }
 
@@ -26,9 +26,30 @@ router.get('/', (req, res) => {
 
 // ** get new user page? - same as log in page - post route is different - why? **
 
+// Use withAuth middleware to prevent access to route
+// do we need this on the homepage route??
+// router.get('/main', withAuth, async (req, res) => {
+//     try {
+//       // Find the logged in user based on the session ID
+//       const userData = await User.findAll({
+//         attributes: { exclude: ['password'] },
+//         include: [Loo, Review],
+//       });
 
+//       const user = userData.get({ plain: true });
+
+//       res.render('signup', {
+//         ...user,
+//         logged_in: true
+//       });
+//     } catch (err) {
+//       res.status(500).json(err);
+//     }
+//   });
+
+//show main page behind authetication
 // MAIN PAGE //*render filtered loos (( + map?? )) *** WORKING
-router.get('/main', async (req, res) => {
+router.get('/', async (req, res) => {
 
     try {
         const looData = await Loo.findAll({ include: [Review] });
@@ -44,12 +65,13 @@ router.get('/main', async (req, res) => {
         })
         res.render('homepage', {
             //render map //make data call to render loos and populate map
-            loos,
-            logged_in: req.session.logged_in
+            layout: 'main',
+            logged_in: req.session.logged_in,
+            loos
         });
-        console.log(filteredLoos);
+        // console.log(filteredLoos);
     } catch (err) {
-        console.log(err);
+        // console.log(err);
         res.status(500).json(err);
     }
 
@@ -59,7 +81,7 @@ router.get('/main', async (req, res) => {
 // will have to update the map with the rendered loo markers
 })
 
-
+// show selected loo - behind authentication
 // VIEW LOO PAGE
 router.get('/loo/:id', async (req, res) => { // *** WORKING
 // TODO: /loo/:id renders a specific loo + associated reviews
@@ -70,8 +92,9 @@ router.get('/loo/:id', async (req, res) => { // *** WORKING
         const loo = looData.get({ plain: true });// Serialize data so the template can read it
 
         res.render('view-loo', {
-            loo,
-            logged_in: req.session.logged_in
+            layout: 'main',
+            logged_in: req.session.logged_in,
+            loo
         });
         //res.status(200).json(looData); //for testing
 
