@@ -23,6 +23,10 @@ nav ul a {
   background-image: url("../images/tp.jpg");
   background-size: cover;
 }
+#image {
+  background-image: url("../images/sink.jpg");
+  background-size: cover;
+}
 .address {
   font-size: 25px;
   color:white;
