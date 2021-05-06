@@ -2,9 +2,9 @@
 // const { User, Review, Loo } = require('../../models')
 // const withAuth = require('../../utils/auth');
 
-
-// // The `/api/reviews` endpoint
-// // get review data, include loo + user [attribute: name, createdAt]
+// // post new review
+// // update review
+// // delete review
 
 // router.post('/reviews', async (req, res) => {
 //     try {
@@ -29,3 +29,8 @@
 
 
 // module.exports = router;
+// /api/reviews (api endpoint)
+
+// post (new review)
+// put (update review)
+// delete (delete review)

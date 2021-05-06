@@ -3,6 +3,7 @@
 const seedUsers = require('./userData');
 const seedLoos = require('./looData');
 const seedReviews = require('./reviewData');
+const seedUsersLoos = require('./usersloosData')
 // const seedLocations = require('./locationData.json');
 
 const sequelize = require('../config/connection');
@@ -16,6 +17,9 @@ const seedDatabase = async () => {
 
     await seedUsers();
     console.log('\n----- USERS SYNCED -----\n');
+
+    await seedUsersLoos();
+    console.log('\n----- USERSLOOS SYNCED -----\n');
 
     await seedReviews();
     console.log('\n----- REVIEWS SYNCED -----\n');
