@@ -29,7 +29,6 @@ nav ul a {
   background-image: url("../images/tp.jpg");
   background-size: cover;
 }
-
 #image {
   background-image: url("../images/sink.jpg");
   background-size: cover;
@@ -39,11 +38,6 @@ nav ul a {
   font-size: 25px;
   color:white;
   text-align:center;
-}
-
-body {
-  background-image: url("../images/tp.jpg");
-  background-size: cover;
 }
 
 li {
