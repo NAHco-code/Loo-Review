@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {{!-- <meta http-equiv="Content-Security-Policy"
+    content="script-src-elem 'self' http://localhost:3001/main 'unsafe-inline' 'unsafe-eval';"> --}}
   <link rel="stylesheet" href="./assets/css/reset.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -14,32 +15,30 @@
   <link rel="stylesheet" href="./assets/css/style.css">
   <title>Document</title>
 </head>
-
 <body style="background-color: #333;">
   <header>
     <nav>
       <div class="nav-wrapper">
-        <a href="/" class="brand-logo">Logo</a>
+        <a href="/main" class="brand-logo">Logo</a>
         <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
-          <li><a href="#">Add a Loo</a></li>
-          <li><a href="/review">Review a Loo</a></li>
+          <li><a href="/loos">Add a Loo</a></li>
+          <li><a href="/reviews">Review a Loo</a></li>
           {{#if logged_in}}
           <li><a href="/logout">Logout</a></li>
           {{else}}
-          <li><a href="/login">Login</a></li>
+          <li><a href="/">Login</a></li>
           {{/if}}
         </ul>
       </div>
     </nav>
-
     <ul class="sidenav" id="mobile-demo">
       <li><a href="#">Add a Loo</a></li>
       <li><a href="/review">Review a Loo</a></li>
       {{#if logged_in}}
       <li><a href="/logout">Logout</a></li>
       {{else}}
-      <li><a href="/login">Login</a></li>
+      <li><a href="/">Login</a></li>
       {{/if}}
     </ul>
   </header>
@@ -47,9 +46,6 @@
     {{{body}}}
   </main>
 </body>
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
 <script src="./assets/js/index.js"></script>
-
 </html>
