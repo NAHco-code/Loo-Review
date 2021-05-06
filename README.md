@@ -7,8 +7,8 @@
 <!-- ISSUES --------->
 <!-- Total: 13 ------>
 <!-- Per Person: 4 -->
-<!-- Per Day: 1.5 ----->
-<!-- Days left: 3 --->
+<!-- Per Day: 1.75 ----->
+<!-- Days left: 2 --->
 
 
 <!-- PSA: Comment your code and use console.logs for testing + leave them in there so others who are using that page can test as well. We will delete them before we submit -->
@@ -118,6 +118,7 @@ X - haversine function to render 20 mi radius based on user's current location /
     - user customization optiions ( themes, light/dark switch, etc )
     - weather api for homepage greeting/banner
     - automated scroll + transitions
+    - update user, delete user
 
     CHALLENGES + UNCHARTED TERRITORIES
     - third party api to provide location and/or restroom data
@@ -163,7 +164,7 @@ TIMELINE
         - complete MVP { ALL }
         - heroku setup { Kathryn }
 
-    - Thurs: 3
+    - Thurs: 2
         - final touches { ALL }
         - presentation slides { Sarehon }
         - presentation plan { Sarehon }
@@ -172,11 +173,11 @@ TIMELINE
         - configure save favorites + search history functionality { save for last }
         - photos and/or themes, light/dark switch, etc { save for last }
 
-    - Fri: 2
+    - Fri: 1
         - README { }
         - commit final changes { ALL }
 
-    - Sat: 1
+    - Sat: 0
         - PRESENT { ALL }
 
     -->
