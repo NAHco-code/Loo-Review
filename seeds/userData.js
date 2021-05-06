@@ -4,120 +4,120 @@ const userData = [
     {
         id: 01,
         name: "Julie",
-        username: "soulSing",
         email: "jcannell@icloud.com",
+        username: "soulSing",
         password: "password12345"
     },
     {
         id: 02,
         name: "Robert",
-        username: "meatnPotatoes",
         email: "robby@gmail.com",
+        username: "meatnPotatoes",
         password: "password12345"
     },
     {
         id: 03,
         name: "Mikey",
-        username: "batman87",
         email: "mcwilwil@aol.com",
+        username: "batman87",
         password: "password12345"
     },
     {
         id: 04,
         name: "Dani",
-        username: "goTops18",
         email: "dpthrow@gmail.com",
+        username: "goTops18",
         password: "password12345"
     },
     {
         id: 05,
         name: "Dani",
-        username: "readyFreddy",
         email: "danicat@gmail.com",
+        username: "readyFreddy",
         password: "password12345"
     },
     {
         id: 06,
         name: "Jake",
-        username: "volleyBear",
         email: "jlww@aol.com",
+        username: "volleyBear",
         password: "password12345"
     },
     {
         id: 07,
         name: "Shelly",
-        username: "smartyPants",
         email: "shelbel@osu.com",
+        username: "smartyPants",
         password: "password12345"
     },
     {
         id: 08,
         name: "Joe",
-        username: "guitarFlower",
         email: "joeyC@gmail.com",
+        username: "guitarFlower",
         password: "password12345"
     },
     {
         id: 09,
         name: "Milo",
-        username: "pennyPoc",
         email: "Milo@yahoo.com",
+        username: "pennyPoc",
         password: "password12345"
     },
     {
         id: 10,
         name: "Tristan",
-        username: "iLikePlanets",
         email: "Tristan@yahoo.com",
+        username: "iLikePlanets",
         password: "password12345"
     },
     {
         id: 11,
         name: "Sue",
-        username: "spoiledGF",
         email: "suzyQ@aol.com",
+        username: "spoiledGF",
         password: "password12345"
     },
     {
         id: 12,
         name: "Jimmy",
-        username: "Jimbo98",
         email: "jimbo@gmail.com",
+        username: "Jimbo98",
         password: "password12345"
     },
     {
         id: 13,
         name: "Toni",
-        username: "iHeartPups",
         email: "antoinette@gmail.com",
+        username: "iHeartPups",
         password: "password12345"
     },
     {
         id: 14,
         name: "Mark",
-        username: "grayBeard",
         email: "markyMark@gmail.com",
+        username: "grayBeard",
         password: "password12345"
     },
     {
         id: 15,
         name: "Nick",
-        username: "MAXout",
         email: "liftnrun@aol.com",
+        username: "MAXout",
         password: "password12345"
     },
     {
         id: 16,
         name: "Maddie",
-        username: "7yearfiance",
         email: "maddieO@aol.com",
+        username: "7yearfiance",
         password: "password12345"
     },
     {
         id: 17,
         name: "Austin",
-        username: "fishEyes",
         email: "austinFoo@gmail.com",
+        username: "fishEyes",
         password: "password12345"
     }
 ]
