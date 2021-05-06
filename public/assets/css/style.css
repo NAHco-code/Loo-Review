@@ -17,7 +17,15 @@ nav ul a {
   font-size: 25px;
 }
  h3, .validate {
- color:white; 
+ color:white;
+}
+.tp {
+  background-image: url("../images/tp.jpg");
+  background-size: cover;
+}
+#image {
+  background-image: url("../images/sink.jpg");
+  background-size: cover;
 }
 .address {
   font-size: 25px;

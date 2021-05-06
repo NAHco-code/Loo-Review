@@ -1,43 +1,14 @@
-// NEEDS TESTED + CHECKED
 
 const router = require('express').Router();
 const { User } = require('../../models')
 
-// create user route
+// post new user
+// post log in user
+// put update user
+// post log out user
+
+// LOGIN FUNCTIONALITY
 router.post('/', async (req, res) => {
-    try {
-        const createUser = await User.create(req.body);
-        // TODO: edge cases - if username exists
-        req.session.save(() => {
-            req.session.user_id = createUser.id;
-            req.session.logged_in = true;
-
-            res.status(200).json(createUser);
-        });
-        res.status(200).json(createUser);
-    } catch (err) {
-        res.status(400).json(err);
-    }
-});
-
-// another format for create user route // TODO: assess
-// router.post('/create', async (req, res) => {
-//     try {
-//         const createUser = await User.create({
-//             name: req.body.name,
-//             username: req.body.username,
-//             email: req.body.email,
-//             password: req.body.password
-//         })
-
-//     } catch (err) {
-//         res.status(400).json(err);
-//     }
-// });
-
-
-// login route - user posts userdata to login or create acct
-router.post('/login', async (req, res) => {
     //
     try {
         const userLogIn = await User.findOne({ where: { email: req.body.email } });
@@ -49,17 +20,17 @@ router.post('/login', async (req, res) => {
             return;
         }
 
-        // const isValidPassword = await userLogIn.checkPassword(req.body.password);
+        const isValidPassword = await userLogIn.checkPassword(req.body.password);
 
-        // if (!isValidPassword) {
-        //     res
-        //         .status(400)
-        //         .json({ message: 'Incorrect email or password, please create an account or try again.' });
-        //     return;
-        // }
+        if (!isValidPassword) {
+            res
+                .status(400)
+                .json({ message: 'Incorrect email or password, please create an account or try again.' });
+            return;
+        }
 
         req.session.save(() => {
-            req.session.user_id = userLogIn.id;
+            req.session.user_id = userLogIn.isSoftDeleted;
             req.session.logged_in = true;
 
             res.json({ user: userLogIn, message: 'Logged In!' });
@@ -70,14 +41,35 @@ router.post('/login', async (req, res) => {
     }
 });
 
-// logout route -
+// CREATE NEW USER FUNCTOINALITY
+router.post('/new-user', async (req, res) => { //WORKING
+    try {
+        const createUser = await User.create(req.body);
+        // TODO: edge cases - if username exists
+        req.session.save(() => {
+            req.session.user_id = createUser.id;
+            req.session.logged_in = true;
+
+            res.status(200).json(createUser);
+        });
+    } catch (err) {
+        res.status(400).json(err);
+    }
+});
+
+// LOGOUT //*not necessary
 router.post('/logout', (req, res) => {
     if (req.session.logged_in) {
+        // Remove the session variables
         req.session.destroy(() => {
-            res.status(204).end();
+            res.status(204).then(
+                res.render('/').end()
+            );
         });
     } else {
-        res.status(404).end();
+        res.status(204).then(
+            res.render('/').end()
+        );
     }
 });
 
