@@ -12,33 +12,35 @@
   <link rel="stylesheet" href="./assets/css/style.css">
   <title>Document</title>
 </head>
-
-<body style="background-color: #333;">
+{{!-- class added to designate a specific image to this page only --}}
+<body style="background-color: #333;" class="tp">
   <header>
     <nav>
       <div class="nav-wrapper">
-        <a href="/" class="brand-logo">Logo</a>
+        <a href="/main" class="brand-logo">Logo</a>
         <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
-          <li><a href="#">Add a Loo</a></li>
-          <li><a href="/review">Review a Loo</a></li>
+          <li><a href="/loos">Add a Loo</a></li>
+          <li><a href="/reviews">Review a Loo</a></li>
           {{#if logged_in}}
           <li><a href="/logout">Logout</a></li>
           {{else}}
-          <li><a href="/login">Login</a></li>
+          <li><a href="/">Login</a></li>
           {{/if}}
         </ul>
       </div>
     </nav>
 
     <ul class="sidenav" id="mobile-demo">
-      <li><a href="#">Add a Loo</a></li>
-      <li><a href="/review">Review a Loo</a></li>
+
+      <li><a href="/loos">Add a Loo</a></li>
+      <li><a href="/reviews">Review a Loo</a></li>
       {{#if logged_in}}
           <li><a href="/logout">Logout</a></li>
           {{else}}
-          <li><a href="/login">Login</a></li>
+          <li><a href="/">Login</a></li>
           {{/if}}
+
     </ul>
   </header>
   <main>

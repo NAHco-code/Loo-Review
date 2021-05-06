@@ -1,7 +1,8 @@
  <div id="map" style="height:300px;"></div>
 
 {{#each loos as |loo|}}
-  <div class="col s12 m6">
+{{!-- added id to render image different than main handlebars --}}
+  <div class="col s12 m6" id="image">
     <h2 class="header">{{loo.facility_name}}</h2>
     <p class="address">{{loo.address}}</p>
     <div class="card">
