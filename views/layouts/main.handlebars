@@ -8,39 +8,39 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="./assets/css/style.css">
   <title>Document</title>
 </head>
-{{!-- class added to designate a specific image to this page only --}}
-<body style="background-color: #333;" class="tp">
+
+<body style="background-color: #333;">
   <header>
     <nav>
       <div class="nav-wrapper">
-        <a href="/main" class="brand-logo">Logo</a>
+        <a href="/" class="brand-logo">Logo</a>
         <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
-          <li><a href="/loos">Add a Loo</a></li>
-          <li><a href="/reviews">Review a Loo</a></li>
+          <li><a href="#">Add a Loo</a></li>
+          <li><a href="/review">Review a Loo</a></li>
           {{#if logged_in}}
           <li><a href="/logout">Logout</a></li>
           {{else}}
-          <li><a href="/">Login</a></li>
+          <li><a href="/login">Login</a></li>
           {{/if}}
         </ul>
       </div>
     </nav>
 
     <ul class="sidenav" id="mobile-demo">
-
-      <li><a href="/loos">Add a Loo</a></li>
-      <li><a href="/reviews">Review a Loo</a></li>
+      <li><a href="#">Add a Loo</a></li>
+      <li><a href="/review">Review a Loo</a></li>
       {{#if logged_in}}
-          <li><a href="/logout">Logout</a></li>
-          {{else}}
-          <li><a href="/">Login</a></li>
-          {{/if}}
-
+      <li><a href="/logout">Logout</a></li>
+      {{else}}
+      <li><a href="/login">Login</a></li>
+      {{/if}}
     </ul>
   </header>
   <main>

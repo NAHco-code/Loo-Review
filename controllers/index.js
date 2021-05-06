@@ -1,6 +1,4 @@
 
-//default file read when 'controllers' is required in another file
-
 const router = require('express').Router();
 const apiRoutes = require('./api');
 const homeRoutes = require('./homeRoutes');
