@@ -154,7 +154,7 @@ TIMELINE
     - Wed: 4
         - views IN PROGRESS { Brandon }
         - finish seed data { Janee + Sarehon }
-        - get haversine function working { Kathryn }
+        x- get haversine function working { Kathryn }
         - finish routes { Kathryn }
         - styling { Sarehon + Janee' }
         - rating functionality { Brandon }
