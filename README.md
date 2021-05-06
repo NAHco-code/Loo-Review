@@ -1,14 +1,14 @@
 # Project-02
 
 <!-- TEAM DASHBOARD
-    * updated 12:00a 4/5/21
+    * updated 07:00a 4/6/21
     * task timeline + assignments at bottom -->
 
 <!-- ISSUES --------->
-<!-- Total: 16 ------>
+<!-- Total: 13 ------>
 <!-- Per Person: 4 -->
-<!-- Per Day: 1 ----->
-<!-- Days left: 4 --->
+<!-- Per Day: 1.75 ----->
+<!-- Days left: 2 --->
 
 
 <!-- PSA: Comment your code and use console.logs for testing + leave them in there so others who are using that page can test as well. We will delete them before we submit -->
@@ -34,7 +34,8 @@
     - express-handlebars 5.3.0 - installed, working
     - express-session 1.17.1 - installed, working
     - mysql2 2.2.5 - installed, *handles promises differently than 'mysql'
-    - nodemon - installed
+    - nodemon - installed, working
+    - s-haversine  - installed, working
     - sequelize 6.6.2 - installed, working
     - uniqid 5.3.0 - installed, *not used yet-->
 
@@ -62,7 +63,7 @@ X BCRYPT - working /* { Janee + Kathryn } */
 
 #5 - FORMS /* { Janee + Sarehon } */
 
-#6 - EVENT LISTENERS /* pick up issue: {  } */
+#6 - EVENT LISTENERS /* pick up issue: { Kathryn } */
 
 #7 - front end js functions to iterate through all of our api calls
     and connect user input to backend + database /* pick up issue: {  } */
@@ -70,20 +71,20 @@ X BCRYPT - working /* { Janee + Kathryn } */
 
 X   - main menu functionality  /* { Brandon } */
 
-#8 - haversine function to render 20 mi radius based on user's current location /* { Kathryn } */
+X - haversine function to render 20 mi radius based on user's current location /* { Kathryn } */
 
-#9 - rating functionality *front end js /* { Brandon } */
+#8 - rating functionality *front end js /* { Brandon } */
 
-#10 - deploy to Heroku /* pick up issue: { Kathryn } */
+#9 - deploy to Heroku /* pick up issue: { Kathryn } */
         * boilerplate passport* tutor note
         * figure out how to access it from Heroku
 
-#11 - favorites and trip boards/saved // save for last
-#12 - user customization optiions like themes, light/dark switch, etc
+#10 - favorites and trip boards/saved // save for last
+#11 - user customization optiions like themes, light/dark switch, etc
 
-#13 - readme /* pick up issue: {  } */
+#12 - readme /* pick up issue: {  } */
 
-#14 - presentation  /* { Sarehon } */
+#13 - presentation  /* { Sarehon } */
     - slides
     - timing
     - meet presentation requirements
@@ -103,7 +104,7 @@ X   - main menu functionality  /* { Brandon } */
     X- log in functionality
     X- main menu functionality
     - rating functionality
-    - review functionality
+    x- review functionality // *** CHECK review connected to loo ***
     X- add new loo (includes location) functionality
     * save favorites funcitonality
     * search history or recent searches
@@ -117,6 +118,7 @@ X   - main menu functionality  /* { Brandon } */
     - user customization optiions ( themes, light/dark switch, etc )
     - weather api for homepage greeting/banner
     - automated scroll + transitions
+    - update user, delete user
 
     CHALLENGES + UNCHARTED TERRITORIES
     - third party api to provide location and/or restroom data
@@ -155,14 +157,14 @@ TIMELINE
         - views IN PROGRESS { Brandon }
         - finish seed data { Janee + Sarehon }
         x- get haversine function working { Kathryn }
-        - finish routes { Kathryn }
+        x- finish routes { Kathryn }
         - styling { Sarehon + Janee' }
         - rating functionality { Brandon }
 
         - complete MVP { ALL }
         - heroku setup { Kathryn }
 
-    - Thurs: 3
+    - Thurs: 2
         - final touches { ALL }
         - presentation slides { Sarehon }
         - presentation plan { Sarehon }
@@ -171,11 +173,11 @@ TIMELINE
         - configure save favorites + search history functionality { save for last }
         - photos and/or themes, light/dark switch, etc { save for last }
 
-    - Fri: 2
+    - Fri: 1
         - README { }
         - commit final changes { ALL }
 
-    - Sat: 1
+    - Sat: 0
         - PRESENT { ALL }
 
     -->
@@ -183,8 +185,8 @@ TIMELINE
 ***ASSIGNMENTS***
 
 -Kathryn:
-    - routes - get, put, post, delete
-    - haversine function
+    x- routes - get, put, post, delete
+    x- haversine function
     - heroku setup
     -
     * final touches
