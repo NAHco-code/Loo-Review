@@ -5,7 +5,9 @@
 //   //alert = allow app to access your current location
 // };
 let locations;
-
+const userLocation = window.navigator.geolocation.getCurrentPosition((data)=>{
+  console.log(data.coords.latitude, data.coords.longitude);
+})
 locations =
 [
   { lat: 39.9902047, lng: -83.0061 },
@@ -46,5 +48,3 @@ document.addEventListener('DOMContentLoaded', function () {
 //   //return filteredLoos variable *defined in homeRoutes
 //   //const userLoc = fetch geolocation
 // });
-
-initMap();
