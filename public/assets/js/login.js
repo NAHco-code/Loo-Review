@@ -1,26 +1,28 @@
-// const loginFormHandler = async (event) => {
-//     event.preventDefault();
 
-//     //get login form id's
-//     const email = document.querySelector('#email-login').nodeValue.trim();
-//     const password = document.querySelector('#password-login').nodeValue.trim();
+let login = async (event) => {
+    event.preventDefault();
 
-//     if (email && password) {
+    //get login form id's
+    const email = document.querySelector('#login-email').value.trim();
+    const password = document.querySelector('#login-password').value.trim();
 
-//         const response = await fetch('/api/user/login', {
-//             method: 'POST',
-//             body: JSON.stringify({ email, password }),
-//             headers: { 'Content-Type': 'application/json' },
-//         });
+    if (email && password) {
+        try {
+            const response = await fetch('/api/users/login', {
+                method: 'POST',
+                body: JSON.stringify({ email, password }),
+                headers: { 'Content-Type': 'application/json' },
+            });
 
-//         if (response.ok) {
-//             document.location.replace('/main');
-//         } else {
-//             alert(err.message);
-//         }
-//     }
-// };
+            if (response.ok) {
+                document.location.replace('/');
+            }
+        } catch (err) {
+            alert(err.message);
+        }
+    }
+};
 
-// document
-//     .querySelector('#submit-login')
-//     .addEventListener('click', loginFormHandler);
+document
+    .querySelector('#submit-login')
+    .addEventListener('click', login);

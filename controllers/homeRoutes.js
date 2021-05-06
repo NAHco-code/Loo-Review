@@ -14,10 +14,10 @@ console.log(haversine);
 
 
 //LOGIN PAGE //*redirect to main page once logged in *** WORKING
-router.get('/login', (req, res) => {
+router.get('/', (req, res) => {
 
     if (req.session.logged_in) {// If the user is already logged in,
-        res.redirect('/'); // redirect to main page
+        res.redirect('/main'); // redirect to main page
         return;
     }
 
@@ -49,7 +49,7 @@ router.get('/login', (req, res) => {
 
 //show main page behind authetication
 // MAIN PAGE //*render filtered loos (( + map?? )) *** WORKING
-router.get('/', async (req, res) => {
+router.get('/main', async (req, res) => {
 
     try {
         const looData = await Loo.findAll({ include: [Review] });
@@ -61,7 +61,7 @@ router.get('/', async (req, res) => {
 
             console.log(req.query);
             console.log( )
-            return haversine.default.distance([Number(req.query.lat), Number(req.query.lon)], [loo.lat, loo.lon]) < 1609.34 * 10; // Meter to mile conversion // 10 mile radius
+            return haversine.default.distance([Number(req.query.lat), Number(req.query.lng)], [loo.lat, loo.lng]) < 1609.34 * 10; // Meter to mile conversion // 10 mile radius
         })
         res.render('homepage', {
             //render map //make data call to render loos and populate map
@@ -76,8 +76,8 @@ router.get('/', async (req, res) => {
     }
 
     // NOTES FOR FRONT END
-// /api/loos?lat=33.333&lon=-123 *URL *lat1 lng1
-// when user adds loo - must take address and feed it into geolocation and get lat + long
+// /api/loos?lat=33.333&lng=-123 *URL *lat1 lng1
+// when user adds loo - must take address and feed it into geolocation and get lat + lng
 // will have to update the map with the rendered loo markers
 })
 

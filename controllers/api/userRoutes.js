@@ -50,8 +50,8 @@ router.post('/signup', async (req, res) => { // *** WORKING ** PW returns hashed
     try {
         const createUser = await User.create({
             name: req.body.name,
-            username: req.body.username,
             email: req.body.email,
+            username: req.body.username,
             password: req.body.password
         });
 
