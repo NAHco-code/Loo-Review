@@ -17,6 +17,9 @@ nav ul a {
   background-color:teal;
   font-size: 25px;
 }
+.fa-toilet:before {
+  padding-left: 10px;
+}
 
  h3, .validate {
  color:white;
