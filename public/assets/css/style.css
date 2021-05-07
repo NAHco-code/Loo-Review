@@ -69,6 +69,6 @@ li a:hover{
   text-align:center;
 }
 
-/* .button{
-  transition: .25s all ease-in-out;
-} */
+.selected-loo-hero{
+  background-image: url("../images/classy-toilet-bowl.jpg")
+}

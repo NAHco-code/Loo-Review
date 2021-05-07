@@ -1,9 +1,7 @@
 
-// user location and map
+// MAP + LOCATION
 
-// function fetchUserLocation() {
-//   //alert = allow app to access your current location
-// };
+// Initialize map with user location data and filtered loo location data
 function initMap() { }
 
 const userLocation = window.navigator.geolocation.getCurrentPosition((data) => {
@@ -14,7 +12,7 @@ const userLocation = window.navigator.geolocation.getCurrentPosition((data) => {
     .then(looData => {
       console.log(looData);
 
-      // (() => {
+      // TEST (() => {
         initMap = function () {
           console.log(initMap);
 
@@ -30,7 +28,7 @@ const userLocation = window.navigator.geolocation.getCurrentPosition((data) => {
             });
           }
         }
-      // })();
+      // TEST })();
       initMap();
 
       looData.forEach(loo => {
@@ -54,13 +52,13 @@ const userLocation = window.navigator.geolocation.getCurrentPosition((data) => {
 
 
     })
-  // document.location.replace('/main?lat=${data.coords.latitude}&lng=${data.coords.longitude}`)');
+  //TEST document.location.replace('/main?lat=${data.coords.latitude}&lng=${data.coords.longitude}`)');
 
 
 });
 
 
-// let locations;
+// TEST let locations;
 // locations =
 // [
 //   { lat: 39.9902047, lng: -83.0061 },
@@ -90,8 +88,6 @@ const userLocation = window.navigator.geolocation.getCurrentPosition((data) => {
 //   }
 // })();
 
-// Function populating locations, ...etc.
-
 //Event Listeners
 document.addEventListener('DOMContentLoaded', function () {
   var elems = document.querySelectorAll('.sidenav');
@@ -105,15 +101,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
 document.addEventListener('DOMContentLoaded', function() {
   var elems = document.querySelectorAll('select');
-  var instances = M.FormSelect.init(elems, options);
+  var instances = M.FormSelect.init(elems, {});
 });
 
 // document.addEventListener('DOMContentLoaded', fetchUserLocation() {
-//   //return filteredLoos variable *defined in homeRoutes
-//   //const userLoc = fetch geolocation
-// });
-
-// document.addEventListener('click', fetchUserLocation() {
 //   //return filteredLoos variable *defined in homeRoutes
 //   //const userLoc = fetch geolocation
 // });
