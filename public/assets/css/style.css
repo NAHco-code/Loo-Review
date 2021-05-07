@@ -24,6 +24,9 @@ nav ul a {
  h3, .validate {
  color:white;
 }
+#title, #loc-name {
+  color:black;
+}
 
 .tp {
   background-image: url("../images/tp.jpg");
