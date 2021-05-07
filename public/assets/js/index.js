@@ -26,7 +26,7 @@ const userLocation = window.navigator.geolocation.getCurrentPosition((data) => {
             new google.maps.Marker({
               position: { lat: parseFloat(place.lat), lng: parseFloat(place.lon) },
               map,
-              title: "NAME",
+              title: place.facility_name,
             });
           }
         }
