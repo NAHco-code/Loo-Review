@@ -26,7 +26,7 @@ const userLocation = window.navigator.geolocation.getCurrentPosition((data) => {
             new google.maps.Marker({
               position: { lat: parseFloat(place.lat), lng: parseFloat(place.lon) },
               map,
-              title: "NAME",
+              title: place.facility_name,
             });
           }
         }
@@ -103,6 +103,10 @@ document.addEventListener('DOMContentLoaded', function() {
   var instances = M.Modal.init(elems, {});
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+  var elems = document.querySelectorAll('select');
+  var instances = M.FormSelect.init(elems, options);
+});
 
 // document.addEventListener('DOMContentLoaded', fetchUserLocation() {
 //   //return filteredLoos variable *defined in homeRoutes
