@@ -1,21 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  {{!-- <meta http-equiv="Content-Security-Policy"
+  {{!--
+  <meta http-equiv="Content-Security-Policy"
     content="script-src-elem 'self' http://localhost:3001/main 'unsafe-inline' 'unsafe-eval';"> --}}
   <link rel="stylesheet" href="./assets/css/reset.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="./assets/css/style.css">
   <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
   <title>Document</title>
 </head>
 {{!-- class added to designate a specific image to this page only --}}
-{{!-- <body style="background-color: #333;"> --}}
+{{!--
+<body style="background-color: #333;"> --}}
   <header>
     <nav>
       <div class="nav-wrapper">
@@ -25,18 +30,18 @@
           <li id="add"><a href="#add-loo" class="modal-trigger">Add a Loo</a></li>
           <li id="review"><a href="#review-loo" class="modal-trigger">Review a Loo</a></li>
           {{#if logged_in}}
-          <li><a href="/logout">Logout</a></li>
+          <li><a class="submit-logout">Logout</a></li>
           {{else}}
           <li><a href="/">Login</a></li>
           {{/if}}
         </ul>
       </div>
     </nav>
-    <ul class="sidenav" id="mobile-demo">
+    <ul class="sidenav" id="mobile-menu">
       <li><a href="#add-loo" class="modal-trigger">Add a Loo</a></li>
       <li><a href="#review-loo" class="modal-trigger">Review a Loo</a></li>
       {{#if logged_in}}
-      <li><a href="/logout">Logout</a></li>
+      <li><a class="submit-logout">Logout</a></li>
       {{else}}
       <li><a href="/">Login</a></li>
       {{/if}}
@@ -49,68 +54,96 @@
     <div id="review-loo" class="modal">
       <div class="modal-content">
         <h2>Add a review</h2>
-<div class="row">
-    <form class="col s12">
         <div class="row">
-            <div class="input-field col s12">
-                <input placeholder="Title" id="title" type="text" class="validate">
+          <form class="col s12">
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="title" type="text" class="validate">
                 <label for="title">Review Title</label>
+              </div>
+              <div class="input-field col s12">
+                <textarea id="review-text" class="materialize-textarea"></textarea>
+                <label for="review-text">Write your review</label>
+              </div>
+              <div class="input-field col s12">
+                <select>
+                  <option value="" selected disabled>Rate this loo</option>
+                  <option value="1">1</option>
+                  <option value="2">1</option>
+                  <option value="3">1</option>
+                  <option value="4">1</option>
+                  <option value="5">1</option>
+                </select>
+                <label>Rating</label>
+              </div>
             </div>
-            <div class="input-field col s12">
-                <textarea id="review-text" placeholder="Write your review..." class="materialize-textarea"></textarea>
-                <label for="review-text">Review</label>
-            </div>
+          </form>
         </div>
-    </form>
-</div>
-<!-- added checkboxs for bathroom features -->
-    <form action="#">
-    <p>
-      <input type="checkbox" id="test5" />
-      <label for="test5">Had Toilet Paper</label>
-    </p>
-    <p>
-      <input type="checkbox" id="test6" checked="checked" />
-      <label for="test6">Clean</label>
-    </p>
-     <p>
-      <input type="checkbox" id="test5" />
-      <label for="test5">Wheelchair Accessible</label>
-    </p>
-    <p>
-      <input type="checkbox" id="test6" checked="checked" />
-      <label for="test6">Changing Table</label>
-    </p>
-     <p>
-      <input type="checkbox" id="test5" />
-      <label for="test5">Paper Towels</label>
-    </p>
-    <p>
-      <input type="checkbox" id="test6" checked="checked" />
-      <label for="test6">Hand Dryer</label>
-    </p>
-    <button class="btn" type="submit">Submit</button>
+        <!-- added checkboxs for bathroom features -->
+        <form action="#">
+          <p>
+            <input type="checkbox" id="test5" />
+            <label for="test5">Had Toilet Paper</label>
+          </p>
+          <p>
+            <input type="checkbox" id="test6" checked="checked" />
+            <label for="test6">Clean</label>
+          </p>
+          <p>
+            <input type="checkbox" id="test5" />
+            <label for="test5">Wheelchair Accessible</label>
+          </p>
+          <p>
+            <input type="checkbox" id="test6" checked="checked" />
+            <label for="test6">Changing Table</label>
+          </p>
+          <p>
+            <input type="checkbox" id="test5" />
+            <label for="test5">Paper Towels</label>
+          </p>
+          <p>
+            <input type="checkbox" id="test6" checked="checked" />
+            <label for="test6">Hand Dryer</label>
+          </p>
+          <button class="btn" type="submit">Submit</button>
       </div>
     </div>
     <div id="add-loo" class="modal">
       <div class="modal-content">
         <h2>Add a New Loo</h2>
-<div class="row">
-    <form class="col s12">
         <div class="row">
-            <div class="input-field col s12">
+          <form action="/api/loos" method="POST" class="col s12">
+            <div class="row">
+              <div class="input-field col s12">
                 <input id="loc-name" type="text" class="validate">
                 <label for="loc-name">Business Name</label>
-            </div>
-            <div class="input-field col s12">
-                <textarea id="address" class="materialize-textarea"></textarea>
+              </div>
+              <div class="input-field col s12">
+                <input id="address" type="text" class="validate"></input>
                 <label for="address">Address</label>
+              </div>
+              <div class="input-field col s12">
+                <input id="city" type="text" class="validate"></input>
+                <label for="city">City</label>
+              </div>
+              <div class="input-field col s6">
+                <input id="state" type="text" class="validate"></input>
+                <label for="state">State</label>
+              </div>
+              <div class="input-field col s6">
+                <input id="zip" type="number" class="validate"></input>
+                <label for="zip">Zip Code</label>
+              </div>
+
+              <button type="submit" class="btn">Submit</button>
             </div>
-            <button type="submit" class="btn">Submit</button>
+          </form>
         </div>
-    </form>
-</div>
   </section>
 </body>
+{{#if logged_in}}
+<script src="./assets/js/logout.js"></script>
+{{/if}}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="./assets/js/index.js"></script>
 </html>
