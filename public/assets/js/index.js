@@ -5,7 +5,9 @@
 //   //alert = allow app to access your current location
 // };
 let locations;
-
+const userLocation = window.navigator.geolocation.getCurrentPosition((data)=>{
+  console.log(data.coords.latitude, data.coords.longitude);
+})
 locations =
 [
   { lat: 39.9902047, lng: -83.0061 },
@@ -37,6 +39,17 @@ document.addEventListener('DOMContentLoaded', function () {
   var instances = M.Sidenav.init(elems, {});
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+  var elems = document.querySelectorAll('.modal');
+  var instances = M.Modal.init(elems, {});
+  if (instances.isOpen){
+    instances.close();
+  } else {
+    instances.open();
+  }
+});
+
+
 // document.addEventListener('DOMContentLoaded', fetchUserLocation() {
 //   //return filteredLoos variable *defined in homeRoutes
 //   //const userLoc = fetch geolocation
@@ -46,5 +59,3 @@ document.addEventListener('DOMContentLoaded', function () {
 //   //return filteredLoos variable *defined in homeRoutes
 //   //const userLoc = fetch geolocation
 // });
-
-initMap();
