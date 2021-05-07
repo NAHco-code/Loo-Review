@@ -26,6 +26,9 @@ nav ul a {
  color:white;
  text-shadow: 0px 0px 10px black;
 }
+#title, #loc-name {
+  color:black;
+}
 
 .tp {
   background-image: url("../images/tp.jpg");

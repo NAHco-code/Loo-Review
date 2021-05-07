@@ -1,7 +1,7 @@
 <!-- view loo + see reviews -->
 <div id="map" style="height:300px;"></div>
-<div>
-  {{#each loos as |loo|}}
+<div id="filteredLoos">
+  {{#each filteredLoos as |loo|}}
   {{!-- added id to render image different than main handlebars --}}
   <div class="col s12 m6" id="image">
     <h2 class="header">{{loo.facility_name}}</h2>
@@ -11,16 +11,14 @@
         <p>Average Rating: {{loo.rating}}</p>
       </div>
       <div class="card-action">
-        <a class="button see-reviews" href="#">See Reviews &#8674;</a>
+        <a class="button see-reviews" href="/loo/{{loo.id}}">See Reviews &#8674;</a>
       </div>
     </div>
-
   </div>
   {{/each}}
 </div>
 <script
   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDz091kyRUnde4u6imdbCufy_dba23YnPc&callback=initMap" async defer></script>
 {{!--
-<script src="./assets/js/location.js"></script>
-<script src="./assets/js/loo.js"></script> --}}
-<script src="./assets/js/index.js"></script>
+<script src="../assets/js/loo.js"></script> --}}
+<script src="/assets/js/index.js"></script>
