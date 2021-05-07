@@ -29,8 +29,7 @@
           <li id="add"><a href="#add-loo" class="modal-trigger">Add a Loo</a></li>
           <li id="review"><a href="#review-loo" class="modal-trigger">Review a Loo</a></li>
           {{#if logged_in}}
-          <li><a href="/logout">Logout</a></li>
-          {{!-- this is a get logout route - need to refactor --}}
+          <li><a class="submit-logout">Logout</a></li>
           {{else}}
           <li><a href="/">Login</a></li>
           {{/if}}
@@ -41,7 +40,7 @@
       <li><a href="#add-loo" class="modal-trigger">Add a Loo</a></li>
       <li><a href="#review-loo" class="modal-trigger">Review a Loo</a></li>
       {{#if logged_in}}
-      <li><a href="/logout">Logout</a></li>
+      <li><a class="submit-logout">Logout</a></li>
       {{else}}
       <li><a href="/">Login</a></li>
       {{/if}}
@@ -117,5 +116,8 @@
 </div>
   </section>
 </body>
+{{#if logged_in}}
+<script src="./assets/js/logout.js"></script>
+{{/if}}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </html>
