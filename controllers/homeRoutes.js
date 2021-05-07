@@ -50,49 +50,11 @@ router.get('/', (req, res) => {
 //show main page behind authetication
 // MAIN PAGE //*render filtered loos (( + map?? )) *** WORKING
 router.get('/main', async (req, res) => {
-<<<<<<< HEAD
-    console.log(req.query);
-=======
->>>>>>> main
     try {
         const looData = await Loo.findAll({ include: [Review] });
 
         const loos = looData.map((loos) => loos.get({ plain: true }));
-<<<<<<< HEAD
 
-
-        // loos.forEach(loo => {
-
-        //     const distance = haversine.default.distance([Number(req.query.lat), Number(req.query.lng)], [Number(loo.lat), Number(loo.lon)])
-        //     console.log(distance)
-        // })
-        testLooDist = [
-        {
-            id: 31,
-                facility_name: "WKU Softball Field",
-                    address: "301-361 Marylan Ave",
-                        city: "Bowling Green",
-                            state: "KY",
-                                zip: 42101,
-                                    lat: 36.9802178,
-                                        lon: -86.4640394
-        },
-        {
-            id: 26,
-                facility_name: "440 Main & Mickey's",
-                    address: "440 E Main Ave",
-                        city: "Bowling Green",
-                            state: "KY",
-                                zip: 42101,
-                                    lat: 36.9933131,
-                                        lon: -86.4409516
-        }
-    ]
-
-
-=======
-        
->>>>>>> main
         // filter loos (based on user location) using haversine npm package
         const filteredLoos = loos.filter((loo) => { // filter expects a condition
 
