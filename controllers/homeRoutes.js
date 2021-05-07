@@ -54,13 +54,14 @@ router.get('/main', async (req, res) => {
         const looData = await Loo.findAll({ include: [Review] });
 
         const loos = looData.map((loos) => loos.get({ plain: true }));
-        
+
         // filter loos (based on user location) using haversine npm package
         const filteredLoos = loos.filter((loo) => { // filter expects a condition
 
-            console.log(req.query);
-            console.log( )
-            return haversine.default.distance([Number(req.query.lat), Number(req.query.lng)], [loo.lat, loo.lng]) < 1609.34 * 10; // Meter to mile conversion // 10 mile radius
+            const distance = haversine.default.distance([Number(req.query.lat), Number(req.query.lng)], [Number(loo.lat), Number(loo.lon)])
+            console.log(distance)
+            return distance < 1609.34 * 10; // Meter to mile conversion // 10 mile radius
+
         })
         res.render('homepage', {
             //render map //make data call to render loos and populate map
@@ -68,7 +69,7 @@ router.get('/main', async (req, res) => {
             logged_in: req.session.logged_in,
             loos
         });
-        // console.log(filteredLoos);
+        console.log(filteredLoos);
     } catch (err) {
         // console.log(err);
         res.status(500).json(err);
