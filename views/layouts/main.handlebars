@@ -57,12 +57,12 @@
     <form class="col s12">
         <div class="row">
             <div class="input-field col s12">
-                <input placeholder="Title" id="title" type="text" class="validate">
+                <input id="title" type="text" class="validate">
                 <label for="title">Review Title</label>
             </div>
             <div class="input-field col s12">
-                <textarea id="review-text" placeholder="Write your review..." class="materialize-textarea"></textarea>
-                <label for="review-text">Review</label>
+                <textarea id="review-text" class="materialize-textarea"></textarea>
+                <label for="review-text">Write your review</label>
             </div>
         </div>
     </form>
@@ -100,16 +100,29 @@
       <div class="modal-content">
         <h2>Add a New Loo</h2>
 <div class="row">
-    <form class="col s12">
+    <form action="/api/loos" method="POST" class="col s12">
         <div class="row">
             <div class="input-field col s12">
                 <input id="loc-name" type="text" class="validate">
                 <label for="loc-name">Business Name</label>
             </div>
             <div class="input-field col s12">
-                <textarea id="address" class="materialize-textarea"></textarea>
+                <input id="address" type="text" class="validate"></input>
                 <label for="address">Address</label>
             </div>
+            <div class="input-field col s12">
+                <input id="city" type="text" class="validate"></input>
+                <label for="city">City</label>
+            </div>
+            <div class="input-field col s6">
+                <input id="state" type="text" class="validate"></input>
+                <label for="state">State</label>
+            </div>
+                        <div class="input-field col s6">
+                <input id="zip" type="number" class="validate"></input>
+                <label for="zip">Zip Code</label>
+            </div>
+
             <button type="submit" class="btn">Submit</button>
         </div>
     </form>
