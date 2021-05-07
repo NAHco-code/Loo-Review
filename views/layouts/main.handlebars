@@ -16,10 +16,8 @@
     rel="stylesheet">
   <link rel="stylesheet" href="./assets/css/style.css">
   <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
-  <title>Document</title>
+  <title>The Loo Review</title>
 </head>
-{{!-- class added to designate a specific image to this page only --}}
-{{!--
 
 <body style="background-color: #333;"> --}}
   <header>
@@ -70,10 +68,10 @@
                 <select>
                   <option value="" selected disabled>Rate this loo</option>
                   <option value="1">1</option>
-                  <option value="2">1</option>
-                  <option value="3">1</option>
-                  <option value="4">1</option>
-                  <option value="5">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
                 </select>
                 <label>Rating</label>
               </div>
@@ -143,8 +141,11 @@
   </section>
 </body>
 {{#if logged_in}}
+{{!-- script for logout -> when logged in --}}
 <script src="./assets/js/logout.js"></script>
 {{/if}}
+{{!-- script for materialize styling featuers --}}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+{{!-- script for location and associated loos --}}
 <script src="./assets/js/index.js"></script>
 </html>
