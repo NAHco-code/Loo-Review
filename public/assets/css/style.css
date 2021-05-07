@@ -30,8 +30,9 @@ nav ul a {
   background-size: cover;
 }
 #image {
-  background-image: url("../images/sink.jpg");
+  background-image: url("../images/pp.jpg");
   background-size: cover;
+  background-position: bottom;
 }
 
 .address {
