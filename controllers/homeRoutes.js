@@ -67,7 +67,7 @@ router.get('/main', async (req, res) => {
             //render map //make data call to render loos and populate map
             layout: 'main',
             logged_in: req.session.logged_in,
-            loos
+            filteredLoos,
         });
         console.log(filteredLoos);
     } catch (err) {
