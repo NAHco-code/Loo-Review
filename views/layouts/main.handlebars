@@ -68,45 +68,19 @@
               </div>
               <div class="input-field col s12">
                 <select>
-                  <option value="" selected disabled>Rate this loo</option>
+                  <option value="" disabled selected></option>
                   <option value="1">1</option>
-                  <option value="2">1</option>
-                  <option value="3">1</option>
-                  <option value="4">1</option>
-                  <option value="5">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
                 </select>
                 <label>Rating</label>
               </div>
             </div>
           </form>
         </div>
-        <!-- added checkboxs for bathroom features -->
-        <form action="#">
-          <p>
-            <input type="checkbox" id="test5" />
-            <label for="test5">Had Toilet Paper</label>
-          </p>
-          <p>
-            <input type="checkbox" id="test6" checked="checked" />
-            <label for="test6">Clean</label>
-          </p>
-          <p>
-            <input type="checkbox" id="test5" />
-            <label for="test5">Wheelchair Accessible</label>
-          </p>
-          <p>
-            <input type="checkbox" id="test6" checked="checked" />
-            <label for="test6">Changing Table</label>
-          </p>
-          <p>
-            <input type="checkbox" id="test5" />
-            <label for="test5">Paper Towels</label>
-          </p>
-          <p>
-            <input type="checkbox" id="test6" checked="checked" />
-            <label for="test6">Hand Dryer</label>
-          </p>
-          <button class="btn" type="submit">Submit</button>
+        <button class="btn" type="submit">Submit</button>
       </div>
     </div>
     <div id="add-loo" class="modal">
@@ -116,8 +90,8 @@
           <form action="/api/loos" method="POST" class="col s12">
             <div class="row">
               <div class="input-field col s12">
-                <input id="loc-name" type="text" class="validate">
-                <label for="loc-name">Business Name</label>
+                <input id="facility_name" type="text" class="validate">
+                <label for="facility_name">Business Name</label>
               </div>
               <div class="input-field col s12">
                 <input id="address" type="text" class="validate"></input>
@@ -147,4 +121,5 @@
 {{/if}}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <script src="./assets/js/index.js"></script>
+
 </html>
