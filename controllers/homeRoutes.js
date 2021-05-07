@@ -50,6 +50,8 @@ router.get('/', (req, res) => {
 //show main page behind authetication
 // MAIN PAGE //*render filtered loos (( + map?? )) *** WORKING
 router.get('/main', async (req, res) => {
+    console.log(req.query);
+
     try {
         const looData = await Loo.findAll({ include: [Review] });
 
@@ -60,16 +62,24 @@ router.get('/main', async (req, res) => {
 
             const distance = haversine.default.distance([Number(req.query.lat), Number(req.query.lng)], [Number(loo.lat), Number(loo.lon)])
             console.log(distance)
-            return distance < 1609.34 * 10; // Meter to mile conversion // 10 mile radius
+            return distance < 1609.34 * 100; // Meter to mile conversion // 10 mile radius
 
         })
-        res.render('homepage', {
-            //render map //make data call to render loos and populate map
-            layout: 'main',
-            logged_in: req.session.logged_in,
-            filteredLoos,
-        });
-        console.log(filteredLoos);
+        if (Object.keys(req.query).length === 0) {
+            res.render('homepage', {
+                //render map //make data call to render loos and populate map
+                layout: 'main',
+                logged_in: req.session.logged_in,
+                // filteredLoos,
+            });
+        } else {
+            res.json(filteredLoos);
+            console.log(filteredLoos);
+        }
+
+
+
+
     } catch (err) {
         // console.log(err);
         res.status(500).json(err);
