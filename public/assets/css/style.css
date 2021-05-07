@@ -17,6 +17,9 @@ nav ul a {
   background-color:teal;
   font-size: 25px;
 }
+.fa-toilet:before {
+  padding-left: 10px;
+}
 
  h3, .validate {
  color:white;
@@ -26,21 +29,16 @@ nav ul a {
   background-image: url("../images/tp.jpg");
   background-size: cover;
 }
-
 #image {
-  background-image: url("../images/sink.jpg");
+  background-image: url("../images/pp.jpg");
   background-size: cover;
+  background-position: bottom;
 }
 
 .address {
   font-size: 25px;
   color:white;
   text-align:center;
-}
-
-body {
-  background-image: url("../images/tp.jpg");
-  background-size: cover;
 }
 
 li {
