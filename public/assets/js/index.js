@@ -38,7 +38,7 @@ function initMap() {}
       new google.maps.Marker({
         position: place,
         map,
-        title: "NAME",
+        clickable: true
       });
     }
   }
