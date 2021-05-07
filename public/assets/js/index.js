@@ -42,11 +42,6 @@ document.addEventListener('DOMContentLoaded', function () {
 document.addEventListener('DOMContentLoaded', function() {
   var elems = document.querySelectorAll('.modal');
   var instances = M.Modal.init(elems, {});
-  if (instances.isOpen){
-    instances.close();
-  } else {
-    instances.open();
-  }
 });
 
 
