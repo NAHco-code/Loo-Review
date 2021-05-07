@@ -5,9 +5,16 @@
 //   //alert = allow app to access your current location
 // };
 let locations;
-const userLocation = window.navigator.geolocation.getCurrentPosition((data)=>{
+const userLocation = window.navigator.geolocation.getCurrentPosition((data) => {
   console.log(data.coords.latitude, data.coords.longitude);
-})
+
+  fetch(`/main?lat=${data.coords.latitude}&lng=${data.coords.longitude}`)
+    .then(response => response.json())
+    .catch((error) => {
+      console.log(error);
+    })
+});
+
 locations =
 [
   { lat: 39.9902047, lng: -83.0061 },
@@ -16,20 +23,26 @@ locations =
   { lat: 39.994207, lng: -83.0059488 },
 ];
 
-function initMap() {
-  const myLatLng = locations[0];
-  const map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 16,
-    center: myLatLng,
-  });
-  for (place of locations){
-    new google.maps.Marker({
-    position: place,
-    map,
-    title: "NAME",
+function initMap() {}
+
+(() => {
+  initMap = function () {
+
+
+    const myLatLng = locations[0];
+    const map = new google.maps.Map(document.getElementById("map"), {
+      zoom: 16,
+      center: myLatLng,
     });
+    for (place of locations) {
+      new google.maps.Marker({
+        position: place,
+        map,
+        title: "NAME",
+      });
+    }
   }
-};
+})();
 
 // Function populating locations, ...etc.
 
