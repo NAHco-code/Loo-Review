@@ -33,11 +33,11 @@ Loo.init(
             allowNull: false
         },
         lat: {
-            type: DataTypes.DECIMAL,
+            type: DataTypes.DECIMAL(15, 10),
             allowNull: false
         },
         lon: {
-            type: DataTypes.DECIMAL,
+            type: DataTypes.DECIMAL(15,10),
             allowNull: false
         }
     },  // render average rating with query
