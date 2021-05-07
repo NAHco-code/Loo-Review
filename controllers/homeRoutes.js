@@ -50,11 +50,15 @@ router.get('/', (req, res) => {
 //show main page behind authetication
 // MAIN PAGE //*render filtered loos (( + map?? )) *** WORKING
 router.get('/main', async (req, res) => {
+<<<<<<< HEAD
     console.log(req.query);
+=======
+>>>>>>> main
     try {
         const looData = await Loo.findAll({ include: [Review] });
 
         const loos = looData.map((loos) => loos.get({ plain: true }));
+<<<<<<< HEAD
 
 
         // loos.forEach(loo => {
@@ -86,6 +90,9 @@ router.get('/main', async (req, res) => {
     ]
 
 
+=======
+        
+>>>>>>> main
         // filter loos (based on user location) using haversine npm package
         const filteredLoos = loos.filter((loo) => { // filter expects a condition
 

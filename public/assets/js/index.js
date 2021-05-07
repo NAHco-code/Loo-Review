@@ -52,6 +52,12 @@ document.addEventListener('DOMContentLoaded', function () {
   var instances = M.Sidenav.init(elems, {});
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+  var elems = document.querySelectorAll('.modal');
+  var instances = M.Modal.init(elems, {});
+});
+
+
 // document.addEventListener('DOMContentLoaded', fetchUserLocation() {
 //   //return filteredLoos variable *defined in homeRoutes
 //   //const userLoc = fetch geolocation
@@ -61,5 +67,3 @@ document.addEventListener('DOMContentLoaded', function () {
 //   //return filteredLoos variable *defined in homeRoutes
 //   //const userLoc = fetch geolocation
 // });
-
-initMap();
