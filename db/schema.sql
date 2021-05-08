@@ -1,5 +1,5 @@
-DROP DATABASE IF EXISTS porcelain_throne;
-CREATE DATABASE porcelain_throne;
+DROP DATABASE IF EXISTS rb3r1cxfg3wbmtzt;
+CREATE DATABASE rb3r1cxfg3wbmtzt;
 
 
 /*
