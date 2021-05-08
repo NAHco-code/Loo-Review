@@ -11,7 +11,9 @@ const { Loo } = require('../../models');
 router.post('/', async (req, res) => { // *** WORKING
     try {
         const newLoo = await Loo.create({
-            ...req.body,
+            title: req.body.title,
+            review: req.body.review,
+            rating: req.body.rating,
             user_id: req.session.user_id,
         });
 
