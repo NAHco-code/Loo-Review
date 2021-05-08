@@ -18,11 +18,16 @@ Express.js API and SQL.
 
 Project in progress.
 
-## Usage
+## Visuals
 
-Usage.
+![login](./public/assets/images/login.PNG) ![selected-loo](./public/assets/images/selected-loo.PNG)
 
-[![DEMO]
+![see-nearby](./public/assets/images/see-nearby.PNG) ![associated-reviews](./public/assets/images/associated-reviews.PNG)
+
+
+[Heroku-DeployedApp] (<https://the-loo-review.herokuapp.com/>)
+
+[Github-Repository] (<https://github.com/NAHco-code/Project-02.git>)
 
 ## Future Development
 
@@ -54,4 +59,4 @@ Please feel free to contact us with any questions via email.
 This project is licensed under the Apache 2.0 License.
 For more information, please visit: [Apache Explained](https://choosealicense.com/licenses/apache-2.0/)
 
-&copy; 2021 k.wilkinson b.king j.mays s.taylor
+&copy; 2021 k.wilkinson | b.king | j.mays | s.taylor
