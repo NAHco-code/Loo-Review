@@ -18,33 +18,25 @@
           <p>{{loo.address}}</p>
           <p>{{loo.city}}</p>
           <p>{{loo.state}} {{loo.zip}}</p></br>
-          <p>Average Rating: <i class="fas fa-poo-storm fa-lg"></i> <i class="fas fa-poo-storm fa-lg"></i> <i class="fas fa-poo-storm fa-lg"></i> <i class="fas fa-poo-storm fa-lg"></i></p>
-       
+          <p>Average Rating:
+            <i class="fas fa-poo-storm fa-lg"></i>
+            <i class="fas fa-poo-storm fa-lg"></i>
+            <i class="fas fa-poo-storm fa-lg"></i>
+            <i class="fas fa-poo-storm fa-lg"></i>
+            </p>
         </div>
+        <!-- Add a review button to render form -->
         <div class="card-action">
-          <button id="review-btn"><a href="#review-loo" class="modal-trigger" class="btn waves-effect waves-light">Review this Loo<i id="size-icon" class="material-icons right">send</i></a></button>
-
+          <button id="review-btn">
+            <a href="#review-loo" class="modal-trigger" class="btn waves-effect waves-light">Review this Loo
+              <i id="size-icon" class="material-icons right">send</i>
+            </a>
+          </button>
         </div>
       </div>
     </div>
   </div>
-
-  {{!-- <button class="btn waves-effect waves-light" type="submit" name="action">Submit
-    <i class="material-icons right">send</i>
-  </button> --}}
-
-{{!-- <div id="hero-wrapper">
-    <div id="selected-loo-hero" style="height: 300px;"></div>
-    <div id="selected-loo-desc">
-        <p>{{loo.facility_name}}</p>
-        <p>{{loo.address}}</p>
-        <p>Average Rating: {{loo.rating}}</p>
-
-    </div>
-</div> --}}
-
-<!-- Add a review button - render form -->
-
+<!-- Review form -->
 <div id="review-loo" class="modal">
       <div class="modal-content">
         <h2>Add a review</h2>
@@ -74,19 +66,10 @@
              <button id="submit-review" class="btn" type="submit">Submit</button>
           </form>
         </div>
-       
+
       </div>
     </div>
 <!-- render associated reviews: include username and date created -->
-{{!-- <div id="reviews">
-    <h2>REVIEWS</h2>
-    {{#each loo.reviews as |value| }}
-    <h3>{{this.title}} | Rating: {{value.rating}}</h3>
-    <p>{{value.review}}</p>
-    {{/each}}
-</div> --}}
-
-
   <div class="row" id="reviews">
     <div class="col s12 m7" id="rev-title-wrapper">
       <h2 id="rev-title-text">REVIEWS</h2>
@@ -109,7 +92,6 @@
     </div>
     {{/each}}
   </div>
-
 {{!-- script for location and associated loos --}}
 <script src="../assets/js/index.js"></script>
 {{!-- script for adding a review --}}
