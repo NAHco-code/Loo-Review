@@ -98,7 +98,7 @@ router.get('/loo/:id', async (req, res) => { // *** WORKING
     try {
         const looData = await Loo.findByPk(req.params.id, { include: [Review] });
         // get review data, include loo + user [attribute: name, createdAt]
-
+        console.log(looData.reviews);
         const loo = looData.get({ plain: true });// Serialize data so the template can read it
 
         res.render('view-loo', {

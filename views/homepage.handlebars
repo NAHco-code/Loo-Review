@@ -1,5 +1,6 @@
 <!-- view filtered loos with map + see ratings -->
 <head>
+   <link rel="stylesheet" href="../assets/css/reset.css">
   <link rel="stylesheet" href="../assets/css/style.css">
   <title>Loos Closest to You</title>
 </head>
@@ -8,7 +9,7 @@
 <div id="filteredLoos">
   {{#each filteredLoos as |loo|}}
   <div class="col s12 m6" id="image">
-    <h2 class="header">{{loo.facility_name}}</h2>
+    <h2 class="header loo-name">{{loo.facility_name}}</h2>
     <p class="address">{{loo.address}}</p>
     <div class="card">
       <div class="card-content">
@@ -24,6 +25,10 @@
 <script
   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDz091kyRUnde4u6imdbCufy_dba23YnPc&callback=initMap" async defer></script>
 {{!-- script to add loo --}}
-{{!-- <script src="../assets/js/loo.js"></script> --}}
+<script src="../assets/js/loo.js"></script>
 {{!-- script for location and associated loos --}}
 <script src="../assets/js/index.js"></script>
+{{#if logged_in}}
+{{!-- script for logout -> when logged in --}}
+<script src="../assets/js/logout.js"></script>
+{{/if}}
