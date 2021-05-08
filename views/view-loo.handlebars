@@ -1,23 +1,51 @@
 <!-- selected loo + reviews -->
 <head>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+    integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous" />
     <link rel="stylesheet" href="../assets/css/reset.css">
     <link rel="stylesheet" href="../assets/css/style.css">
     <title>Selected Loo</title>
 </head>
 <!-- TODO: render selected loo at the top: include average rating for selected loo
                 and maybe a photo -->
+  <div class="row">
+    <div class="col s12 m7">
+      <div class="card">
+        <div class="card-image">
+          <img src="../assets/images/classy-toilet-bowl.jpg">
+          <span class="card-title">{{loo.facility_name}}</span>
+        </div>
+        <div class="card-content">
+          <p>{{loo.address}}</p>
+          <p>{{loo.city}}</p>
+          <p>{{loo.state}} {{loo.zip}}</p></br>
+          <p>Average Rating: <i class="fas fa-poo-storm fa-lg"></i> <i class="fas fa-poo-storm fa-lg"></i> <i class="fas fa-poo-storm fa-lg"></i> <i class="fas fa-poo-storm fa-lg"></i></p>
+          {{!-- {{loo.rating}} --}}
+        </div>
+        <div class="card-action">
+          <button id="review-btn"><a href="#review-loo" class="modal-trigger" class="btn waves-effect waves-light">Review this Loo<i id="size-icon" class="material-icons right">send</i></a></button>
 
-<div id="hero-wrapper">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {{!-- <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+    <i class="material-icons right">send</i>
+  </button> --}}
+
+{{!-- <div id="hero-wrapper">
     <div id="selected-loo-hero" style="height: 300px;"></div>
     <div id="selected-loo-desc">
         <p>{{loo.facility_name}}</p>
         <p>{{loo.address}}</p>
         <p>Average Rating: {{loo.rating}}</p>
-        
+
     </div>
-</div>
+</div> --}}
+
 <!-- Add a review button - render form -->
-<button><a href="#review-loo" class="modal-trigger">Review this Loo</a></button>
+
 <div id="review-loo" class="modal">
       <div class="modal-content">
         <h2>Add a review</h2>
@@ -46,22 +74,47 @@
             </div>
           </form>
         </div>
-        <button id="review-btn" class="btn" type="submit">Submit</button>
+        <button id="submit-review" class="btn" type="submit">Submit</button>
       </div>
     </div>
 <!-- render associated reviews: include username and date created -->
-<div id="reviews">
+{{!-- <div id="reviews">
     <h2>REVIEWS</h2>
     {{#each loo.reviews as |value| }}
     <h3>{{this.title}} | Rating: {{value.rating}}</h3>
     <p>{{value.review}}</p>
     {{/each}}
-</div>
+</div> --}}
+
+
+  <div class="row" id="reviews">
+    <div class="col s12 m7" id="rev-title-wrapper">
+      <h2 id="rev-title-text">REVIEWS</h2>
+    </div>
+    {{#each loo.reviews as |value| }}
+    <div class="col s12 m7">
+      <div class="card blue-grey darken-1">
+        <div class="card-content white-text">
+          <span class="card-title" id="size-title">{{this.title}}</span>
+          <hr>
+          <span class="card-title" id="size-subtitle">Rating: {{value.rating}}</span>
+
+          <p>{{value.review}}</p>
+        </div>
+        <div class="card-action">
+          <p>{{format_date this.createdAt}}</p>
+          <p>{{this.user_id.username}}</p>
+        </div>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+
 {{!-- script for location and associated loos --}}
 <script src="../assets/js/index.js"></script>
 {{!-- script for adding a review --}}
 <script src="../assets/js/review.js"></script>
-{{#if logged_in}}
 {{!-- script for logout -> when logged in --}}
+{{#if logged_in}}
 <script src="../assets/js/logout.js"></script>
 {{/if}}
