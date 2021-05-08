@@ -491,14 +491,16 @@ const looData = [
         lat: 36.98334320207736, 
         lon: -86.40398709304574
     },
-    // {
-    //     id: 50,
-    //     facility_name: "",
-    //     address: "",
-    //     city: "Bowling Green",
-    //     state: "KY",
-    //     zip:
-    // },
+    {
+        id: 50,
+        facility_name: "Q Coffee Emporium",
+        address: "3031 Nashville Rd",
+        city: "Bowling Green",
+        state: "KY",
+        zip: 42101,
+        lat: 36.96111060705825, 
+        lon: -86.47763438612488
+    },
 ]
 
 const seedLoos = () => Loo.bulkCreate(looData);
