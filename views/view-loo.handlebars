@@ -1,17 +1,62 @@
 <!-- selected loo + reviews -->
-<link rel="stylesheet" href="../assets/css/style.css">
 <head>
-
-
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <title>Selected Loo</title>
+</head>
 <!-- TODO: render selected loo at the top: include average rating for selected loo
                 and maybe a photo -->
 
-<!-- Add a review will be a button to a form -->
+<div id="hero-wrapper">
+    <div id="selected-loo-hero" style="height: 300px;"></div>
+    <div id="selected-loo-desc">
+        <p>{{loo.facility_name}}</p>
+        <p>{{loo.address}}</p>
+        <p>Average Rating: {{loo.rating}}</p>
+    </div>
+</div>
+<!-- Add a review button - render form -->
+<button><a href="#review-loo" class="modal-trigger">Review this Loo</a></button>
+
+{{!-- <section>
+    <div id="review-loo" class="modal">
+        <div class="modal-content">
+            <h2>Add a review</h2>
+            <div class="row">
+                <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="title" type="text" class="validate">
+                            <label for="title">Review Title</label>
+                        </div>
+                        <div class="input-field col s12">
+                            <textarea id="review-text" class="materialize-textarea"></textarea>
+                            <label for="review-text">Write your review</label>
+                        </div>
+                        <div class="input-field col s12">
+                            <select>
+                                <option value="" selected disabled>Rate this loo</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                            <label>Rating</label>
+                        </div>
+                    </div>
+                </form>
+            </div> --}}
 
 <!-- added checkboxs for bathroom features -->
 
 <!-- render associated reviews: include username and date created -->
 
+{{!-- script for location and associated loos --}}
 <script src="../assets/js/index.js"></script>
-{{!-- <script src="../assets/js/loo.js"></script>
-<script src="../assets/js/review.js"></script> --}}
+{{!-- script for adding a review --}}
+<script src="../assets/js/review.js"></script>
+{{#if logged_in}}
+{{!-- script for logout -> when logged in --}}
+<script src="./assets/js/logout.js"></script>
+{{/if}}
