@@ -1,7 +1,6 @@
 
 const router = require('express').Router();
 const { Loo } = require('../../models');
-// const { contains } = require('sequelize/types/lib/operators');
 
 // post new loo
 // update loo

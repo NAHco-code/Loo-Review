@@ -72,9 +72,10 @@ li a:hover{
   text-shadow: 0px 0px 10px black;
 }
 
-.selected-loo-hero{
+#selected-loo-hero{
   background-image: url("../images/classy-toilet-bowl.jpg")
 }
+
 @media screen and (max-width: 600px) {
   .row {
     flex-direction: column;
