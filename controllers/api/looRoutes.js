@@ -2,11 +2,6 @@
 const router = require('express').Router();
 const { Loo } = require('../../models');
 
-// post new loo
-// update loo
-// delete loo
-
-
 // NEW LOO FUNCTIONALITY
 router.post('/', async (req, res) => { // *** WORKING
     try {
@@ -57,8 +52,4 @@ router.delete('/:id', async (req, res) => { // *** WORKING ***
 
 
 module.exports = router;
-// /api/loos (api endpoint)
 
-// post (new loo)
-// put (update loo)
-// delete (delete loo)
