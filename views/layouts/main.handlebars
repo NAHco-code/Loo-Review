@@ -4,11 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  {{!--
-  <meta http-equiv="Content-Security-Policy"
-    content="script-src-elem 'self' http://localhost:3001/main 'unsafe-inline' 'unsafe-eval';"> --}}
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link
@@ -40,7 +36,7 @@
       <li><a href="/main">Nearby</a></li>
       <li><a href="#add-loo" class="modal-trigger">Add a Loo</a></li>
       {{#if logged_in}}
-      <li><a class="submit-logout">Logout</a></li>
+      <li><a id="submit-logout">Logout</a></li>
       {{else}}
       <li><a href="/">Login</a></li>
       {{/if}}
