@@ -321,142 +321,176 @@ const looData = [
         lat: 36.98630026844749,
         lon: -86.45788299593002
     },
-    // {
-    //     id: 33,
-    //     facility_name: "",
-    //     address: "",
-    //     city: "Bowling Green",
-    //     state: "KY",
-    //     zip:
-    // },
-    // {
-    //     id: 34,
-    //     facility_name: "",
-    //     address: "",
-    //     city: "Bowling Green",
-    //     state: "KY",
-    //     zip:
-    // },
-    // {
-    //     id: 35,
-    //     facility_name: "",
-    //     address: "",
-    //     city: "Bowling Green",
-    //     state: "KY",
-    //     zip:
-    // },
-    // {
-    //     id: 36,
-    //     facility_name: "",
-    //     address: "",
-    //     city: "Bowling Green",
-    //     state: "KY",
-    //     zip:
-    // },
-    // {
-    //     id: 37,
-    //     facility_name: "",
-    //     address: "",
-    //     city: "Bowling Green",
-    //     state: "KY",
-    //     zip:
-    // },
-    // {
-    //     id: 38,
-    //     facility_name: "",
-    //     address: "",
-    //     city: "Bowling Green",
-    //     state: "KY",
-    //     zip:
-    // },
-    // {
-    //     id: 39,
-    //     facility_name: "",
-    //     address: "",
-    //     city: "Bowling Green",
-    //     state: "KY",
-    //     zip:
-    // },
-    // {
-    //     id: 40,
-    //     facility_name: "",
-    //     address: "",
-    //     city: "Bowling Green",
-    //     state: "KY",
-    //     zip:
-    // },
-    // {
-    //     id: 41,
-    //     facility_name: "",
-    //     address: "",
-    //     city: "Bowling Green",
-    //     state: "KY",
-    //     zip:
-    // },
-    // {
-    //     id: 42,
-    //     facility_name: "",
-    //     address: "",
-    //     city: "Bowling Green",
-    //     state: "KY",
-    //     zip:
-    // },
-    // {
-    //     id: 43,
-    //     facility_name: "",
-    //     address: "",
-    //     city: "Bowling Green",
-    //     state: "KY",
-    //     zip:
-    // },
-    // {
-    //     id: 44,
-    //     facility_name: "",
-    //     address: "",
-    //     city: "Bowling Green",
-    //     state: "KY",
-    //     zip:
-    // },
-    // {
-    //     id: 45,
-    //     facility_name: "",
-    //     address: "",
-    //     city: "Bowling Green",
-    //     state: "KY",
-    //     zip:
-    // },
-    // {
-    //     id: 46,
-    //     facility_name: "",
-    //     address: "",
-    //     city: "Bowling Green",
-    //     state: "KY",
-    //     zip:
-    // },
-    // {
-    //     id: 47,
-    //     facility_name: "",
-    //     address: "",
-    //     city: "Bowling Green",
-    //     state: "KY",
-    //     zip:
-    // },
-    // {
-    //     id: 48,
-    //     facility_name: "",
-    //     address: "",
-    //     city: "Bowling Green",
-    //     state: "KY",
-    //     zip:
-    // },
-    // {
-    //     id: 49,
-    //     facility_name: "",
-    //     address: "",
-    //     city: "Bowling Green",
-    //     state: "KY",
-    //     zip:
-    // },
+    {
+        id: 33,
+        facility_name: "Taqueria Los Vazquez Llc",
+        address: "850 Morgantown Rd",
+        city: "Bowling Green",
+        state: "KY",
+        zip: 42101,
+        lat: 36.989111186832865, 
+        lon: -86.47380543929043
+    },
+    {
+        id: 34,
+        facility_name: "Zaxby's Chicken Fingers & Buffalo Wings",
+        address: "1801 US Highway 31",
+        city: "Bowling Green",
+        state: "KY",
+        zip: 42101,
+        lat: 36.97954376990842, 
+        lon: -86.45391316688765
+    },
+    {
+        id: 35,
+        facility_name: "Lost River Cave",
+        address: "2818 Nashville Rd",
+        city: "Bowling Green",
+        state: "KY",
+        zip: 42101,
+        lat: 36.95806520861739, 
+        lon: -86.4723349024903
+    },
+    {
+        id: 36,
+        facility_name: "National Corvette Museum",
+        address: "350 Corvette Dr",
+        city: "Bowling Green",
+        state: "KY",
+        zip: 42101,
+        lat: 37.00796255564621, 
+        lon: -86.37435662447955
+    },
+    {
+        id: 37,
+        facility_name: "Ogden Park",
+        address: "1600 Park St",
+        city: "Bowling Green",
+        state: "KY",
+        zip: 42101,
+        lat: 36.985303994308026, 
+        lon: -86.4518890851841
+    },
+    {
+        id: 38,
+        facility_name: "Kroger",
+        address: "350 U.S. 31 W Bypass",
+        city: "Bowling Green",
+        state: "KY",
+        zip: 42101,
+        lat: 37.00269662567043, 
+        lon: -86.42456426244031
+    },
+    {
+        id: 39,
+        facility_name: "Shipley's Service Station",
+        address: "1248 Center St",
+        city: "Bowling Green",
+        state: "KY",
+        zip: 42101,
+        lat: 36.995538710930894, 
+        lon: -86.44997023898773
+    },
+    {
+        id: 40,
+        facility_name: "Anytime Fitness",
+        address: "164 Iron Skillet Ct",
+        city: "Bowling Green",
+        state: "KY",
+        zip: 42104,
+        lat: 36.93605790423971, 
+        lon: -86.41465906906683
+    },
+    {
+        id: 41,
+        facility_name: "Spencer's Coffee",
+        address: "915 College St",
+        city: "Bowling Green",
+        state: "KY",
+        zip: 42101,
+        lat: 36.999381506094906, 
+        lon: -86.44212502155548
+    },
+    {
+        id: 42,
+        facility_name: "The Derby Piano and Dessert Bar",
+        address: "635 College St",
+        city: "Bowling Green",
+        state: "KY",
+        zip: 42101,
+        lat: 37.002082294298916, 
+        lon: -86.43903524930307
+    },
+    {
+        id: 43,
+        facility_name: "CBD Spot & smoke shop",
+        address: "1248 U.S. 31 W Bypass",
+        city: "Bowling Green",
+        state: "KY",
+        zip: 432101,
+        lat: 36.98883823007571, 
+        lon: -86.4407521280462
+    },
+    {
+        id: 44,
+        facility_name: "Bowling Green Ballpark",
+        address: "300 E 8th Ave",
+        city: "Bowling Green",
+        state: "KY",
+        zip: 42101,
+        lat: 37.00168486513042, 
+        lon: -86.4441854880421
+    },
+    {
+        id: 45,
+        facility_name: "Regal Greenwood Mall",
+        address: "2625 Scottsville Rd",
+        city: "Bowling Green",
+        state: "KY",
+        zip: 42103,
+        lat: 36.95578031552061, 
+        lon: -86.43085964598122
+    },
+    {
+        id: 46,
+        facility_name: "The Bistro",
+        address: "1129 College St",
+        city: "Bowling Green",
+        state: "KY",
+        zip: 42101,
+        lat: 36.997936133991985, 
+        lon: -86.44514069198976
+    },
+    {
+        id: 47,
+        facility_name: "Gerard's 1907 Tavern",
+        address: "935 College St",
+        city: "Bowling Green",
+        state: "KY",
+        zip: 42101,
+        lat: 36.99930710753142, 
+        lon: -86.44273743274047
+    },
+    {
+        id: 48,
+        facility_name: "Bark Park at H.P. Thomas Park",
+        address: "850 Cave Mill Rd",
+        city: "Bowling Green",
+        state: "KY",
+        zip: 42104,
+        lat: 36.95428515017682, 
+        lon: -86.46196363918068
+    },
+    {
+        id: 49,
+        facility_name: "Lovers Lane Soccer Complex",
+        address: "385 Lovers Ln",
+        city: "Bowling Green",
+        state: "KY",
+        zip: 42103,
+        lat: 36.98334320207736, 
+        lon: -86.40398709304574
+    },
     // {
     //     id: 50,
     //     facility_name: "",
