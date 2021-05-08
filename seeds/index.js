@@ -3,13 +3,13 @@
 const seedUsers = require('./userData');
 const seedLoos = require('./looData');
 const seedReviews = require('./reviewData');
-const seedUsersLoos = require('./usersloosData')
-// const seedLocations = require('./locationData.json');
+// const seedUsersLoos = require('./usersloosData')
+
 
 const sequelize = require('../config/connection');
 
 const seedDatabase = async () => {
-    await sequelize.sync({ force: false });
+    await sequelize.sync({ force: true });
     console.log('\n----- DATABASE SYNCED -----\n');
 
     await seedLoos();
@@ -18,8 +18,8 @@ const seedDatabase = async () => {
     await seedUsers();
     console.log('\n----- USERS SYNCED -----\n');
 
-    await seedUsersLoos();
-    console.log('\n----- USERSLOOS SYNCED -----\n');
+    // await seedUsersLoos();
+    // console.log('\n----- USERSLOOS SYNCED -----\n');
 
     await seedReviews();
     console.log('\n----- REVIEWS SYNCED -----\n');
