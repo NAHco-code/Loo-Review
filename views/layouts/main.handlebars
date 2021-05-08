@@ -7,25 +7,21 @@
   {{!--
   <meta http-equiv="Content-Security-Policy"
     content="script-src-elem 'self' http://localhost:3001/main 'unsafe-inline' 'unsafe-eval';"> --}}
-  <link rel="stylesheet" href="./assets/css/reset.css">
+ 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link
     href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="./assets/css/style.css">
   <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
-  <title>Document</title>
+  <title>The Loo Review</title>
 </head>
-{{!-- class added to designate a specific image to this page only --}}
-{{!--
-
-<body style="background-color: #333;"> --}}
+<body style="background-color: #333;"> 
   <header>
     <nav>
       <div class="nav-wrapper">
-        <a href="/main" class='fas fa-toilet' style='font-size:36px'> The Loo Review</a>
+        <a href="/main" class='fas fa-toilet' style='font-size:36px;text-shadow: 0px 0px 10px black;'> The Loo Review</a>
         <a href="#" data-target="mobile-menu" class="sidenav-trigger"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
           <li id="add"><a href="#add-loo" class="modal-trigger">Add a Loo</a></li>
@@ -116,10 +112,7 @@
         </div>
   </section>
 </body>
-{{#if logged_in}}
-<script src="./assets/js/logout.js"></script>
-{{/if}}
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-<script src="./assets/js/index.js"></script>
 
+{{!-- script for materialize styling featuers --}}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </html>
