@@ -50,18 +50,18 @@
       <div class="modal-content">
         <h2>Add a review</h2>
         <div class="row">
-          <form class="col s12">
+          <form class="col s12" action="/api/reviews" method="POST">
             <div class="row">
               <div class="input-field col s12">
                 <input id="title" type="text" class="validate">
                 <label for="title">Review Title</label>
               </div>
               <div class="input-field col s12">
-                <textarea id="review-text" class="materialize-textarea"></textarea>
-                <label for="review-text">Write your review</label>
+                <textarea id="review" class="materialize-textarea"></textarea>
+                <label for="review">Write your review</label>
               </div>
-              <div id ="rating" class="input-field col s12">
-                <select>
+              <div class="input-field col s12">
+                <select id ="rating" >
                   <option value="" disabled selected></option>
                   <option value="1">1</option>
                   <option value="2">2</option>
@@ -72,9 +72,10 @@
                 <label>Rating</label>
               </div>
             </div>
+             <button id="submit-review" class="btn" type="submit">Submit</button>
           </form>
         </div>
-        <button id="submit-review" class="btn" type="submit">Submit</button>
+       
       </div>
     </div>
 <!-- render associated reviews: include username and date created -->
