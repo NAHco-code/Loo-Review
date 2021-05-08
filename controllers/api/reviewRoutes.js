@@ -1,12 +1,8 @@
 const router = require('express').Router();
 const { User, Review, Loo } = require('../../models')
 
-// post new review
-// update review
-// delete review
-
 // NEW REVIEW FUNCTIONALITY
-router.post('/', async (req, res) => { //how to make sure loo is attached to review
+router.post('/', async (req, res) => { 
     try {
         const newReview = await Review.create({
             ...req.body,
@@ -53,8 +49,4 @@ router.delete('/:id', async (req, res) => {
 
 
 module.exports = router;
-// /api/reviews (api endpoint)
 
-// post (new review)
-// put (update review)
-// delete (delete review)

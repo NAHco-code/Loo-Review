@@ -1,28 +1,3 @@
-// IN PROGRESS
-
-// #### USER TABLE
-// * ID(PK)
-// * Name
-// * Email
-// * Password
-// * Username
-
-// #### LOO TABLE
-// * ID(PK)
-// * Facility name
-// * Address
-// * City
-// * Zip
-
-// #### REVIEW TABLE
-// * ID(PK)
-// * Title
-// * Rating
-// * Review
-// * createdAt
-// * Loo ID // to get rating + facility name
-// * User ID // to get username
-
 // import models
 const Loo = require('./Loo');
 const User = require('./User');
@@ -43,8 +18,6 @@ User.hasMany(Review, { foreignKey: 'user_id' });
 User.belongsToMany(Loo, { through: UsersLoos });
 Loo.belongsToMany(User, { through: UsersLoos });
 
-
-// Many-to Many relationship b/w user and loo if we want to save favorites //*after MVP is reached
 
 module.exports = {
     Loo,
