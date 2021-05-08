@@ -21,4 +21,3 @@ if (process.env.JAWSDB_URL) {
 
 module.exports = sequelize;
 
-// mysql://fmx93b1rtuvg53uy:htxki9jzdtntywe2@wcwimj6zu5aaddlj.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/rb3r1cxfg3wbmtzt
