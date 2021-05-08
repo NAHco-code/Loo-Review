@@ -1,5 +1,5 @@
 
-const login = async (event) => {
+let login = async (event) => {
     event.preventDefault();
 
     //get login form id's
@@ -16,7 +16,7 @@ const login = async (event) => {
             });
 
             if (response.ok) {
-                document.location.replace('/');
+                document.location.replace('/main');
             }
         } catch (err) {
             alert(err.message);
