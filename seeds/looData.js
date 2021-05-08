@@ -101,126 +101,156 @@ const looData = [
         lat: 39.9863605,
         lon: -83.0447611
     },
-    // {
-    //     id: 11,
-    //     facility_name: "",
-    //     address: "",
-    //     city: "Columbus",
-    //     state: "OH",
-    //     zip:
-    // },
-    // {
-    //     id: 12,
-    //     facility_name: "",
-    //     address: "",
-    //     city: "Columbus",
-    //     state: "OH",
-    //     zip:
-    // },
-    // {
-    //     id: 13,
-    //     facility_name: "",
-    //     address: "",
-    //     city: "Columbus",
-    //     state: "OH",
-    //     zip:
-    // },
-    // {
-    //     id: 14,
-    //     facility_name: "",
-    //     address: "",
-    //     city: "Columbus",
-    //     state: "OH",
-    //     zip:
-    // },
-    // {
-    //     id: 15,
-    //     facility_name: "",
-    //     address: "",
-    //     city: "Columbus",
-    //     state: "OH",
-    //     zip:
-    // },
-    // {
-    //     id: 16,
-    //     facility_name: "",
-    //     address: "",
-    //     city: "Columbus",
-    //     state: "OH",
-    //     zip:
-    // },
-    // {
-    //     id: 17,
-    //     facility_name: "",
-    //     address: "",
-    //     city: "Columbus",
-    //     state: "OH",
-    //     zip:
-    // },
-    // {
-    //     id: 18,
-    //     facility_name: "",
-    //     address: "",
-    //     city: "Columbus",
-    //     state: "OH",
-    //     zip:
-    // },
-    // {
-    //     id: 19,
-    //     facility_name: "",
-    //     address: "",
-    //     city: "Columbus",
-    //     state: "OH",
-    //     zip:
-    // },
-    // {
-    //     id: 20,
-    //     facility_name: "",
-    //     address: "",
-    //     city: "Columbus",
-    //     state: "OH",
-    //     zip:
-    // },
-    // {
-    //     id: 21,
-    //     facility_name: "",
-    //     address: "",
-    //     city: "Columbus",
-    //     state: "OH",
-    //     zip:
-    // },
-    // {
-    //     id: 22,
-    //     facility_name: "",
-    //     address: "",
-    //     city: "Columbus",
-    //     state: "OH",
-    //     zip:
-    // },
-    // {
-    //     id: 23,
-    //     facility_name: "",
-    //     address: "",
-    //     city: "Columbus",
-    //     state: "OH",
-    //     zip:
-    // },
-    // {
-    //     id: 24,
-    //     facility_name: "",
-    //     address: "",
-    //     city: "Columbus",
-    //     state: "OH",
-    //     zip:
-    // },
-    // {
-    //     id: 25,
-    //     facility_name: "",
-    //     address: "",
-    //     city: "Columbus",
-    //     state: "OH",
-    //     zip:
-    // },
+    {
+        id: 11,
+        facility_name: "Nationwide Arena",
+        address: "200 W Nationwide Blvd",
+        city: "Columbus",
+        state: "OH",
+        zip: 43215,
+        lat: 39.96942918575591, 
+        lon: -83.00612340393856
+    },
+    {
+        id: 12,
+        facility_name: "Ohio Union",
+        address: "1739 N High St",
+        city: "Columbus",
+        state: "OH",
+        zip:43210,
+        lat: 39.99849877017836, 
+        lon: -83.00848900491522
+    },
+    {
+        id: 13,
+        facility_name: "Jeni's Splendid Ice Creams",
+        address: "714 N High St",
+        city: "Columbus",
+        state: "OH",
+        zip: 43215,
+        lat: 39.977805419232354, 
+        lon: -83.00320960492597
+    },
+    {
+        id: 14,
+        facility_name: "North Market Downtown",
+        address: "59 Spruce St",
+        city: "Columbus",
+        state: "OH",
+        zip: 43215,
+        lat: 39.972563162062585, 
+        lon: -83.00418998958487
+    },
+    {
+        id: 15,
+        facility_name: "Wheeler Memorial Park",
+        address: "725 Thurber Dr W",
+        city: "Columbus",
+        state: "OH",
+        zip: 43215,
+        lat: 39.97666940630532,
+        lon: -83.01397108958295
+    },
+    {
+        id: 16,
+        facility_name: "Fox In The Snow Cafe",
+        address: "210 Thurman Ave",
+        city: "Columbus",
+        state: "OH",
+        zip: 43206,
+        lat: 39.940293325364586, 
+        lon: -82.9901386282267
+    },
+    {
+        id: 17,
+        facility_name: "Schmidt’s Sausage Haus und Restaurant",
+        address: "240 E Kossuth St",
+        city: "Columbus",
+        state: "OH",
+        zip: 43206,
+        lat: 39.946959986485595, 
+        lon: -82.99083038959839
+    },
+    {
+        id: 18,
+        facility_name: "Scioto Audubon Metro Park",
+        address: "400 W Whittier St",
+        city: "Columbus",
+        state: "OH",
+        zip: 43215,
+        lat: 39.94877946810586, 
+        lon: -83.00681083562849
+    },
+    {
+        id: 19,
+        facility_name: "The Pearl",
+        address: "641 N High St",
+        city: "Columbus",
+        state: "OH",
+        zip: 43215,
+        lat: 39.97599186706173, 
+        lon: -83.0031703895832
+    },
+    {
+        id: 20,
+        facility_name: "Land-Grant Brewing Company",
+        address: "424 W Town St",
+        city: "Columbus",
+        state: "OH",
+        zip: 43215,
+        lat: 39.95808206587347,
+        lon: -83.0114251290853
+    },
+    {
+        id: 21,
+        facility_name: "BrewDog Franklinton",
+        address: "463 W Town St",
+        city: "Columbus",
+        state: "OH",
+        zip: 43215,
+        lat: 39.96429353977561, 
+        lon: -83.01272946969017
+    },
+    {
+        id: 22,
+        facility_name: "Raising Cane's Chicken Fingers",
+        address: "21 Old Village Rd",
+        city: "Columbus",
+        state: "OH",
+        zip: 43228,
+        lat: 39.98168623912561, 
+        lon: -83.1254212723097
+    },
+    {
+        id: 23,
+        facility_name: "CrossFit Grandview",
+        address: "880 Kinnear Rd",
+        city: "Columbus",
+        state: "OH",
+        zip: 43212,
+        lat: 39.999235130931254, 
+        lon: -83.03209993560222
+    },
+    {
+        id: 24,
+        facility_name: "Virtue Salon",
+        address: "3282 N High St",
+        city: "Columbus",
+        state: "OH",
+        zip: 43202,
+        lat: 40.029786949091765, 
+        lon: -83.0151287816175
+    },
+    {
+        id: 25,
+        facility_name: "Katalina's in Harrison West",
+        address: "1105 Pennsylvania Ave",
+        city: "Columbus",
+        state: "OH",
+        zip: 43201,
+        lat: 39.984471090296736, 
+        lon: -83.01597819698493
+    },
     {
         id: 26,
         facility_name: "440 Main & Mickey's",
