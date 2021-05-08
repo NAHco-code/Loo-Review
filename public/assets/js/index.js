@@ -38,7 +38,8 @@ const userLocation = window.navigator.geolocation.getCurrentPosition((data) => {
         <p class="address">${ loo.address }</p>
         <div class="card">
           <div class="card-content">
-            <p>Average Rating: <i class="fas fa-poo-storm fa-lg"></i> <i class="fas fa-poo-storm fa-lg"></i> <i class="fas fa-poo-storm fa-lg"></i> <i class="fas fa-poo-storm fa-lg"></i></p>
+            <p>Average Rating: <i class="fas fa-poo-storm fa-lg"></i> <i class="fas fa-poo-storm fa-lg"></i> <i class="fas fa-poo-storm fa-lg"></i> <i
+            class="fas fa-poo-storm fa-lg"></i></p>
           </div>
           <div class="card-action">
             <a class="button see-reviews" href="/loo/${loo.id}">See Reviews &#8674;</a>
