@@ -9,14 +9,14 @@ reviewBtn.addEventListener('click', (event) => {
 
         //get review form id's
         const revTitle = document.querySelector('#title').value.trim();
-        const revContent = document.querySelector('#review-text').value.trim();
+        const revContent = document.querySelector('#review').value.trim();
         const revRating = document.querySelector('#rating').value.trim();
 
-        let review_split = window.location.pathname;
-        let reviewID = parseInt(review_split.split('/')[2]);
-        console.log(review_split, reviewID);
+        // let review_split = window.location.pathname;
+        // let reviewID = parseInt(review_split.split('/')[2]);
+        // console.log(review_split, reviewID);
 
-        if (revTitle && revContent && revRating && reviewID) {
+        if (revTitle && revContent && revRating) {
 
             try {
                 const response = await fetch('/api/reviews', {
