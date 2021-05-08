@@ -100,11 +100,13 @@ router.get('/loo/:id', async (req, res) => { // *** WORKING
         // get review data, include loo + user [attribute: name, createdAt]
         console.log(looData.reviews);
         const loo = looData.get({ plain: true });// Serialize data so the template can read it
+        // const user = userData.get({ plain: true });
 
         res.render('view-loo', {
             layout: 'main',
             logged_in: req.session.logged_in,
-            loo
+            loo,
+            // user
         });
         //res.status(200).json(looData); //for testing
 
