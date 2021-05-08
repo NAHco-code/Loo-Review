@@ -11,4 +11,19 @@ const logout = async () => {
     }
 };
 
-document.querySelector('#submit-logout').addEventListener('click', logout);
+document.querySelector('#submit-logout-main').addEventListener('click', logout);
+
+const logoutSidenav = async () => {
+    const response = await fetch('/api/users/logout', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+    });
+
+    if (response.ok) {
+        document.location.replace('/');
+    } else {
+        alert(response.statusText);
+    }
+};
+
+document.querySelector('#submit-logout-sidenav').addEventListener('click', logoutSidenav);
