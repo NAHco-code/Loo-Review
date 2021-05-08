@@ -16,7 +16,7 @@ Loo.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
-        address: { // format still in question  - string or obeject
+        address: { 
             type: DataTypes.STRING,
             allowNull: false
         },
