@@ -57,11 +57,11 @@
                 <label for="title">Review Title</label>
               </div>
               <div class="input-field col s12">
-                <textarea id="review-text" class="materialize-textarea"></textarea>
-                <label for="review-text">Write your review</label>
+                <textarea id="review" class="materialize-textarea"></textarea>
+                <label for="review">Write your review</label>
               </div>
-              <div id ="rating" class="input-field col s12">
-                <select>
+              <div class="input-field col s12">
+                <select id ="rating" >
                   <option value="" disabled selected></option>
                   <option value="1">1</option>
                   <option value="2">2</option>
@@ -72,9 +72,10 @@
                 <label>Rating</label>
               </div>
             </div>
+             <button id="submit-review" class="btn" type="submit">Submit</button>
           </form>
         </div>
-        <button id="submit-review" class="btn" type="submit">Submit</button>
+       
       </div>
     </div>
 <!-- render associated reviews: include username and date created -->
