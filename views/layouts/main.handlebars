@@ -7,7 +7,7 @@
   {{!--
   <meta http-equiv="Content-Security-Policy"
     content="script-src-elem 'self' http://localhost:3001/main 'unsafe-inline' 'unsafe-eval';"> --}}
- 
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -17,15 +17,17 @@
   <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
   <title>The Loo Review</title>
 </head>
-<body style="background-color: #333;"> 
+
+<body style="background-color: #333;">
   <header>
     <nav>
       <div class="nav-wrapper">
-        <a href="/main" class='fas fa-toilet' style='font-size:36px;text-shadow: 0px 0px 10px black;'> The Loo Review</a>
+        <a href="/main" class='fas fa-toilet' style='font-size:36px;text-shadow: 0px 0px 10px black;'> The Loo
+          Review</a>
         <a href="#" data-target="mobile-menu" class="sidenav-trigger"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
+          <li><a href="/main">Nearby</a></li>
           <li id="add"><a href="#add-loo" class="modal-trigger">Add a Loo</a></li>
-          <li id="review"><a href="#review-loo" class="modal-trigger">Review a Loo</a></li>
           {{#if logged_in}}
           <li><a class="submit-logout">Logout</a></li>
           {{else}}
@@ -35,8 +37,8 @@
       </div>
     </nav>
     <ul class="sidenav" id="mobile-menu">
+      <li><a href="/main">Nearby</a></li>
       <li><a href="#add-loo" class="modal-trigger">Add a Loo</a></li>
-      <li><a href="#review-loo" class="modal-trigger">Review a Loo</a></li>
       {{#if logged_in}}
       <li><a class="submit-logout">Logout</a></li>
       {{else}}
@@ -48,42 +50,12 @@
     {{{body}}}
   </main>
   <section>
-    <div id="review-loo" class="modal">
-      <div class="modal-content">
-        <h2>Add a review</h2>
-        <div class="row">
-          <form class="col s12">
-            <div class="row">
-              <div class="input-field col s12">
-                <input id="title" type="text" class="validate">
-                <label for="title">Review Title</label>
-              </div>
-              <div class="input-field col s12">
-                <textarea id="review-text" class="materialize-textarea"></textarea>
-                <label for="review-text">Write your review</label>
-              </div>
-              <div class="input-field col s12">
-                <select>
-                  <option value="" disabled selected></option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                </select>
-                <label>Rating</label>
-              </div>
-            </div>
-          </form>
-        </div>
-        <button class="btn" type="submit">Submit</button>
-      </div>
-    </div>
+
     <div id="add-loo" class="modal">
       <div class="modal-content">
         <h2>Add a New Loo</h2>
         <div class="row">
-          <form action="/api/loos" method="POST" class="col s12">
+          <form class="col s12">
             <div class="row">
               <div class="input-field col s12">
                 <input id="facility_name" type="text" class="validate">
@@ -106,7 +78,7 @@
                 <label for="zip">Zip Code</label>
               </div>
 
-              <button type="submit" class="btn">Submit</button>
+              <button type="submit" id="add-btn" class="btn">Submit</button>
             </div>
           </form>
         </div>
@@ -115,4 +87,5 @@
 
 {{!-- script for materialize styling featuers --}}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
 </html>

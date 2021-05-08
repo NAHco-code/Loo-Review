@@ -18,12 +18,42 @@
 </div>
 <!-- Add a review button - render form -->
 <button><a href="#review-loo" class="modal-trigger">Review this Loo</a></button>
-
+<div id="review-loo" class="modal">
+      <div class="modal-content">
+        <h2>Add a review</h2>
+        <div class="row">
+          <form class="col s12">
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="title" type="text" class="validate">
+                <label for="title">Review Title</label>
+              </div>
+              <div class="input-field col s12">
+                <textarea id="review-text" class="materialize-textarea"></textarea>
+                <label for="review-text">Write your review</label>
+              </div>
+              <div id ="rating" class="input-field col s12">
+                <select>
+                  <option value="" disabled selected></option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+                <label>Rating</label>
+              </div>
+            </div>
+          </form>
+        </div>
+        <button id="review-btn" class="btn" type="submit">Submit</button>
+      </div>
+    </div>
 <!-- render associated reviews: include username and date created -->
 <div id="reviews">
     <h2>REVIEWS</h2>
     {{#each loo.reviews as |value| }}
-    <h3>{{this.title}}, {{value.rating}}</h3>
+    <h3>{{this.title}} | Rating: {{value.rating}}</h3>
     <p>{{value.review}}</p>
     {{/each}}
 </div>
