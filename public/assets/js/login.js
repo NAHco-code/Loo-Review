@@ -16,10 +16,10 @@ let login = async (event) => {
             });
 
             if (response.ok) {
-                document.location.replace('/main');
+                window.location.assign('/main');
             }
         } catch (err) {
-            alert(err.message);
+            window.location.replace('/');
         }
     }
 };

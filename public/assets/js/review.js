@@ -1,48 +1,45 @@
 // ADD A REVIEW FUNCTIONALITY
 
-const reviewBtn = document.querySelector('#review-btn');
+const addReview = async (event) => {
+    event.preventDefault();
 
-// reviewBtn.addEventListener('click', (event) => {
+    //get review form id's
+    const title = document.querySelector('#title').value.trim();
+    const review = document.querySelector('#review').value.trim();
+    const rating = document.querySelector('#rating').value.trim();
 
-//     const addReview = async (event) => {
-//         event.preventDefault();
+    let review_split = window.location.pathname;
+    let loo_id = parseInt(review_split.split('/')[2]);
+    console.log(review_split, loo_id);
 
-//         //get review form id's
-//         const revTitle = document.querySelector('#title').value.trim();
-//         const revContent = document.querySelector('#review').value.trim();
-//         const revRating = document.querySelector('#rating').value.trim();
+    if (title && review && rating) {
 
-//         // let review_split = window.location.pathname;
-//         // let reviewID = parseInt(review_split.split('/')[2]);
-//         // console.log(review_split, reviewID);
+        try {
+            const response = await fetch('/api/reviews', {
+                method: 'POST',
+                body: JSON.stringify({ title, review, rating, loo_id }),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            });
 
-//         if (revTitle && revContent && revRating) {
+            if (response.ok) {
+                document.location.reload();
+            }
+        } catch (err) {
+            alert(err.message);
+        }
+    }
+};
 
-//             try {
-//                 const response = await fetch('/api/reviews', {
-//                     method: 'POST',
-//                     body: JSON.stringify({ revTitle, revContent, revRating, reviewID }),
-//                     headers: {
-//                         'Content-Type': 'application/json'
-//                     }
-//                 });
-
-//                 if (response.ok) {
-//                     document.location.reload();
-//                 }
-//             } catch (err) {
-//                 alert(err.message);
-//             }
-//         }
-//     };
-
-//     document
-//         .querySelector('#submit-review')
-//         .addEventListener('click', addReview);
+document
+    .querySelector('#submit-review')
+    .addEventListener('click', addReview);
 
 
-// });
-
+function openRevForm () {
+    document.querySelector('#review-btn').style.display = 'inline';
+};
 // const reviewBtn = document.querySelector('#review-btn');
 
 
