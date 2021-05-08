@@ -17,7 +17,7 @@ const userLocation = window.navigator.geolocation.getCurrentPosition((data) => {
           console.log(initMap);
 
           const map = new google.maps.Map(document.getElementById("map"), {
-            zoom: 10,
+          zoom: 14,
             center: { lat: data.coords.latitude, lng: data.coords.longitude },
           });
           for (place of looData) {
