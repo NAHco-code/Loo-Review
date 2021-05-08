@@ -16,7 +16,7 @@ let login = async (event) => {
             });
 
             if (response.ok) {
-                window.location.assign('/main');
+                window.location.replace('/main');
             }
         } catch (err) {
             window.location.replace('/');
