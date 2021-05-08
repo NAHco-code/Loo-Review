@@ -2,11 +2,6 @@
 const router = require('express').Router();
 const { User } = require('../../models')
 
-// post new user
-// post log in user
-// put update user
-// post log out user
-
 // LOGIN FUNCTIONALITY
 router.post('/login', async (req, res) => { // *** WORKING
     //
@@ -46,7 +41,7 @@ router.post('/login', async (req, res) => { // *** WORKING
 });
 
 // CREATE NEW USER FUNCTIONALITY
-router.post('/signup', async (req, res) => { // *** WORKING ** PW returns hashed in response
+router.post('/signup', async (req, res) => { 
     try {
         const createUser = await User.create({
             name: req.body.name,
@@ -69,12 +64,13 @@ router.post('/signup', async (req, res) => { // *** WORKING ** PW returns hashed
     }
 });
 
-// LOGOUT //*not necessary
-router.post('/logout', (req, res) => { // *** WORKING
+// LOGOUT 
+router.post('/logout', (req, res) => { 
     if (req.session.logged_in) {
-        req.session.destroy(() => { // Remove the session variables
-
-            res.status(204).end() //CHECK REDIRECT * font end js?
+        // Remove the session variables
+        req.session.destroy(() => { 
+            //CHECK REDIRECT 
+            res.status(204).end() 
             console.log ({message: 'Successfully logged out'});
         });
 
@@ -85,4 +81,3 @@ router.post('/logout', (req, res) => { // *** WORKING
 });
 
 module.exports = router;
-// /api/users (api endpoint)
