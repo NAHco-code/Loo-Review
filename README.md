@@ -17,6 +17,8 @@ Express.js API and SQL.
 
 ## Description
 ![Untitled_ May 8, 2021 10_59 PM (1)](https://user-images.githubusercontent.com/74032335/117559188-4d42e000-b051-11eb-956a-aacd4cd20310.gif)
+
+
 The Loo Review
 ---USER STORY---
 As a user I want to be able to quickly find a bathroom in an given area. I would also like the ability to rate a restroom and see other user reviews.
