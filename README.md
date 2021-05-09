@@ -15,8 +15,14 @@ Express.js API and SQL.
 - [License](#license)
 
 ## Description
+![Untitled_ May 8, 2021 10_59 PM (1)](https://user-images.githubusercontent.com/74032335/117559188-4d42e000-b051-11eb-956a-aacd4cd20310.gif)
 
-Project in progress.
+
+The Loo Review
+---USER STORY---
+As a user I want to be able to quickly find a bathroom in an given area. I would also like the ability to rate a restroom and see other user reviews.
+
+This application allows users to find a restroom in there area and see all previous reviews with the timestamps either before or after the user visits the restroom. The user can then also choose to leave a review of thier own as well as add a business to the ever growing list.
 
 ## Visuals
 
