@@ -3,8 +3,8 @@
 
 ![License: Apache](https://img.shields.io/badge/License-Apache2.0-yellow.svg)
 
-Blurb.
-Express.js API and SQL.
+<!-- Blurb.
+Express.js API and SQL. -->
 
 ## Table of Contents
 
@@ -16,8 +16,6 @@ Express.js API and SQL.
 - [License](#license)
 
 ## Description
-![Untitled_ May 8, 2021 10_59 PM (1)](https://user-images.githubusercontent.com/74032335/117559188-4d42e000-b051-11eb-956a-aacd4cd20310.gif)
-
 
 The Loo Review
 ---USER STORY---
@@ -27,6 +25,8 @@ This application allows users to find a restroom in there area and see all previ
 
 ## Visuals
 
+![Untitled_ May 8, 2021 10_59 PM (1)](https://user-images.githubusercontent.com/74032335/117559188-4d42e000-b051-11eb-956a-aacd4cd20310.gif)
+
 ![login](./public/assets/images/login.PNG) ![selected-loo](./public/assets/images/selected-loo.PNG)
 
 ![see-nearby](./public/assets/images/see-nearby.PNG) ![associated-reviews](./public/assets/images/associated-reviews.PNG)
@@ -35,10 +35,10 @@ This application allows users to find a restroom in there area and see all previ
 [Heroku-DeployedApp] (<https://the-loo-review.herokuapp.com/>)
 
 [Github-Repository] (<https://github.com/NAHco-code/Project-02.git>)
-
+<!--
 ## Future Development
 
-Future development.
+Future development. -->
 
 ## Contribute
 
