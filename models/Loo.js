@@ -16,7 +16,7 @@ Loo.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
-        address: { 
+        address: {
             type: DataTypes.STRING,
             allowNull: false
         },
@@ -33,7 +33,7 @@ Loo.init(
             allowNull: false
         },
         lat: {
-            type: DataTypes.DECIMAL(15, 10),
+            type: DataTypes.DECIMAL(15,10),
             allowNull: false
         },
         lon: {
