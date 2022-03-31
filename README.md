@@ -34,7 +34,7 @@ This application allows users to find a restroom in there area and see all previ
 
 [Heroku-DeployedApp] (<https://the-loo-review.herokuapp.com/>)
 
-[Github-Repository] (<https://github.com/NAHco-code/Project-02.git>)
+[Github-Repository] (<https://github.com/kathrynwilkinson/Loo-Review.git>)
 <!--
 ## Future Development
 
@@ -43,7 +43,7 @@ Future development. -->
 ## Contribute
 
 Creators:
-- Kathryn Wilkinson @[NAHco-code](https://github.com/NAHco-code)
+- Kathryn Wilkinson @[kathrynwilkinson](https://github.com/kathrynwilkinson)
 - Brandon King @[thebsking](https://github.com/thebsking)
 - Janee' Mays @[janee-elise-mays](https://github.com/janee-elise-mays)
 - Sarehon Taylor @[SarehonTaylor](https://github.com/SarehonTaylor)
