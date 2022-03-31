@@ -4,7 +4,8 @@
 ![License: Apache](https://img.shields.io/badge/License-Apache2.0-yellow.svg)
 
 <!-- Blurb.
-Express.js API and SQL. -->
+Express.js API and SQL.
+-->
 
 ## Table of Contents
 
